@@ -566,7 +566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMoveSpeed: 5
   maxMoveSpeed: 10
-  jumpPower: 0
+  jumpPower: 10
+  dashPower: 2
   disabled: 0
   cameraTransform: {fileID: 330585546}
   rotationSensibility: 0.5

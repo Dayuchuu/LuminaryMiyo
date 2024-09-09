@@ -22,6 +22,8 @@ public class PlayerInputManager : MonoBehaviour
         inputMap.Player.Movement.canceled += playerMovement.Move;
 
         inputMap.Player.Jump.performed += playerMovement.Jump;
+        
+        inputMap.Player.Dash.performed += playerMovement.Dash;
     }
 
     private void OnDisable()
@@ -32,5 +34,7 @@ public class PlayerInputManager : MonoBehaviour
         inputMap.Player.Movement.canceled -= playerMovement.Move;
         
         inputMap.Player.Jump.performed -= playerMovement.Jump;
+
+        inputMap.Player.Dash.performed -= playerMovement.Dash;
     }
 }

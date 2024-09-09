@@ -7,12 +7,16 @@ public class PlayerMovement : MonoBehaviour
     #region Variables
     [Header("Player Variables")]
     private Rigidbody rb;
+
+    private Vector3 movementDirection = Vector3.zero;
     
-    [SerializeField] private float defaultMoveSpeed;
+    [SerializeField] private float defaultMoveSpeed = 5f;
 
-    [SerializeField] private float maxMoveSpeed;
+    [SerializeField] private float maxMoveSpeed = 10f;
 
-    [SerializeField] private float jumpPower;
+    [SerializeField] private float jumpPower = 10f;
+
+    [SerializeField] private float dashPower = 5f;
     
     private float timer = 0f;
     
@@ -20,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     
     private float inputZ;
 
+    private bool isDashing;
+    
     public bool disabled;
     
     [Header("Camera Variables")]
@@ -76,11 +82,11 @@ public class PlayerMovement : MonoBehaviour
         
         movementDirection =
             Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
-             
+        
         rb.velocity = movementDirection;
         
         /*Debug.Log(rb.velocity);
-        
+
         Vector3 targetVelocity = new Vector3(inputX, 0f, inputZ);
 
         targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
@@ -90,11 +96,11 @@ public class PlayerMovement : MonoBehaviour
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxMoveSpeed, maxMoveSpeed);
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxMoveSpeed, maxMoveSpeed);
         velocityChange.y = 0f;
-        
+
         //velocityChange = Quaternion.AngleAxis()
-        
+
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
-        
+
         if (rb.velocity.magnitude >= 0.05f)
         {
             isWalking = true;
@@ -114,6 +120,11 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpPower, rb.velocity.z);
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        rb.velocity = movementDirection * dashPower;
     }
 
     public void DisableMovement()
