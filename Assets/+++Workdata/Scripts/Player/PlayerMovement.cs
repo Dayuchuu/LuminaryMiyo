@@ -4,29 +4,75 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    #region Variables
-    [Header("Player Variables")]
-    private Rigidbody rb;
+    #region Definitions
 
+    private enum PlayerStates
+    {
+        Default,
+        Dash
+    }
+
+    #endregion
+    
+    #region Variables
+
+    #region PlayerValues
+
+    [Header("Player Variables")] 
+    [SerializeField]
+    private PlayerStates states =  PlayerStates.Default;
+    
+    [SerializeField] 
+    private float acceleration = 5f;
+    
+    [SerializeField] 
+    private float deceleration = 5f;
+    
+    [SerializeField] 
+    private float maxDefaultMoveSpeed = 10f;
+
+    [SerializeField] 
+    private float maxMoveSpeedDuringDash = 0f;
+
+    [SerializeField] 
+    private float jumpPower = 10f;
+
+    [SerializeField] 
+    private float dashPower = 5f;
+
+    [SerializeField] 
+    private float defaultGravity = -9.81f;
+    
+    [SerializeField] 
+    private float fallingGravity = -9.81f;
+
+    [SerializeField] 
+    private float groundDistance = 0f;
+
+    [SerializeField]
+    private float dashTimer = 0f;
+    
+    [Space]
+    public bool disabled;
+    
+    [SerializeField]
+    private LayerMask groundMask;
+    
+    private Rigidbody rb;
+    
     private Vector3 movementDirection = Vector3.zero;
     
-    [SerializeField] private float defaultMoveSpeed = 5f;
-
-    [SerializeField] private float maxMoveSpeed = 10f;
-
-    [SerializeField] private float jumpPower = 10f;
-
-    [SerializeField] private float dashPower = 5f;
+    private float moveSpeed = 0f;
     
-    private float timer = 0f;
+    private float gravity = 0f;
     
     private float inputX;
     
     private float inputZ;
-
-    private bool isDashing;
     
-    public bool disabled;
+    #endregion
+
+    #region CamerValues
     
     [Header("Camera Variables")]
     [SerializeField] private Transform cameraTransform;
@@ -40,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
     
     private float cameraPitch;
     private float cameraRoll;
+    #endregion
     
     #endregion 
 
@@ -49,66 +96,78 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
+        gravity = defaultGravity;
+
+        moveSpeed = maxDefaultMoveSpeed;
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
+        if (states == PlayerStates.Dash)
+        {
+            moveSpeed = maxMoveSpeedDuringDash;
+        }
+        else
+        {
+            moveSpeed = maxDefaultMoveSpeed;
+        }
+        
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
         
         if(invertCameraPitch)
         {
-            cameraPitch = cameraPitch - mouseDelta.y * rotationSensibility;
+            cameraPitch -= mouseDelta.y * rotationSensibility;
         }
         else
         {
-            cameraPitch = cameraPitch + mouseDelta.y * rotationSensibility;
+            cameraPitch += mouseDelta.y * rotationSensibility;
         }
         
         cameraPitch = Mathf.Clamp(cameraPitch, -maxCameraPitch, maxCameraPitch);
 
-        cameraRoll = cameraRoll + mouseDelta.x * rotationSensibility;
+        cameraRoll += mouseDelta.x * rotationSensibility;
 
         cameraTransform.localEulerAngles = new Vector3(cameraPitch, cameraRoll, 0f);
     }
 
     private void FixedUpdate()
     {
-        if (disabled) return;
-        
-        Debug.Log(rb.velocity);
-        
-        Vector3 movementDirection =  new Vector3(inputX * defaultMoveSpeed, rb.velocity.y, inputZ * defaultMoveSpeed);
-        
-        movementDirection =
-            Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
-        
-        rb.velocity = movementDirection;
-        
-        /*Debug.Log(rb.velocity);
-
-        Vector3 targetVelocity = new Vector3(inputX, 0f, inputZ);
-
-        targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
-
-        Vector3 velocity = rb.velocity;
-        Vector3 velocityChange = (targetVelocity - velocity);
-        velocityChange.x = Mathf.Clamp(velocityChange.x, -maxMoveSpeed, maxMoveSpeed);
-        velocityChange.z = Mathf.Clamp(velocityChange.z, -maxMoveSpeed, maxMoveSpeed);
-        velocityChange.y = 0f;
-
-        //velocityChange = Quaternion.AngleAxis()
-
-        rb.AddForce(velocityChange, ForceMode.VelocityChange);
-
-        if (rb.velocity.magnitude >= 0.05f)
+        if (rb.velocity.y < -0.2f)
         {
-            isWalking = true;
+            gravity = fallingGravity;
         }
         else
         {
-            isWalking = false;
-        }*/
+            gravity = defaultGravity;
+        }
+        
+        rb.AddForce(0f, gravity,0f, ForceMode.Acceleration);
+
+        if (disabled) return;
+
+        movementDirection = new Vector3(inputX * acceleration, rb.velocity.y, inputZ * acceleration);
+
+        movementDirection = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
+
+        if (movementDirection != Vector3.zero)
+        {
+            rb.AddForce(movementDirection, ForceMode.Acceleration);
+
+            Vector3 magnitudeVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+            if (magnitudeVelocity.magnitude > moveSpeed)
+            {
+                rb.AddForce(magnitudeVelocity * -deceleration, ForceMode.Acceleration);
+            }
+        }
+        else
+        {
+            Vector3 magnitudeVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+            
+            rb.AddForce(magnitudeVelocity * -deceleration, ForceMode.Acceleration);
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -119,12 +178,49 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        rb.velocity = new Vector3(rb.velocity.x, jumpPower, rb.velocity.z);
+        if (!IsGrounded()) { return; }
+        
+        Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
+        
+        rb.AddForce(jumpVector, ForceMode.VelocityChange);
     }
 
     public void Dash(InputAction.CallbackContext context)
     {
-        rb.velocity = movementDirection * dashPower;
+        if (states == PlayerStates.Dash) { return; }
+        
+        states = PlayerStates.Dash;
+        
+        movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration);
+
+        movementDirection = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
+        
+        movementDirection *= 2;
+        
+        rb.velocity = movementDirection;
+
+        float timer = dashTimer;
+
+        while (timer > 0.05f)
+        {
+            timer -= Time.time;
+            
+            Debug.Log(timer);
+        }
+
+        states = PlayerStates.Default;
+    }
+
+    private bool IsGrounded()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void DisableMovement()
