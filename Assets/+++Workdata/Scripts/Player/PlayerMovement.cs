@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -199,16 +200,7 @@ public class PlayerMovement : MonoBehaviour
         
         rb.velocity = movementDirection;
 
-        float timer = dashTimer;
-
-        while (timer > 0.05f)
-        {
-            timer -= Time.time;
-            
-            Debug.Log(timer);
-        }
-
-        states = PlayerStates.Default;
+        StartCoroutine(WaitForDash());
     }
 
     private bool IsGrounded()
@@ -221,6 +213,13 @@ public class PlayerMovement : MonoBehaviour
         {
             return false;
         }
+    }
+
+    private IEnumerator WaitForDash()
+    {
+        yield return new WaitForSeconds(dashTimer);
+        
+        states = PlayerStates.Default;
     }
 
     public void DisableMovement()
