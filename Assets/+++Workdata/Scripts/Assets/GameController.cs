@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
 
     public int coinPoints = 0;
+
+    public int timePoints = 0;
     
     #endregion
 

@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] 
     private float dashPower = 5f;
-
+    
     [SerializeField] 
     private float defaultGravity = -9.81f;
     
@@ -52,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float dashTimer = 0f;
+
+    private float noGravity = 0f;
     
     [Space]
     public bool disabled;
@@ -106,6 +108,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (disabled)
+        {
+            return;
+        }
+        
         if (states == PlayerStates.Dash)
         {
             moveSpeed = maxMoveSpeedDuringDash;
@@ -135,6 +142,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (states == PlayerStates.Dash)
+        {
+            gravity = noGravity;
+        }
+        
         if (rb.velocity.y < -0.2f)
         {
             gravity = fallingGravity;
@@ -148,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (disabled) return;
 
-        movementDirection = new Vector3(inputX * acceleration, rb.velocity.y, inputZ * acceleration);
+        movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration);
 
         movementDirection = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
 

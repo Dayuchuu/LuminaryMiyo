@@ -1,37 +1,58 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
 	[SerializeField]
 	private GameObject bullet = null;
-	
-	private GameObject player = null;
 
 	[SerializeField] 
 	private Transform bulletSpawnPoint = null;
 
-	[SerializeField]
-	private float distanceBetweenPLayerAndEnemy = 0f;
+	[SerializeField] 
+	private float bulletSpawnCooldown = 0f;
 
-	private void Update()
-	{
-		
-	}
+	private Coroutine bulletSpawn;
+	
+	public bool inRange = false;
 	
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("PlayerAttack"))
+		if(other.CompareTag("Player"))
 		{
-			gameObject.SetActive(false);
+			inRange = true;
+
+			StartCoroutine(SpawnBullet());
+		}
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.CompareTag("Player"))
+		{
+			inRange = false;
 		}
 	}
 
 	private void InstantiateBullet()
 	{
 		Instantiate(bullet, bulletSpawnPoint);
+	}
+
+	private IEnumerator SpawnBullet()
+	{
+		if (inRange)
+		{
+			InstantiateBullet();
+
+			yield return new WaitForSeconds(bulletSpawnCooldown);
+
+			StartCoroutine(SpawnBullet());
+		}
+		else
+		{
+			yield break;
+		}
 	}
 }
