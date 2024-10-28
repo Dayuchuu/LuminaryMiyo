@@ -28,11 +28,7 @@ public class Timer : MonoBehaviour
    {
       if (time <= 0)
       {
-         gameOverScreen.SetActive(true);
-
-         player.DisableMovement();
-         
-         Time.timeScale = 0;
+        GameController.Instance.ShowGameOverScreen();
          
          yield break;
       }

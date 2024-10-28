@@ -32,6 +32,8 @@ public class EnemyController : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			inRange = false;
+			
+			StopCoroutine(SpawnBullet());
 		}
 	}
 

@@ -9,6 +9,10 @@ public class GameController : MonoBehaviour
 
     public static GameController Instance;
 
+    public GameObject GameOverScreen = null;
+
+    public PlayerMovement player = null;
+    
     public int coinPoints = 0;
 
     public int timePoints = 0;
@@ -23,5 +27,16 @@ public class GameController : MonoBehaviour
             
             DontDestroyOnLoad(this);
         }
+    }
+
+    public void ShowGameOverScreen()
+    {
+        GameOverScreen.SetActive(true);
+        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        
+        player.DisablePlayerActions();
+
+        Time.timeScale = 0f;
     }
 }

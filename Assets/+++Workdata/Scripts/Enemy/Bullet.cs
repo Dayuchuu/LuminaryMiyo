@@ -24,6 +24,25 @@ public class Bullet : MonoBehaviour
 		
 		Shoot();
 	}
+	
+	private void OnCollisionEnter(Collision other)
+	{
+		if (!other.gameObject.CompareTag("Player"))
+		{
+			Destroy(gameObject);
+		}
+		else if (other.gameObject.CompareTag("Player"))
+		{
+			other.gameObject.GetComponent<PlayerMovement>().healthPoints--;
+
+			if (other.gameObject.GetComponent<PlayerMovement>().healthPoints <= 0)
+			{
+				GameController.Instance.ShowGameOverScreen();
+			}
+			
+			Destroy(gameObject);
+		}
+	}
 
 	private void Shoot()
 	{

@@ -12,14 +12,16 @@ public class PlayerMovement : MonoBehaviour
         Default,
         Dash
     }
-
     #endregion
     
     #region Variables
 
     #region PlayerValues
 
-    [Header("Player Variables")] 
+    [Header("Player Variables")]
+
+    #region Movement Varaibles
+    
     [SerializeField]
     private PlayerStates states =  PlayerStates.Default;
     
@@ -72,6 +74,13 @@ public class PlayerMovement : MonoBehaviour
     private float inputX;
     
     private float inputZ;
+    #endregion
+
+    #region Health Variables
+    
+    public int healthPoints = 0;
+    
+    #endregion
     
     #endregion
 
@@ -108,10 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (disabled)
-        {
-            return;
-        }
+        if (disabled) { return; }
         
         if (states == PlayerStates.Dash)
         {
@@ -142,6 +148,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (disabled) { return; }
+        
         if (states == PlayerStates.Dash)
         {
             gravity = noGravity;
@@ -157,8 +165,6 @@ public class PlayerMovement : MonoBehaviour
         }
         
         rb.AddForce(0f, gravity,0f, ForceMode.Acceleration);
-
-        if (disabled) return;
 
         movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration);
 
@@ -185,12 +191,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        if (disabled) { return; }
+        
         inputX = context.ReadValue<Vector3>().x;
         inputZ = context.ReadValue<Vector3>().z;
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
+        if (disabled) { return; }
+        
         if (!IsGrounded()) { return; }
         
         Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
@@ -200,6 +210,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Dash(InputAction.CallbackContext context)
     {
+        if (disabled) { return; }
+        
         if (states == PlayerStates.Dash) { return; }
         
         states = PlayerStates.Dash;
@@ -215,6 +227,13 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(WaitForDash());
     }
 
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (disabled) { return; }
+
+        
+    }
+
     private bool IsGrounded()
     {
         if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
@@ -226,6 +245,17 @@ public class PlayerMovement : MonoBehaviour
             return false;
         }
     }
+    public void DisablePlayerActions()
+    {
+        disabled = true;
+        
+        rb.velocity = Vector3.zero;
+    }
+
+    public void EnablePlayerActions()
+    {
+        disabled = false;
+    }
 
     private IEnumerator WaitForDash()
     {
@@ -234,11 +264,5 @@ public class PlayerMovement : MonoBehaviour
         states = PlayerStates.Default;
     }
 
-    public void DisableMovement()
-    {
-        disabled = true;
-        
-        rb.velocity = Vector3.zero;
-    }
     #endregion
 }
