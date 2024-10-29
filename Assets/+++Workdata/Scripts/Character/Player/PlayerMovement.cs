@@ -85,7 +85,7 @@ public class PlayerMovement : CharacterBase
     
     #endregion
 
-    #region CamerValues
+    #region CameraValues
     
     [Header("Camera Variables")]
     [SerializeField] private Transform cameraTransform;

@@ -7,11 +7,15 @@ public class PlayerInputManager : MonoBehaviour
 
     private PlayerMovement playerMovement;
 
+    private PlayerSwordAttack playerAttack;
+
     private void Awake()
     {
         inputMap = new InputMap();
 
         playerMovement = GetComponent<PlayerMovement>();
+
+        playerAttack = GetComponentInChildren<PlayerSwordAttack>();
     }
 
     private void OnEnable()
@@ -24,6 +28,8 @@ public class PlayerInputManager : MonoBehaviour
         inputMap.Player.Jump.performed += playerMovement.Jump;
         
         inputMap.Player.Dash.performed += playerMovement.Dash;
+
+        inputMap.Player.Attack.performed += playerAttack.Attack;
     }
 
     private void OnDisable()

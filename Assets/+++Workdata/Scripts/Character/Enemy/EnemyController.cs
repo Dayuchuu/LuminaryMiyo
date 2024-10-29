@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public int enemyAmount = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void OnValidate()
+	{
+		enemyAmount = GameObject.FindObjectsOfType<EnemyShooting>().Length;
+	}
 }
