@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : CharacterBase
 {
     #region Definitions
 
@@ -75,12 +75,13 @@ public class PlayerMovement : MonoBehaviour
     
     private float inputZ;
     #endregion
-
-    #region Health Variables
-    
-    public int healthPoints = 0;
     
     #endregion
+
+    #region SwordBasedVariables
+
+    [SerializeField] 
+    private Animator swordAnim = null;
     
     #endregion
 
@@ -225,13 +226,6 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = movementDirection;
 
         StartCoroutine(WaitForDash());
-    }
-
-    public void Attack(InputAction.CallbackContext context)
-    {
-        if (disabled) { return; }
-
-        
     }
 
     private bool IsGrounded()

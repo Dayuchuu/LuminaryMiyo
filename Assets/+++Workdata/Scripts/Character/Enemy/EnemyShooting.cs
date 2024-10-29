@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyShooting : CharacterBase
 {
 	[SerializeField]
 	private GameObject bullet = null;
@@ -51,10 +51,6 @@ public class EnemyController : MonoBehaviour
 			yield return new WaitForSeconds(bulletSpawnCooldown);
 
 			StartCoroutine(SpawnBullet());
-		}
-		else
-		{
-			yield break;
 		}
 	}
 }

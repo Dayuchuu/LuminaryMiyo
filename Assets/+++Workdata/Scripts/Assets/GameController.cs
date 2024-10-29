@@ -39,4 +39,10 @@ public class GameController : MonoBehaviour
 
         Time.timeScale = 0f;
     }
+
+    public void ResetGameStats()
+    {
+        coinPoints = 0;
+        timePoints = 0;
+    }
 }
