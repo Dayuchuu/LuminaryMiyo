@@ -37,6 +37,8 @@ public class Timer : MonoBehaviour
 
       time--;
 
+      GameController.Instance.timePoints = time;
+
       timeText.text = time.ToString();
 
       StartCoroutine(CountDown());

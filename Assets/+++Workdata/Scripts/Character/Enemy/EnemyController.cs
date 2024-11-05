@@ -1,12 +1,49 @@
-using UnityEditor;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-	public int enemyAmount = 0;
+	public static EnemyController Instance;
 
-	private void OnValidate()
+	public EnemyShooting[] enemies = new EnemyShooting[0];
+
+	private void Awake()
 	{
-		enemyAmount = GameObject.FindObjectsOfType<EnemyShooting>().Length;
+		if (Instance == null)
+		{
+			Instance = this;
+			
+			DontDestroyOnLoad(this);
+		}
+		else
+		{
+			Destroy(this);
+
+			return;
+		}
+		
+		FindEnemies();
+	}
+
+	public void FindEnemies()
+	{
+		enemies = FindObjectsOfType<EnemyShooting>();
+	}
+	
+	public int FindCurrentEnemies()
+	{
+		int enemyInactive = 0;
+		
+		for (int enemyIndex = 0,  enemyAmount = enemies.Length; enemyIndex < enemyAmount; enemyIndex++)
+		{
+			if (!enemies[enemyIndex].gameObject.activeInHierarchy)
+			{
+				enemyInactive++;
+			}
+		}
+
+		return enemyInactive;
 	}
 }

@@ -1,12 +1,8 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 public class EnemyShooting : CharacterBase
 {
-	[SerializeField]
-	private GameObject bullet = null;
-
 	[SerializeField] 
 	private Transform bulletSpawnPoint = null;
 
@@ -39,7 +35,14 @@ public class EnemyShooting : CharacterBase
 
 	private void InstantiateBullet()
 	{
-		Instantiate(bullet, bulletSpawnPoint);
+		GameObject bullet = ObjectPool.sharedInstance.GetPooledObject();
+		if (bullet != null)
+		{
+			bullet.transform.position = bulletSpawnPoint.position;
+			bullet.transform.rotation = bulletSpawnPoint.rotation;
+			bullet.SetActive(true);
+			bullet.GetComponent<Bullet>().StartBullet();	
+		}
 	}
 
 	private IEnumerator SpawnBullet()

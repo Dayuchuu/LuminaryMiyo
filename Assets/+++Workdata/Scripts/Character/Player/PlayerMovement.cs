@@ -78,13 +78,6 @@ public class PlayerMovement : CharacterBase
     
     #endregion
 
-    #region SwordBasedVariables
-
-    [SerializeField] 
-    private Animator swordAnim = null;
-    
-    #endregion
-
     #region CameraValues
     
     [Header("Camera Variables")]
@@ -203,6 +196,7 @@ public class PlayerMovement : CharacterBase
         if (disabled) { return; }
         
         if (!IsGrounded()) { return; }
+        Debug.Log("Should be Jumping!!!");
         
         Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
         

@@ -1,12 +1,13 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
 	[SerializeField] 
-	public float shootSpeed = 0f;
+	private float shootSpeed = 0f;
+
+	[SerializeField]
+	private int setTimer = 0;
 	
 	private Transform playerTransform = null;
 
@@ -19,19 +20,11 @@ public class Bullet : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody>();
 		
 		playerTransform = GameObject.FindWithTag("Player").transform;
-
-		shootDirection = playerTransform.position - transform.position;
-		
-		Shoot();
 	}
 	
-	private void OnCollisionEnter(Collision other)
+	private void OnTriggerEnter(Collider other)
 	{
-		if (!other.gameObject.CompareTag("Player"))
-		{
-			Destroy(gameObject);
-		}
-		else if (other.gameObject.CompareTag("Player"))
+		if (other.gameObject.CompareTag("Player"))
 		{
 			other.gameObject.GetComponent<PlayerMovement>().healthPoints--;
 
@@ -40,12 +33,32 @@ public class Bullet : MonoBehaviour
 				GameController.Instance.ShowGameOverScreen();
 			}
 			
-			Destroy(gameObject);
+			gameObject.SetActive(false);
 		}
+		else if(!other.CompareTag("Player") && !other.CompareTag("Enemy"))
+		{
+			gameObject.SetActive(false);
+		}
+	}
+
+	public void StartBullet()
+	{
+		Shoot();
+
+		StartCoroutine(SetInactiveAfterTime());
 	}
 
 	private void Shoot()
 	{
+		shootDirection = playerTransform.position - transform.position;
+		
 		rb.velocity = shootDirection * shootSpeed;
+	}
+
+	IEnumerator SetInactiveAfterTime()
+	{
+		yield return new WaitForSeconds(setTimer);
+		
+		gameObject.SetActive(false);
 	}
 }

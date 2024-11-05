@@ -1,12 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerSwordAttack : MonoBehaviour
 {
+   #region Variables
+
    [SerializeField] private float attackDistance = 0f;
 
    [SerializeField] private LayerMask attackLayer = 0;
@@ -14,7 +12,11 @@ public class PlayerSwordAttack : MonoBehaviour
    private Animator swordAnim = null;
 
    private RaycastHit hit;
+   
+   #endregion
 
+   #region Methods
+   
    private void Awake()
    {
       swordAnim = GetComponent<Animator>();
@@ -33,7 +35,7 @@ public class PlayerSwordAttack : MonoBehaviour
 
          if (target.GetComponent<EnemyShooting>().healthPoints <= 0)
          {
-            Destroy(target);
+            target.SetActive(false);
          }
       }
    }
@@ -42,4 +44,5 @@ public class PlayerSwordAttack : MonoBehaviour
    {
       Debug.DrawRay(transform.position, transform.forward * attackDistance);
    }
+   #endregion
 } 
