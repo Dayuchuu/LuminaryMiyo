@@ -27,6 +27,10 @@ public class GameController : MonoBehaviour
             
             DontDestroyOnLoad(this);
         }
+        else
+        {
+            Destroy(this);
+        }
     }
 
     public void ShowGameOverScreen()

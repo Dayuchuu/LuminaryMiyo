@@ -196,7 +196,6 @@ public class PlayerMovement : CharacterBase
         if (disabled) { return; }
         
         if (!IsGrounded()) { return; }
-        Debug.Log("Should be Jumping!!!");
         
         Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
         
