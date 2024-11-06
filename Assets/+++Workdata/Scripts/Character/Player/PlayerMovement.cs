@@ -1,6 +1,8 @@
 using System.Collections;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : CharacterBase
@@ -55,10 +57,15 @@ public class PlayerMovement : CharacterBase
     [SerializeField]
     private float dashTimer = 0f;
 
+    [SerializeField] 
+    private float dashCooldownSpeed = 0f;
+
     private float noGravity = 0f;
-    
+
     [Space]
-    public bool disabled;
+    public bool disabled = false;
+
+    [SerializeField] private bool canDash = true;
     
     [SerializeField]
     private LayerMask groundMask;
@@ -76,6 +83,15 @@ public class PlayerMovement : CharacterBase
     private float inputZ;
     #endregion
     
+    #endregion
+
+    #region Player Ui
+
+    [SerializeField] 
+    private Image dashCooldownImage = null;
+    
+    private float currentValue = 0f;
+
     #endregion
 
     #region CameraValues
@@ -209,6 +225,8 @@ public class PlayerMovement : CharacterBase
         if (states == PlayerStates.Dash) { return; }
         
         states = PlayerStates.Dash;
+
+        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         
         movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration);
 
@@ -217,6 +235,8 @@ public class PlayerMovement : CharacterBase
         movementDirection *= 2;
         
         rb.velocity = movementDirection;
+
+        dashCooldownImage.fillAmount = 0f;
 
         StartCoroutine(WaitForDash());
     }
@@ -232,6 +252,22 @@ public class PlayerMovement : CharacterBase
             return false;
         }
     }
+
+    private void CooldownForDash()
+    {
+        while (currentValue < 99.9f)
+        {
+            if (currentValue < 100)
+            {
+                currentValue *= dashCooldownSpeed * Time.deltaTime;
+            }
+        }
+
+        dashCooldownImage.fillAmount = currentValue / 100;
+
+        currentValue = 0f;
+    }
+    
     public void DisablePlayerActions()
     {
         disabled = true;
@@ -246,6 +282,8 @@ public class PlayerMovement : CharacterBase
 
     private IEnumerator WaitForDash()
     {
+        if (!canDash) { yield break; }
+        
         yield return new WaitForSeconds(dashTimer);
         
         states = PlayerStates.Default;
