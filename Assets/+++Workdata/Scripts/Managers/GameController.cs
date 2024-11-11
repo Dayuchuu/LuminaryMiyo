@@ -19,8 +19,6 @@ public class GameController : MonoBehaviour
 
     public static GameController Instance;
 
-    public GameObject GameOverScreen = null;
-
     public PlayerMovement player = null;
     
     public int coinPoints = 0;
@@ -31,6 +29,8 @@ public class GameController : MonoBehaviour
     
     #endregion
 
+    #region Methods
+    
     private void Awake()
     {
         if (Instance == null)
@@ -50,4 +50,6 @@ public class GameController : MonoBehaviour
         coinPoints = 0;
         timePoints = 0;
     }
+    
+    #endregion
 }

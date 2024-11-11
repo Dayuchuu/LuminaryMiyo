@@ -5,10 +5,16 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+	#region Variables
+	
 	public static EnemyController Instance;
 
 	public EnemyShooting[] enemies = new EnemyShooting[0];
+	
+	#endregion
 
+	#region Methods
+	
 	private void Awake()
 	{
 		if (Instance == null)
@@ -46,4 +52,5 @@ public class EnemyController : MonoBehaviour
 
 		return enemyInactive;
 	}
+	#endregion
 }

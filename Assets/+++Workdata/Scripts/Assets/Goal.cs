@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-	[SerializeField] 
-	private GameObject winScreen = null;
+	#region Variables
 
 	private PlayerMovement player = null;
 
@@ -22,7 +21,11 @@ public class Goal : MonoBehaviour
 	private int timeAmount = 0;
 
 	private int scoreAmount = 0;
+	
+	#endregion
 
+	#region Methods
+	
 	private void OnValidate()
 	{
 		player = FindObjectOfType<PlayerMovement>();
@@ -36,7 +39,7 @@ public class Goal : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			winScreen.SetActive(true);
+			UIManager.Instance.OpenMenu(UIManager.Instance.winScreen, 0f);
 
 			player.DisablePlayerActions();
 
@@ -89,4 +92,5 @@ public class Goal : MonoBehaviour
 			scoreText.text = "S " + currentScore;
 		}
 	}
+	#endregion
 }

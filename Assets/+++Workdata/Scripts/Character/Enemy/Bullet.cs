@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+	#region Variables
+	
 	[SerializeField] 
 	private float shootSpeed = 0f;
 
@@ -15,6 +17,10 @@ public class Bullet : MonoBehaviour
 	
 	Vector3 shootDirection = Vector3.zero;
 
+	#endregion
+
+	#region Methods
+	
 	private void Awake()
 	{
 		rb = gameObject.GetComponent<Rigidbody>();
@@ -61,4 +67,5 @@ public class Bullet : MonoBehaviour
 		
 		gameObject.SetActive(false);
 	}
+	#endregion
 }

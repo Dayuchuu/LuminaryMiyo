@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnemyShooting : CharacterBase
 {
+	#region MyRegion
+
 	[SerializeField] 
 	private Transform bulletSpawnPoint = null;
 
@@ -12,6 +14,10 @@ public class EnemyShooting : CharacterBase
 	private Coroutine bulletSpawn;
 	
 	public bool inRange = false;
+
+	#endregion
+
+	#region Methods
 	
 	private void OnTriggerEnter(Collider other)
 	{
@@ -56,4 +62,5 @@ public class EnemyShooting : CharacterBase
 			StartCoroutine(SpawnBullet());
 		}
 	}
+	#endregion
 }

@@ -3,12 +3,18 @@ using UnityEngine;
 
 public class PlayerInputManager : MonoBehaviour
 {
+    #region Variables
+
     private InputMap inputMap;
 
     private PlayerMovement playerMovement;
 
     private PlayerSwordAttack playerAttack;
 
+    #endregion
+
+    #region Methods
+    
     private void Awake()
     {
         inputMap = new InputMap();
@@ -43,4 +49,5 @@ public class PlayerInputManager : MonoBehaviour
 
         inputMap.Player.Dash.performed -= playerMovement.Dash;
     }
+    #endregion
 }

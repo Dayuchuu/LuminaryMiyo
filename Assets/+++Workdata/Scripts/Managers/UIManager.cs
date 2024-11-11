@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-	
-	
 	#region Variables
 	public static UIManager Instance;
 
@@ -13,6 +11,8 @@ public class UIManager : MonoBehaviour
 
 	#endregion
 
+	#region Methods
+	
 	private void Awake()
 	{
 		if (Instance != null)
@@ -31,4 +31,5 @@ public class UIManager : MonoBehaviour
 
 		Time.timeScale = timeScale;
 	}
+	#endregion
 }

@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
+   #region Variables
+
    public int time = 0;
 
    [SerializeField] 
@@ -13,6 +15,10 @@ public class Timer : MonoBehaviour
 
    [SerializeField] 
    private PlayerMovement player = null;
+
+   #endregion
+
+   #region Methods
    
    private void Awake()
    {
@@ -40,4 +46,5 @@ public class Timer : MonoBehaviour
 
       StartCoroutine(CountDown());
    }
+   #endregion
 }
