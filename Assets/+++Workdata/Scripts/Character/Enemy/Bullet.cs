@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
 
 			if (other.gameObject.GetComponent<PlayerMovement>().healthPoints <= 0)
 			{
-				GameController.Instance.ShowGameOverScreen();
+				UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, 0f);
 			}
 			
 			gameObject.SetActive(false);
