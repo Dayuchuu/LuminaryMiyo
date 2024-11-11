@@ -5,6 +5,16 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    #region Definitons
+
+    public enum GameStates
+    {
+        MainMenu,
+        Level
+    }
+    
+    #endregion
+    
     #region Variables
 
     public static GameController Instance;
@@ -16,6 +26,8 @@ public class GameController : MonoBehaviour
     public int coinPoints = 0;
 
     public int timePoints = 0;
+
+    public GameStates gameStates;
     
     #endregion
 
@@ -31,17 +43,6 @@ public class GameController : MonoBehaviour
         {
             Destroy(this);
         }
-    }
-
-    public void ShowGameOverScreen()
-    {
-        GameOverScreen.SetActive(true);
-        
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        
-        player.DisablePlayerActions();
-
-        Time.timeScale = 0f;
     }
 
     public void ResetGameStats()

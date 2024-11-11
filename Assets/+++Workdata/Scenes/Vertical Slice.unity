@@ -3875,7 +3875,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 337af5e85661d0e4da913eb9726527bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5228,6 +5228,37 @@ MonoBehaviour:
     type: 3}
   pooledObjectParent: {fileID: 1471001272}
   amountToPool: 50
+--- !u!1 &1949309538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949309539}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949309539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949309538}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.18947, y: 1.315567, z: 4.058548}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1949677894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3044780838656155641, guid: e7412fd91d7a86543a3ebc8f7496f8d7,
@@ -6103,5 +6134,6 @@ SceneRoots:
   - {fileID: 1408294100}
   - {fileID: 495852736}
   - {fileID: 1923480197}
-  - {fileID: 289242429}
   - {fileID: 2022989292}
+  - {fileID: 289242429}
+  - {fileID: 1949309539}

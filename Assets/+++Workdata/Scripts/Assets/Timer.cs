@@ -12,9 +12,6 @@ public class Timer : MonoBehaviour
    private TextMeshProUGUI timeText;
 
    [SerializeField] 
-   private GameObject gameOverScreen = null;
-
-   [SerializeField] 
    private PlayerMovement player = null;
    
    private void Awake()
@@ -28,7 +25,7 @@ public class Timer : MonoBehaviour
    {
       if (time <= 0)
       {
-        GameController.Instance.ShowGameOverScreen();
+        UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, 0f);
          
          yield break;
       }
