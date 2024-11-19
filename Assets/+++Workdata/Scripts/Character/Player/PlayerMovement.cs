@@ -227,7 +227,7 @@ public class PlayerMovement : CharacterBase
 
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         
-        movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration);
+        movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration) * dashPower;
 
         movementDirection = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
         

@@ -13,9 +13,6 @@ public class Timer : MonoBehaviour
    [SerializeField] 
    private TextMeshProUGUI timeText;
 
-   [SerializeField] 
-   private PlayerMovement player = null;
-
    #endregion
 
    #region Methods

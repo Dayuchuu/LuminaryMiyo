@@ -18,8 +18,6 @@ public class Goal : MonoBehaviour
 	
 	private int coinAmount = 0;
 
-	private int timeAmount = 0;
-
 	private int scoreAmount = 0;
 	
 	#endregion
@@ -77,19 +75,19 @@ public class Goal : MonoBehaviour
 	{
 		if (currentScore >= (int)(currentMaxScore * 0) && currentScore <= (int)(currentMaxScore * 0.25))
 		{
-			scoreText.text = "C " + currentScore;
+			UIManager.Instance.ChangeScoreText(currentScore, "C ");
 		}
 		else if (currentScore >= (int)(currentMaxScore * 0.25) && currentScore <= (int)(currentMaxScore * 0.5))
 		{
-			scoreText.text = "B " + currentScore;
+			UIManager.Instance.ChangeScoreText(currentScore, "B ");
 		}
 		else if (currentScore >= (int)(currentMaxScore * 0.5) && currentScore <= (int)(currentMaxScore * 0.75))
 		{
-			scoreText.text = "A " + currentScore;
+			UIManager.Instance.ChangeScoreText(currentScore, "A ");
 		}
 		else if (currentScore >= (int)(currentMaxScore * 0.75))
 		{
-			scoreText.text = "S " + currentScore;
+			UIManager.Instance.ChangeScoreText(currentScore, "S ");
 		}
 	}
 	#endregion
