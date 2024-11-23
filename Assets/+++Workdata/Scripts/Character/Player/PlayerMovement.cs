@@ -253,7 +253,7 @@ public class PlayerMovement : CharacterBase
         
         rb.velocity = movementDirection;
 
-        dashCooldownImage.fillAmount = 0f;
+        //dashCooldownImage.fillAmount = 0f;
 
         StartCoroutine(WaitForDash());
     }
