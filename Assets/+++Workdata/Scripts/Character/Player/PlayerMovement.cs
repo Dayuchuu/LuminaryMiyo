@@ -107,6 +107,9 @@ public class PlayerMovement : CharacterBase
     
     private float cameraPitch;
     private float cameraRoll;
+    
+    [SerializeField] private int maxVelocityChange;
+
     #endregion
     
     #endregion 
@@ -158,6 +161,10 @@ public class PlayerMovement : CharacterBase
     private void FixedUpdate()
     {
         if (disabled) { return; }
+
+        Vector3 targetVelocity = new Vector3(inputX, 0f, inputZ);
+        
+        targetVelocity = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * targetVelocity;
         
         if (states == PlayerStates.Dash)
         {
@@ -174,28 +181,39 @@ public class PlayerMovement : CharacterBase
         }
         
         rb.AddForce(0f, gravity,0f, ForceMode.Acceleration);
+        
+        targetVelocity = transform.TransformDirection(targetVelocity) * moveSpeed;
 
-        movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration);
+        // Apply a force that attempts to reach our target velocity
+        Vector3 velocity = rb.velocity;
+        Vector3 velocityChange = (targetVelocity - velocity);
+        velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+        velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+        velocityChange.y = 0;
 
-        movementDirection = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
+        rb.AddForce(velocityChange, ForceMode.VelocityChange);
+        
+        // movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration);
+        //
+        // movementDirection = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
 
-        if (movementDirection != Vector3.zero)
-        {
-            rb.AddForce(movementDirection, ForceMode.Acceleration);
-
-            Vector3 magnitudeVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-            if (magnitudeVelocity.magnitude > moveSpeed)
-            {
-                rb.AddForce(magnitudeVelocity * -deceleration, ForceMode.Acceleration);
-            }
-        }
-        else
-        {
-            Vector3 magnitudeVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-            
-            rb.AddForce(magnitudeVelocity * -deceleration, ForceMode.Acceleration);
-        }
+        // if (movementDirection != Vector3.zero)
+        // {
+        //     rb.AddForce(movementDirection, ForceMode.Acceleration);
+        //
+        //     Vector3 magnitudeVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        //
+        //     if (magnitudeVelocity.magnitude > moveSpeed)
+        //     {
+        //         rb.AddForce(magnitudeVelocity * -deceleration, ForceMode.Acceleration);
+        //     }
+        // }
+        // else
+        // {
+        //     Vector3 magnitudeVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        //     
+        //     rb.AddForce(magnitudeVelocity * -deceleration, ForceMode.Acceleration);
+        // }
     }
 
     public void Move(InputAction.CallbackContext context)
