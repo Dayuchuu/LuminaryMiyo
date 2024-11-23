@@ -27,16 +27,12 @@ public class PlayerMovement : CharacterBase
     private PlayerStates states =  PlayerStates.Default;
     
     [SerializeField] 
-    private float acceleration = 5f;
-    
-    [SerializeField] 
-    private float deceleration = 5f;
-    
-    [SerializeField] 
     private float maxDefaultMoveSpeed = 10f;
 
     [SerializeField] 
     private float maxMoveSpeedDuringDash = 0f;
+    
+    [SerializeField] private int maxVelocityChange;
 
     [SerializeField] 
     private float jumpPower = 10f;
@@ -108,7 +104,6 @@ public class PlayerMovement : CharacterBase
     private float cameraPitch;
     private float cameraRoll;
     
-    [SerializeField] private int maxVelocityChange;
 
     #endregion
     
@@ -161,10 +156,6 @@ public class PlayerMovement : CharacterBase
     private void FixedUpdate()
     {
         if (disabled) { return; }
-
-        Vector3 targetVelocity = new Vector3(inputX, 0f, inputZ);
-        
-        targetVelocity = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * targetVelocity;
         
         if (states == PlayerStates.Dash)
         {
@@ -180,6 +171,10 @@ public class PlayerMovement : CharacterBase
             gravity = defaultGravity;
         }
         
+        Vector3 targetVelocity = new Vector3(inputX, 0f, inputZ);
+        
+        targetVelocity = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * targetVelocity;
+        
         rb.AddForce(0f, gravity,0f, ForceMode.Acceleration);
         
         targetVelocity = transform.TransformDirection(targetVelocity) * moveSpeed;
@@ -192,28 +187,6 @@ public class PlayerMovement : CharacterBase
         velocityChange.y = 0;
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
-        
-        // movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration);
-        //
-        // movementDirection = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
-
-        // if (movementDirection != Vector3.zero)
-        // {
-        //     rb.AddForce(movementDirection, ForceMode.Acceleration);
-        //
-        //     Vector3 magnitudeVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        //
-        //     if (magnitudeVelocity.magnitude > moveSpeed)
-        //     {
-        //         rb.AddForce(magnitudeVelocity * -deceleration, ForceMode.Acceleration);
-        //     }
-        // }
-        // else
-        // {
-        //     Vector3 magnitudeVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        //     
-        //     rb.AddForce(magnitudeVelocity * -deceleration, ForceMode.Acceleration);
-        // }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -242,18 +215,10 @@ public class PlayerMovement : CharacterBase
         if (states == PlayerStates.Dash) { return; }
         
         states = PlayerStates.Dash;
-
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         
-        movementDirection = new Vector3(inputX * acceleration, 0f, inputZ * acceleration) * dashPower;
-
-        movementDirection = Quaternion.AngleAxis(cameraTransform.localEulerAngles.y, Vector3.up) * movementDirection;
-        
-        movementDirection *= 2;
+        movementDirection = cameraTransform.forward * dashPower;
         
         rb.velocity = movementDirection;
-
-        //dashCooldownImage.fillAmount = 0f;
 
         StartCoroutine(WaitForDash());
     }
