@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
 	
 	private void Awake()
 	{
-		if (Instance != null)
+		if (Instance == null)
 		{
 			Instance = this;
 		}
