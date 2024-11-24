@@ -130,8 +130,6 @@ public class PlayerMovement : CharacterBase
     private void Start()
     {
         currentDashAmount = dashAmount;
-
-        currentJumpAmount = jumpAmount;
     }
 
     private void Update()
@@ -256,6 +254,8 @@ public class PlayerMovement : CharacterBase
             rb.velocity = movementDirection;
 
             currentDashAmount--;
+            
+            currentJumpAmount = jumpAmount;
 
             StartCoroutine(WaitForDash());
         }
@@ -266,8 +266,6 @@ public class PlayerMovement : CharacterBase
         if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
         {
             currentDashAmount = dashAmount;
-
-            currentJumpAmount = jumpAmount;
             
             return true;
         }
