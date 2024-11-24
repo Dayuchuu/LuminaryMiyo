@@ -7916,6 +7916,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3802460829245930385, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4592246763816529813, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: m_Material
@@ -7994,6 +7999,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
+      propertyPath: dashAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: jumpAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
       propertyPath: groundDistance
       value: 1
       objectReference: {fileID: 0}
@@ -8005,7 +8020,7 @@ PrefabInstance:
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: dashCooldownSpeed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}

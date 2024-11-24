@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -54,6 +55,12 @@ public class PlayerMovement : CharacterBase
 
     [SerializeField] 
     private float dashCooldownSpeed = 0f;
+    
+    [SerializeField] private int dashAmount = 0;
+    [SerializeField] private int currentDashAmount = 0;
+
+    [SerializeField] private int jumpAmount = 0;
+    [SerializeField] private int currentJumpAmount = 0;
 
     private float noGravity = 0f;
 
@@ -84,8 +91,6 @@ public class PlayerMovement : CharacterBase
 
     [SerializeField] 
     private Image dashCooldownImage = null;
-    
-    private float currentValue = 0f;
 
     #endregion
 
@@ -122,9 +127,18 @@ public class PlayerMovement : CharacterBase
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void Start()
+    {
+        currentDashAmount = dashAmount;
+
+        currentJumpAmount = jumpAmount;
+    }
+
     private void Update()
     {
         if (disabled) { return; }
+
+        IsGrounded();
         
         if (states == PlayerStates.Dash)
         {
@@ -200,12 +214,21 @@ public class PlayerMovement : CharacterBase
     public void Jump(InputAction.CallbackContext context)
     {
         if (disabled) { return; }
-        
-        if (!IsGrounded()) { return; }
-        
-        Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
-        
-        rb.AddForce(jumpVector, ForceMode.VelocityChange);
+
+        if (!IsGrounded() && currentJumpAmount > 0)
+        {
+            Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
+            
+            rb.AddForce(jumpVector, ForceMode.VelocityChange);
+
+            currentJumpAmount--;
+        }
+        else if (IsGrounded())
+        {
+            Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
+            
+            rb.AddForce(jumpVector, ForceMode.VelocityChange);
+        }
     }
 
     public void Dash(InputAction.CallbackContext context)
@@ -213,41 +236,45 @@ public class PlayerMovement : CharacterBase
         if (disabled) { return; }
         
         if (states == PlayerStates.Dash) { return; }
-        
-        states = PlayerStates.Dash;
-        
-        movementDirection = cameraTransform.forward * dashPower;
-        
-        rb.velocity = movementDirection;
 
-        StartCoroutine(WaitForDash());
+        if (IsGrounded())
+        {
+            states = PlayerStates.Dash;
+        
+            movementDirection = cameraTransform.forward * dashPower;
+            
+            rb.velocity = movementDirection;
+            
+            StartCoroutine(WaitForDash());
+        }
+        else if (currentDashAmount > 0 && !IsGrounded())
+        { 
+            states = PlayerStates.Dash;
+        
+            movementDirection = cameraTransform.forward * dashPower;
+            
+            rb.velocity = movementDirection;
+
+            currentDashAmount--;
+
+            StartCoroutine(WaitForDash());
+        }
     }
 
     private bool IsGrounded()
     {
         if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
         {
+            currentDashAmount = dashAmount;
+
+            currentJumpAmount = jumpAmount;
+            
             return true;
         }
         else
         {
             return false;
         }
-    }
-
-    private void CooldownForDash()
-    {
-        while (currentValue < 99.9f)
-        {
-            if (currentValue < 100)
-            {
-                currentValue *= dashCooldownSpeed * Time.deltaTime;
-            }
-        }
-
-        dashCooldownImage.fillAmount = currentValue / 100;
-
-        currentValue = 0f;
     }
     
     public void DisablePlayerActions()
