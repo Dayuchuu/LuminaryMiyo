@@ -174,7 +174,7 @@ public class PlayerMovement : CharacterBase
             gravity = noGravity;
         }
         
-        if (rb.velocity.y < -0.2f)
+        if (rb.velocity.y < 0f)
         {
             gravity = fallingGravity;
         }
@@ -217,7 +217,8 @@ public class PlayerMovement : CharacterBase
         {
             Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
             
-            rb.AddForce(jumpVector, ForceMode.VelocityChange);
+
+            rb.AddForce(jumpVector * 1.5f, ForceMode.VelocityChange);
 
             currentJumpAmount--;
         }
