@@ -12,12 +12,9 @@ public class UIManager : MonoBehaviour
 	public GameObject winScreen = null;
 	public GameObject loseScreen = null;
 	public GameObject pauseScreen = null;
-	
-	[SerializeField] private Button play = null;
-	[SerializeField] private Button settings = null;
-	[SerializeField] private Button mainMenu = null;
 
 	public TextMeshProUGUI scoreText = null;
+	public TextMeshProUGUI timeText = null;
 	
 	#endregion
 
@@ -28,6 +25,10 @@ public class UIManager : MonoBehaviour
 		if (Instance == null)
 		{
 			Instance = this;
+		}
+		else
+		{
+			Destroy(gameObject);
 		}
 	}
 

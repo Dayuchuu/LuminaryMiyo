@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -9,8 +7,7 @@ public class Timer : MonoBehaviour
    #region Variables
 
    public int time = 0;
-
-   [SerializeField] 
+   
    private TextMeshProUGUI timeText;
 
    #endregion
@@ -19,6 +16,8 @@ public class Timer : MonoBehaviour
    
    private void Awake()
    {
+      timeText = UIManager.Instance.timeText;
+      
       timeText.text = time.ToString();
       
       StartCoroutine(CountDown());

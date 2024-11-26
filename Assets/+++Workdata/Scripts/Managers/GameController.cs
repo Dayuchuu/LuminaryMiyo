@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -10,6 +7,7 @@ public class GameController : MonoBehaviour
     public enum GameStates
     {
         MainMenu,
+        Loading,
         Level
     }
     
@@ -18,14 +16,11 @@ public class GameController : MonoBehaviour
     #region Variables
 
     public static GameController Instance;
-
-    public PlayerMovement player = null;
+    
+    public GameStates gameStates;
     
     public int coinPoints = 0;
-
     public int timePoints = 0;
-
-    public GameStates gameStates;
     
     #endregion
 
@@ -36,12 +31,12 @@ public class GameController : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            
-            DontDestroyOnLoad(this);
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
+
+            return;
         }
     }
 

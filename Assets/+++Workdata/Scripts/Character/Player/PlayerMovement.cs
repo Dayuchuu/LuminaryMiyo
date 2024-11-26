@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,50 +26,30 @@ public class PlayerMovement : CharacterBase
     [SerializeField]
     private PlayerStates states =  PlayerStates.Default;
     
-    [SerializeField] 
-    private float maxDefaultMoveSpeed = 10f;
-
-    [SerializeField] 
-    private float maxMoveSpeedDuringDash = 0f;
-    
+    [SerializeField] private float maxDefaultMoveSpeed = 10f;
     [SerializeField] private int maxVelocityChange;
 
-    [SerializeField] 
-    private float jumpPower = 10f;
 
-    [SerializeField] 
-    private float dashPower = 5f;
-    
-    [SerializeField] 
-    private float defaultGravity = -9.81f;
-    
-    [SerializeField] 
-    private float fallingGravity = -9.81f;
-
-    [SerializeField] 
-    private float groundDistance = 0f;
-
-    [SerializeField]
-    private float dashTimer = 0f;
-
-    [SerializeField] 
-    private float dashCooldownSpeed = 0f;
-    
+    [SerializeField] private float maxMoveSpeedDuringDash = 0f;
+    [SerializeField] private float dashPower = 5f;
+    [SerializeField] private float dashTimer = 0f;
     [SerializeField] private int dashAmount = 0;
     [SerializeField] private int currentDashAmount = 0;
-
+    private bool canDash = true;
+    
+    [SerializeField] private float jumpPower = 10f;
+    [SerializeField] private float defaultGravity = -9.81f;
+    [SerializeField] private float fallingGravity = -9.81f;
+    [SerializeField] private float groundDistance = 0f;
     [SerializeField] private int jumpAmount = 0;
-    [SerializeField] private int currentJumpAmount = 0;
-
+    [SerializeField] private LayerMask groundMask;
+    private int currentJumpAmount = 0;
     private float noGravity = 0f;
-
+    
     [Space]
     public bool disabled = false;
-
-    [SerializeField] private bool canDash = true;
     
-    [SerializeField]
-    private LayerMask groundMask;
+    
     
     private Rigidbody rb;
     
@@ -87,13 +66,6 @@ public class PlayerMovement : CharacterBase
     
     #endregion
 
-    #region Player Ui
-
-    [SerializeField] 
-    private Image dashCooldownImage = null;
-
-    #endregion
-
     #region CameraValues
     
     [Header("Camera Variables")]
@@ -108,6 +80,8 @@ public class PlayerMovement : CharacterBase
     
     private float cameraPitch;
     private float cameraRoll;
+
+    [SerializeField] private float yAxis;
     
 
     #endregion
@@ -135,8 +109,6 @@ public class PlayerMovement : CharacterBase
     private void Update()
     {
         if (disabled) { return; }
-
-        IsGrounded();
         
         if (states == PlayerStates.Dash)
         {
@@ -174,7 +146,7 @@ public class PlayerMovement : CharacterBase
             gravity = noGravity;
         }
         
-        if (rb.velocity.y < 0f)
+        if (rb.velocity.y < 0.5f)
         {
             gravity = fallingGravity;
         }
@@ -190,8 +162,7 @@ public class PlayerMovement : CharacterBase
         rb.AddForce(0f, gravity,0f, ForceMode.Acceleration);
         
         targetVelocity = transform.TransformDirection(targetVelocity) * moveSpeed;
-
-        // Apply a force that attempts to reach our target velocity
+        
         Vector3 velocity = rb.velocity;
         Vector3 velocityChange = (targetVelocity - velocity);
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
@@ -217,7 +188,6 @@ public class PlayerMovement : CharacterBase
         {
             Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
             
-
             rb.AddForce(jumpVector * 1.5f, ForceMode.VelocityChange);
 
             currentJumpAmount--;
@@ -225,6 +195,8 @@ public class PlayerMovement : CharacterBase
         else if (IsGrounded())
         {
             Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
+
+            currentDashAmount = dashAmount;
             
             rb.AddForce(jumpVector, ForceMode.VelocityChange);
         }
@@ -266,8 +238,6 @@ public class PlayerMovement : CharacterBase
     {
         if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
         {
-            currentDashAmount = dashAmount;
-            
             return true;
         }
         else

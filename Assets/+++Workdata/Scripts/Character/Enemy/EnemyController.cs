@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -20,8 +17,6 @@ public class EnemyController : MonoBehaviour
 		if (Instance == null)
 		{
 			Instance = this;
-			
-			DontDestroyOnLoad(this);
 		}
 		else
 		{
