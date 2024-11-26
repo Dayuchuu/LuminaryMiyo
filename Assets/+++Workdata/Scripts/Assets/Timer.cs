@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -14,11 +15,16 @@ public class Timer : MonoBehaviour
 
    #region Methods
    
-   private void Awake()
+   private void Start()
    {
       timeText = UIManager.Instance.timeText;
       
       timeText.text = time.ToString();
+
+      if (GameController.Instance.gameStates == GameController.GameStates.Level)
+      {
+         timeText.gameObject.SetActive(true);
+      }
       
       StartCoroutine(CountDown());
    }

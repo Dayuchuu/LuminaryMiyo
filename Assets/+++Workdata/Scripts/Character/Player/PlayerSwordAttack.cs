@@ -42,7 +42,7 @@ public class PlayerSwordAttack : MonoBehaviour
 
    private void Update()
    {
-      Debug.DrawRay(transform.position, transform.forward * attackDistance);
+      Debug.DrawRay(transform.parent.position, transform.parent.forward * attackDistance);
    }
    #endregion
 } 
