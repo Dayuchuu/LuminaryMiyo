@@ -45,6 +45,8 @@ public class PlayerMovement : CharacterBase
     private int currentJumpAmount = 0;
     private float noGravity = 0f;
 
+    
+
     [SerializeField] private AnimationCurve animationCurve;
     
     [Space]
@@ -56,8 +58,15 @@ public class PlayerMovement : CharacterBase
     
     private float moveSpeed = 0f;
     
-    private float gravity = 0f;
+    //changed to serialize field so i can see shit in the inspector
+    [SerializeField] private float gravity = 0f;
+
+    //added to test falling state in inspector, practically useless
+    [SerializeField] private bool falling = false;
+    //rate by which the gravity gets reduced once falling
+    [SerializeField] private float gravityReduction = 1f;
     
+
     private float inputX;
     
     private float inputZ;
@@ -131,6 +140,23 @@ public class PlayerMovement : CharacterBase
         cameraRoll += mouseDelta.x * rotationSensibility;
 
         cameraTransform.localEulerAngles = new Vector3(cameraPitch, cameraRoll, 0f);
+
+
+
+        //increases gravity over time once the player starts falling
+        if (rb.velocity.y < 0f && !IsGrounded())
+        {
+            falling = true;
+            gravity -= gravityReduction * Time.deltaTime;
+        }
+        else
+        {
+            falling = false;
+            gravity = defaultGravity;
+        }
+
+
+
     }
 
     private void FixedUpdate()
@@ -141,20 +167,16 @@ public class PlayerMovement : CharacterBase
         {
             gravity = noGravity;
         }
+        else
+        {
+            //gravity = defaultGravity;
+        }
 
         if ( rb.velocity.y >= 15f)
         {
             //gravity = animationCurve.Evaluate()
         }
         
-        if (rb.velocity.y < -0.2f)
-        {
-            gravity = fallingGravity;
-        }
-        else
-        {
-            gravity = defaultGravity;
-        }
         
         Vector3 targetVelocity = new Vector3(inputX, 0f, inputZ);
         
@@ -171,6 +193,7 @@ public class PlayerMovement : CharacterBase
         velocityChange.y = 0;
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
+
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -200,6 +223,9 @@ public class PlayerMovement : CharacterBase
             currentDashAmount = dashAmount;
             
             rb.velocity = jumpVector;
+
+            //set gravity to default once grounded
+            gravity = defaultGravity;
         }
 
         if (context.canceled && rb.velocity.y > 0f)
@@ -207,6 +233,8 @@ public class PlayerMovement : CharacterBase
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * 0.5f, rb.velocity.z);
         }
     }
+
+
 
     public void Dash(InputAction.CallbackContext context)
     {
@@ -271,6 +299,9 @@ public class PlayerMovement : CharacterBase
         yield return new WaitForSeconds(dashTimer);
         
         states = PlayerStates.Default;
+
+        //set gravity back to default after dash is over
+        gravity = defaultGravity;
     }
 
     #endregion
