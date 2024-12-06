@@ -32,6 +32,7 @@ public class PlayerInputManager : MonoBehaviour
         inputMap.Player.Movement.canceled += playerMovement.Move;
 
         inputMap.Player.Jump.performed += playerMovement.Jump;
+        inputMap.Player.Jump.canceled += playerMovement.Jump;
         
         inputMap.Player.Dash.performed += playerMovement.Dash;
 
@@ -46,6 +47,7 @@ public class PlayerInputManager : MonoBehaviour
         inputMap.Player.Movement.canceled -= playerMovement.Move;
         
         inputMap.Player.Jump.performed -= playerMovement.Jump;
+        inputMap.Player.Jump.canceled -= playerMovement.Jump;
 
         inputMap.Player.Dash.performed -= playerMovement.Dash;
     }

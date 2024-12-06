@@ -21,14 +21,13 @@ public class PlayerMovement : CharacterBase
 
     [Header("Player Variables")]
 
-    #region Movement Varaibles
+    #region Movement Variables
     
     [SerializeField]
     private PlayerStates states =  PlayerStates.Default;
     
     [SerializeField] private float maxDefaultMoveSpeed = 10f;
     [SerializeField] private int maxVelocityChange;
-
 
     [SerializeField] private float maxMoveSpeedDuringDash = 0f;
     [SerializeField] private float dashPower = 5f;
@@ -186,11 +185,11 @@ public class PlayerMovement : CharacterBase
     {
         if (disabled) { return; }
 
-        if (!IsGrounded() && currentJumpAmount > 0)
+        if (!IsGrounded() && currentJumpAmount > 0 && context.performed)
         {
             Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
-            
-            rb.AddForce(jumpVector * 1.5f, ForceMode.VelocityChange);
+
+            rb.velocity = jumpVector;
 
             currentJumpAmount--;
         }
@@ -200,7 +199,12 @@ public class PlayerMovement : CharacterBase
 
             currentDashAmount = dashAmount;
             
-            rb.AddForce(jumpVector, ForceMode.VelocityChange);
+            rb.velocity = jumpVector;
+        }
+
+        if (context.canceled && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * 0.5f, rb.velocity.z);
         }
     }
 

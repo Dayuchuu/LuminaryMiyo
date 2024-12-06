@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,9 +10,9 @@ public class PlayerSwordAttack : MonoBehaviour
 
    [SerializeField] private LayerMask attackLayer = 0;
 
-   private Animator swordAnim = null;
+   [SerializeField] private Transform cameraTransform = null;
 
-   private RaycastHit hit;
+   private Animator swordAnim = null;
    
    #endregion
 
@@ -22,24 +23,24 @@ public class PlayerSwordAttack : MonoBehaviour
       swordAnim = GetComponent<Animator>();
    }
 
+   private void OnTriggerEnter(Collider other)
+   {
+      if (other.CompareTag("Enemy"))
+      {
+         other.GetComponent<CharacterBase>().healthPoints--;
+         
+         other.GetComponent<MeshRenderer>().material.color = Color.red;
+         
+         if (other.GetComponent<EnemyShooting>().healthPoints <= 0)
+         {
+            other.gameObject.gameObject.SetActive(false);
+         }
+      }
+   }
+
    public void Attack(InputAction.CallbackContext context)
    {
       swordAnim.SetTrigger("Attacks");
-      
-      //Physics.BoxCast()
-      
-      if (Physics.Raycast(transform.parent.position, transform.parent.forward, out hit, attackDistance, attackLayer))
-      {
-         GameObject target = hit.transform.gameObject;
-         target.GetComponent<EnemyShooting>().healthPoints--;
-         
-         target.GetComponent<MeshRenderer>().material.color = Color.red;
-
-         if (target.GetComponent<EnemyShooting>().healthPoints <= 0)
-         {
-            target.SetActive(false);
-         }
-      }
    }
 
    private void Update()
