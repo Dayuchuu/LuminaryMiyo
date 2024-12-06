@@ -39,6 +39,8 @@ public class Goal : MonoBehaviour
 			UIManager.Instance.OpenMenu(UIManager.Instance.winScreen, 0f);
 
 			player.DisablePlayerActions();
+			
+			Cursor.lockState = CursorLockMode.None;
 
 			GetMaxScore();
 			

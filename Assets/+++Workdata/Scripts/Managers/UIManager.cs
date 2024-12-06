@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -77,7 +76,7 @@ public class UIManager : MonoBehaviour
 	
 	public void MainMenu()
 	{
-		SceneManager.LoadScene(0);
+		//SceneLoader.Instance.LoadScene();
 
 		Time.timeScale = 1f;
 	}

@@ -26,6 +26,8 @@ public class PlayerSwordAttack : MonoBehaviour
    {
       swordAnim.SetTrigger("Attacks");
       
+      //Physics.BoxCast()
+      
       if (Physics.Raycast(transform.parent.position, transform.parent.forward, out hit, attackDistance, attackLayer))
       {
          GameObject target = hit.transform.gameObject;

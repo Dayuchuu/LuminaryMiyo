@@ -36,6 +36,8 @@ public class Bullet : MonoBehaviour
 
 			if (other.gameObject.GetComponent<PlayerMovement>().healthPoints <= 0)
 			{
+				Cursor.lockState = CursorLockMode.None;
+				
 				UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, 0f);
 			}
 			

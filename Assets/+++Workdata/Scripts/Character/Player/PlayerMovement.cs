@@ -45,11 +45,11 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private LayerMask groundMask;
     private int currentJumpAmount = 0;
     private float noGravity = 0f;
+
+    [SerializeField] private AnimationCurve animationCurve;
     
     [Space]
     public bool disabled = false;
-    
-    
     
     private Rigidbody rb;
     
@@ -80,10 +80,7 @@ public class PlayerMovement : CharacterBase
     
     private float cameraPitch;
     private float cameraRoll;
-
-    [SerializeField] private float yAxis;
     
-
     #endregion
     
     #endregion 
@@ -145,8 +142,13 @@ public class PlayerMovement : CharacterBase
         {
             gravity = noGravity;
         }
+
+        if ( rb.velocity.y >= 15f)
+        {
+            //gravity = animationCurve.Evaluate()
+        }
         
-        if (rb.velocity.y < 0.5f)
+        if (rb.velocity.y < -0.2f)
         {
             gravity = fallingGravity;
         }
