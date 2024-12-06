@@ -57,15 +57,18 @@ public class PlayerMovement : CharacterBase
     private Vector3 movementDirection = Vector3.zero;
     
     private float moveSpeed = 0f;
-    
+
+
+    [Header("Gravity Stuff")]
     //changed to serialize field so i can see shit in the inspector
     [SerializeField] private float gravity = 0f;
-
     //added to test falling state in inspector, practically useless
     [SerializeField] private bool falling = false;
     //rate by which the gravity gets reduced once falling
     [SerializeField] private float gravityReduction = 1f;
-    
+    [SerializeField] private float maxGravity = -30f;
+
+    [Space]
 
     private float inputX;
     
@@ -147,16 +150,16 @@ public class PlayerMovement : CharacterBase
         if (rb.velocity.y < 0f && !IsGrounded())
         {
             falling = true;
-            gravity -= gravityReduction * Time.deltaTime;
+            if (gravity > maxGravity)
+            {
+                gravity -= gravityReduction * Time.deltaTime;
+            }
         }
         else
         {
             falling = false;
             gravity = defaultGravity;
         }
-
-
-
     }
 
     private void FixedUpdate()
