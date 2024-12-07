@@ -66,7 +66,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 90
   orthographic: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   fallingGravity: -19.62
   groundDistance: 1
   jumpAmount: 1
+  boxCastSize: {x: 1, y: 0.5, z: 1}
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -237,11 +238,17 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   disabled: 0
+  movementDirection: {x: 0, y: 0, z: 0}
+  gravity: 0
+  falling: 0
+  gravityReduction: 15
+  maxGravity: -30
   cameraTransform: {fileID: 5212311064682074393}
   rotationSensibility: 0.25
   maxCameraPitch: 80
   invertCameraPitch: 1
-  yAxis: 0
+  jumpGracePeriod: 0
+  jumpButtonPressed: 0
 --- !u!136 &4592246763816529813
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -261,7 +268,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.5
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -315,7 +322,7 @@ GameObject:
   - component: {fileID: 4915598094983698287}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,10 +421,30 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7468983332623729612, guid: 427ec51a2b305b440a9a7a15de39abd2,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3109033862335290967, guid: 427ec51a2b305b440a9a7a15de39abd2,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2590470702234203892, guid: 427ec51a2b305b440a9a7a15de39abd2,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 427ec51a2b305b440a9a7a15de39abd2,
         type: 3}
       propertyPath: m_Name
       value: MagicalWeapon_Lowpoly_M
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339682756743880114, guid: 427ec51a2b305b440a9a7a15de39abd2,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -475,6 +502,7 @@ MonoBehaviour:
   attackLayer:
     serializedVersion: 2
     m_Bits: 8388608
+  cameraTransform: {fileID: 0}
 --- !u!4 &605254427155739686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 427ec51a2b305b440a9a7a15de39abd2,

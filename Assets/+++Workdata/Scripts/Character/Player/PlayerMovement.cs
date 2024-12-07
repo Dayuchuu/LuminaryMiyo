@@ -1,4 +1,6 @@
+using JetBrains.Annotations;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -24,7 +26,7 @@ public class PlayerMovement : CharacterBase
     #region Movement Variables
     
     [SerializeField]
-    private PlayerStates states =  PlayerStates.Default;
+    private PlayerStates states = PlayerStates.Default;
     
     [SerializeField] private float maxDefaultMoveSpeed = 10f;
     [SerializeField] private int maxVelocityChange;
@@ -41,12 +43,15 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private float fallingGravity = -9.81f;
     [SerializeField] private float groundDistance = 0f;
     [SerializeField] private int jumpAmount = 0;
+
+    [SerializeField] private Vector3 boxCastSize;
     [SerializeField] private LayerMask groundMask;
+
+
     private int currentJumpAmount = 0;
     private float noGravity = 0f;
 
     
-
     [SerializeField] private AnimationCurve animationCurve;
     
     [Space]
@@ -54,7 +59,8 @@ public class PlayerMovement : CharacterBase
     
     private Rigidbody rb;
     
-    private Vector3 movementDirection = Vector3.zero;
+    //serialize fielded
+    [SerializeField] private Vector3 movementDirection = Vector3.zero;
     
     private float moveSpeed = 0f;
 
@@ -62,17 +68,16 @@ public class PlayerMovement : CharacterBase
     [Header("Gravity Stuff")]
     //changed to serialize field so i can see shit in the inspector
     [SerializeField] private float gravity = 0f;
-    //added to test falling state in inspector, practically useless
-    [SerializeField] private bool falling = false;
+
     //rate by which the gravity gets reduced once falling
     [SerializeField] private float gravityReduction = 1f;
     [SerializeField] private float maxGravity = -30f;
 
-    [Space]
 
-    private float inputX;
-    
+    [Space]
+    private float inputX; 
     private float inputZ;
+
     #endregion
     
     #endregion
@@ -91,21 +96,19 @@ public class PlayerMovement : CharacterBase
     
     private float cameraPitch;
     private float cameraRoll;
-    
+
+
     #endregion
-    
-    #endregion 
+
+    #endregion
 
     #region Methods
-    
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-
         gravity = defaultGravity;
-
         moveSpeed = maxDefaultMoveSpeed;
-
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -113,6 +116,9 @@ public class PlayerMovement : CharacterBase
     {
         currentDashAmount = dashAmount;
     }
+
+
+
 
     private void Update()
     {
@@ -129,6 +135,7 @@ public class PlayerMovement : CharacterBase
         
         Vector2 mouseDelta = Mouse.current.delta.ReadValue();
         
+        //inverts the vertical camera movement
         if(invertCameraPitch)
         {
             cameraPitch -= mouseDelta.y * rotationSensibility;
@@ -145,11 +152,10 @@ public class PlayerMovement : CharacterBase
         cameraTransform.localEulerAngles = new Vector3(cameraPitch, cameraRoll, 0f);
 
 
-
         //increases gravity over time once the player starts falling
-        if (rb.velocity.y < 0f && !IsGrounded())
+        if (rb.velocity.y < 0f && !IsGrounded() && states != PlayerStates.Dash)
         {
-            falling = true;
+            //if the character is falling slowly increase gravity over time
             if (gravity > maxGravity)
             {
                 gravity -= gravityReduction * Time.deltaTime;
@@ -157,10 +163,19 @@ public class PlayerMovement : CharacterBase
         }
         else
         {
-            falling = false;
+            //if the character isn't falling set gravity back to normal
             gravity = defaultGravity;
         }
+
+
+        //testing
+        movementDirection = cameraTransform.forward;
+
+       
     }
+
+
+
 
     private void FixedUpdate()
     {
@@ -169,6 +184,7 @@ public class PlayerMovement : CharacterBase
         if (states == PlayerStates.Dash)
         {
             gravity = noGravity;
+            rb.useGravity = false;
         }
         else
         {
@@ -191,14 +207,18 @@ public class PlayerMovement : CharacterBase
         
         Vector3 velocity = rb.velocity;
         Vector3 velocityChange = (targetVelocity - velocity);
+
+        //changes velocity of the rigidbody, e.g. moves the player
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
         velocityChange.y = 0;
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
-
     }
 
+
+
+    // --- MOVE METHOD --- //
     public void Move(InputAction.CallbackContext context)
     {
         if (disabled) { return; }
@@ -207,30 +227,33 @@ public class PlayerMovement : CharacterBase
         inputZ = context.ReadValue<Vector3>().z;
     }
 
+
+
+    // --- JUMPT METHOD --- //
     public void Jump(InputAction.CallbackContext context)
     {
         if (disabled) { return; }
 
-        if (!IsGrounded() && currentJumpAmount > 0 && context.performed)
+        //jump on ground
+        else if (context.performed && IsGrounded())
         {
-            Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
-
-            rb.velocity = jumpVector;
-
-            currentJumpAmount--;
-        }
-        else if (IsGrounded())
-        {
-            Vector3 jumpVector = new Vector3(0f, jumpPower, 0f);
-
-            currentDashAmount = dashAmount;
-            
-            rb.velocity = jumpVector;
+            rb.velocity = new Vector3(0f, jumpPower, 0f);
 
             //set gravity to default once grounded
             gravity = defaultGravity;
+            currentDashAmount = dashAmount;
         }
 
+        //jump in air if Jump amount is larger than 0
+        if (context.performed && !IsGrounded() && currentJumpAmount > 0) 
+        {
+            rb.velocity = new Vector3(0f, jumpPower, 0f);
+
+            //reduce jump amount
+            currentJumpAmount--;
+        }
+
+        //jump button released
         if (context.canceled && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * 0.5f, rb.velocity.z);
@@ -239,6 +262,7 @@ public class PlayerMovement : CharacterBase
 
 
 
+    // --- DASH METHOD --- //
     public void Dash(InputAction.CallbackContext context)
     {
         if (disabled) { return; }
@@ -248,20 +272,33 @@ public class PlayerMovement : CharacterBase
         if (IsGrounded())
         {
             states = PlayerStates.Dash;
-        
-            movementDirection = cameraTransform.forward * dashPower;
-            
-            rb.velocity = movementDirection;
-            
+
+            Debug.Log("Character dashing on ground");
+
+            //movementDirection = cameraTransform.forward * dashPower;
+            //rb.velocity = movementDirection * dashPower;
+            rb.AddForce(cameraTransform.forward, ForceMode.Impulse);
+
+
+
+
+
+
             StartCoroutine(WaitForDash());
         }
         else if (currentDashAmount > 0 && !IsGrounded())
         { 
             states = PlayerStates.Dash;
-        
-            movementDirection = cameraTransform.forward * dashPower;
-            
-            rb.velocity = movementDirection;
+
+            Debug.Log("Character dashing in air");
+
+            //movementDirection = cameraTransform.forward * dashPower;       
+            //rb.velocity = movementDirection * dashPower;
+            rb.AddForce(cameraTransform.forward, ForceMode.Impulse);
+
+
+
+
 
             currentDashAmount--;
             
@@ -271,9 +308,24 @@ public class PlayerMovement : CharacterBase
         }
     }
 
+
+
+
+
     private bool IsGrounded()
     {
-        if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
+        /*if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }*/
+
+
+
+        if (Physics.BoxCast(transform.position, boxCastSize, Vector3.down, Quaternion.identity, boxCastSize.y, groundMask))
         {
             return true;
         }
@@ -281,8 +333,18 @@ public class PlayerMovement : CharacterBase
         {
             return false;
         }
+
     }
-    
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position, boxCastSize);
+        Gizmos.DrawLine(cameraTransform.position, cameraTransform.forward);
+    }
+
+
+
+
     public void DisablePlayerActions()
     {
         disabled = true;
@@ -305,6 +367,7 @@ public class PlayerMovement : CharacterBase
 
         //set gravity back to default after dash is over
         gravity = defaultGravity;
+        rb.useGravity = true;
     }
 
     #endregion

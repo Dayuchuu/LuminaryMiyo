@@ -6117,6 +6117,21 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3802460829245930385, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802460829245930385, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592246763816529813, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4915598094983698287, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6125,7 +6140,7 @@ PrefabInstance:
     - target: {fileID: 4915598094983698287, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.31
+      value: 1.228
       objectReference: {fileID: 0}
     - target: {fileID: 4915598094983698287, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
@@ -6181,6 +6196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483208606933732394, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
