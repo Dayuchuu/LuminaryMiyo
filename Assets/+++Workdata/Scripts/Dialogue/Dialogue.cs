@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
@@ -12,12 +13,15 @@ public class Dialogue : MonoBehaviour
         public string speaker;
         [TextArea(3, 10)]
         public string line;
+        public Sprite portrait;
     }
 
     [SerializeField] private DialogueData[] dialogueData;
 
     [SerializeField] private TextMeshProUGUI dialogueTextComponent;
     [SerializeField] private TextMeshProUGUI speakerTextComponent;
+    [SerializeField] private Image speakerPortrait;
+
 
     [SerializeField] private float textSpeed;
 
@@ -27,7 +31,8 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         dialogueTextComponent.text = string.Empty;
-        speakerTextComponent.text = string.Empty;   
+        speakerTextComponent.text = string.Empty;
+        speakerPortrait.sprite = null;
         StartDialogue();
     }
 
@@ -48,6 +53,7 @@ public class Dialogue : MonoBehaviour
                 StopAllCoroutines();
                 dialogueTextComponent.text = dialogueData[dialogueDataIndex].line;
                 speakerTextComponent.text = dialogueData[dialogueDataIndex].speaker;
+                speakerPortrait.sprite = dialogueData[dialogueDataIndex].portrait;
             }
         }
     }
@@ -66,9 +72,9 @@ public class Dialogue : MonoBehaviour
     {
         foreach (char c in dialogueData[dialogueDataIndex].line.ToCharArray())
         {
-            speakerTextComponent.text = dialogueData[dialogueDataIndex].speaker;
-
             dialogueTextComponent.text += c;
+            speakerTextComponent.text = dialogueData[dialogueDataIndex].speaker;
+            speakerPortrait.sprite = dialogueData[dialogueDataIndex].portrait;
             yield return new WaitForSeconds(textSpeed);
         }
     }
@@ -81,6 +87,7 @@ public class Dialogue : MonoBehaviour
             dialogueDataIndex++;
             dialogueTextComponent.text = string.Empty;
             speakerTextComponent.text= string.Empty;
+            speakerPortrait.sprite = null;
             StartCoroutine (TypeLine());
         }
 
