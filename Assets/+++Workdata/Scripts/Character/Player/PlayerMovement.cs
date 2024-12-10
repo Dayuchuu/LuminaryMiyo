@@ -116,10 +116,7 @@ public class PlayerMovement : CharacterBase
     {
         currentDashAmount = dashAmount;
     }
-
-
-
-
+    
     private void Update()
     {
         if (disabled) { return; }
@@ -170,13 +167,8 @@ public class PlayerMovement : CharacterBase
 
         //testing
         movementDirection = cameraTransform.forward;
-
-       
     }
-
-
-
-
+    
     private void FixedUpdate()
     {
         if (disabled) { return; }
@@ -185,17 +177,9 @@ public class PlayerMovement : CharacterBase
         {
             gravity = noGravity;
             rb.useGravity = false;
-        }
-        else
-        {
-            //gravity = defaultGravity;
-        }
 
-        if ( rb.velocity.y >= 15f)
-        {
-            //gravity = animationCurve.Evaluate()
+            return;
         }
-        
         
         Vector3 targetVelocity = new Vector3(inputX, 0f, inputZ);
         
@@ -207,17 +191,15 @@ public class PlayerMovement : CharacterBase
         
         Vector3 velocity = rb.velocity;
         Vector3 velocityChange = (targetVelocity - velocity);
-
+        
         //changes velocity of the rigidbody, e.g. moves the player
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
         velocityChange.y = 0;
-
+        
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
     }
-
-
-
+    
     // --- MOVE METHOD --- //
     public void Move(InputAction.CallbackContext context)
     {
@@ -226,16 +208,14 @@ public class PlayerMovement : CharacterBase
         inputX = context.ReadValue<Vector3>().x;
         inputZ = context.ReadValue<Vector3>().z;
     }
-
-
-
-    // --- JUMPT METHOD --- //
+    
+    // --- JUMP METHOD --- //
     public void Jump(InputAction.CallbackContext context)
     {
         if (disabled) { return; }
 
         //jump on ground
-        else if (context.performed && IsGrounded())
+        if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector3(0f, jumpPower, 0f);
 
@@ -243,9 +223,8 @@ public class PlayerMovement : CharacterBase
             gravity = defaultGravity;
             currentDashAmount = dashAmount;
         }
-
         //jump in air if Jump amount is larger than 0
-        if (context.performed && !IsGrounded() && currentJumpAmount > 0) 
+        else if (context.performed && !IsGrounded() && currentJumpAmount > 0) 
         {
             rb.velocity = new Vector3(0f, jumpPower, 0f);
 
@@ -273,33 +252,28 @@ public class PlayerMovement : CharacterBase
         {
             states = PlayerStates.Dash;
 
+            rb.velocity = Vector3.zero;
+
             Debug.Log("Character dashing on ground");
 
             //movementDirection = cameraTransform.forward * dashPower;
             //rb.velocity = movementDirection * dashPower;
-            rb.AddForce(cameraTransform.forward, ForceMode.Impulse);
-
-
-
-
-
-
+            rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
+            
             StartCoroutine(WaitForDash());
         }
         else if (currentDashAmount > 0 && !IsGrounded())
         { 
             states = PlayerStates.Dash;
+            
+            rb.velocity = Vector3.zero;
 
             Debug.Log("Character dashing in air");
 
             //movementDirection = cameraTransform.forward * dashPower;       
             //rb.velocity = movementDirection * dashPower;
-            rb.AddForce(cameraTransform.forward, ForceMode.Impulse);
-
-
-
-
-
+            rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
+            
             currentDashAmount--;
             
             currentJumpAmount = jumpAmount;
@@ -307,11 +281,7 @@ public class PlayerMovement : CharacterBase
             StartCoroutine(WaitForDash());
         }
     }
-
-
-
-
-
+    
     private bool IsGrounded()
     {
         /*if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
@@ -322,9 +292,7 @@ public class PlayerMovement : CharacterBase
         {
             return false;
         }*/
-
-
-
+        
         if (Physics.BoxCast(transform.position, boxCastSize, Vector3.down, Quaternion.identity, boxCastSize.y, groundMask))
         {
             return true;
@@ -341,10 +309,7 @@ public class PlayerMovement : CharacterBase
         Gizmos.DrawWireCube(transform.position, boxCastSize);
         Gizmos.DrawLine(cameraTransform.position, cameraTransform.forward);
     }
-
-
-
-
+    
     public void DisablePlayerActions()
     {
         disabled = true;

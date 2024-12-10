@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyShooting : CharacterBase
@@ -8,33 +10,50 @@ public class EnemyShooting : CharacterBase
 	[SerializeField] 
 	private Transform bulletSpawnPoint = null;
 
-	[SerializeField] 
-	private float bulletSpawnCooldown = 0f;
+	[SerializeField] private float bulletSpawnCooldown = 0f;
+	
+	[SerializeField] private float distance;
 
 	private Coroutine bulletSpawn;
-	
-	public bool inRange = false;
 
+	private Transform playerTransform = null;
+
+	private bool nextShotPossible = false;
+
+	private float waitUntilNextShot = 0f;
+	
+	[SerializeField] float shootCooldown = 0f;
+	
 	#endregion
 
 	#region Methods
-	
-	private void OnTriggerEnter(Collider other)
-	{
-		if(other.CompareTag("Player"))
-		{
-			inRange = true;
 
-			StartCoroutine(SpawnBullet());
-		}
+	private void Awake()
+	{
+		waitUntilNextShot = shootCooldown;
+
+		playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
 	}
 
-	private void OnTriggerExit(Collider other)
+	private void Update()
 	{
-		if (other.CompareTag("Player"))
+		if (!nextShotPossible)
 		{
-			inRange = false;
-			
+			waitUntilNextShot -= Time.deltaTime;
+
+			if (waitUntilNextShot <= 0f)
+			{
+				nextShotPossible = true;
+				waitUntilNextShot = shootCooldown;
+			}
+		}
+		
+		if(Vector3.Distance(transform.position, playerTransform.position) < distance  && nextShotPossible)
+		{
+			StartCoroutine(SpawnBullet());
+		}
+		else if (Vector3.Distance(transform.position, playerTransform.position) > distance)
+		{
 			StopCoroutine(SpawnBullet());
 		}
 	}
@@ -53,14 +72,11 @@ public class EnemyShooting : CharacterBase
 
 	private IEnumerator SpawnBullet()
 	{
-		if (inRange)
-		{
-			InstantiateBullet();
+		InstantiateBullet();
 
-			yield return new WaitForSeconds(bulletSpawnCooldown);
+		yield return new WaitForSeconds(bulletSpawnCooldown);
 
-			StartCoroutine(SpawnBullet());
-		}
+		StartCoroutine(SpawnBullet());
 	}
 	#endregion
 }
