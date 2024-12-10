@@ -165,8 +165,13 @@ public class PlayerMovement : CharacterBase
         }
 
 
-        //testing
-        movementDirection = cameraTransform.forward;
+        if (IsGrounded() && currentDashAmount == 0)
+        {
+            currentDashAmount = 1;
+        }
+
+
+
     }
     
     private void FixedUpdate()
@@ -248,51 +253,71 @@ public class PlayerMovement : CharacterBase
         
         if (states == PlayerStates.Dash) { return; }
 
-        if (IsGrounded())
+        //if on ground and not moving, move in direction of camera
+        //checks if player is not moving by checking if the movement inputs return a value
+        if (IsGrounded() && inputX == 0 && inputZ == 0)
         {
+            Debug.Log("on ground and not moving");
             states = PlayerStates.Dash;
-
             rb.velocity = Vector3.zero;
 
-            Debug.Log("Character dashing on ground");
+            movementDirection = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+            movementDirection.Normalize();
 
-            //movementDirection = cameraTransform.forward * dashPower;
-            //rb.velocity = movementDirection * dashPower;
             rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
             
             StartCoroutine(WaitForDash());
         }
-        else if (currentDashAmount > 0 && !IsGrounded())
-        { 
+        //if on ground and moving, move in current movement direction 
+        else if (IsGrounded() && rb.velocity != Vector3.zero)
+        {
+            Debug.Log("on ground and moving");
+            states = PlayerStates.Dash;
+
+            movementDirection = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+            movementDirection.Normalize();
+            rb.AddForce(movementDirection * dashPower, ForceMode.VelocityChange);
+
+            StartCoroutine(WaitForDash());
+        }
+        //if in air and not moving, move in direction of camera
+        //checks if player is not moving by checking if the movement inputs return a value
+        else if (currentDashAmount > 0 && !IsGrounded() && inputX == 0 && inputZ == 0)
+        {
+            Debug.Log("in air and not moving");
             states = PlayerStates.Dash;
             
             rb.velocity = Vector3.zero;
 
-            Debug.Log("Character dashing in air");
-
-            //movementDirection = cameraTransform.forward * dashPower;       
-            //rb.velocity = movementDirection * dashPower;
             rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
             
             currentDashAmount--;
-            
             currentJumpAmount = jumpAmount;
-
             StartCoroutine(WaitForDash());
         }
+        //if in air and moving, move in current movement direction 
+        else if (currentDashAmount > 0 && !IsGrounded() && rb.velocity != Vector3.zero)
+        {
+            Debug.Log("in air and moving");
+            states = PlayerStates.Dash;
+
+            movementDirection = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+            movementDirection.Normalize();
+            rb.AddForce(movementDirection * dashPower, ForceMode.VelocityChange);
+
+            currentDashAmount--;
+            currentJumpAmount = jumpAmount;
+            StartCoroutine(WaitForDash());
+        }
+
+
+
+
+
     }
     
     private bool IsGrounded()
-    {
-        /*if (Physics.Raycast(transform.position, Vector3.down, groundDistance, groundMask))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }*/
-        
+    {        
         if (Physics.BoxCast(transform.position, boxCastSize, Vector3.down, Quaternion.identity, boxCastSize.y, groundMask))
         {
             return true;
@@ -301,7 +326,6 @@ public class PlayerMovement : CharacterBase
         {
             return false;
         }
-
     }
 
     private void OnDrawGizmos()
@@ -310,6 +334,8 @@ public class PlayerMovement : CharacterBase
         Gizmos.DrawLine(cameraTransform.position, cameraTransform.forward);
     }
     
+
+
     public void DisablePlayerActions()
     {
         disabled = true;

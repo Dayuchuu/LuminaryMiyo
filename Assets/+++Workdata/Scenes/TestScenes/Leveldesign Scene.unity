@@ -232,13 +232,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
+      propertyPath: dashPower
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
       propertyPath: jumpPower
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: boxCastSize.x
-      value: 1
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
@@ -248,7 +253,7 @@ PrefabInstance:
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: boxCastSize.z
-      value: 1
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
