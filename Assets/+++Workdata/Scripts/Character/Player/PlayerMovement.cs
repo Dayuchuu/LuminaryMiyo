@@ -48,14 +48,13 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private LayerMask groundMask;
 
 
-    private int currentJumpAmount = 0;
+    [SerializeField] private int currentJumpAmount = 0;
     private float noGravity = 0f;
 
     
-    [SerializeField] private AnimationCurve animationCurve;
-    
+
     [Space]
-    public bool disabled = false;
+    public bool disableMovement = false;
     
     private Rigidbody rb;
     
@@ -119,7 +118,7 @@ public class PlayerMovement : CharacterBase
     
     private void Update()
     {
-        if (disabled) { return; }
+        if (disableMovement) { return; }
         
         if (states == PlayerStates.Dash)
         {
@@ -176,13 +175,13 @@ public class PlayerMovement : CharacterBase
     
     private void FixedUpdate()
     {
-        if (disabled) { return; }
+        if (disableMovement) { return; }
         
         if (states == PlayerStates.Dash)
         {
             gravity = noGravity;
             rb.useGravity = false;
-
+            rb.velocity = new Vector3 (rb.velocity.x, 0, rb.velocity.z);
             return;
         }
         
@@ -208,7 +207,7 @@ public class PlayerMovement : CharacterBase
     // --- MOVE METHOD --- //
     public void Move(InputAction.CallbackContext context)
     {
-        if (disabled) { return; }
+        if (disableMovement) { return; }
         
         inputX = context.ReadValue<Vector3>().x;
         inputZ = context.ReadValue<Vector3>().z;
@@ -217,7 +216,12 @@ public class PlayerMovement : CharacterBase
     // --- JUMP METHOD --- //
     public void Jump(InputAction.CallbackContext context)
     {
-        if (disabled) { return; }
+        if (disableMovement) { return; }
+
+        states = PlayerStates.Default;
+        StopAllCoroutines();
+        gravity = defaultGravity;
+        rb.useGravity = true;
 
         //jump on ground
         if (context.performed && IsGrounded())
@@ -249,7 +253,7 @@ public class PlayerMovement : CharacterBase
     // --- DASH METHOD --- //
     public void Dash(InputAction.CallbackContext context)
     {
-        if (disabled) { return; }
+        if (disableMovement) { return; }
         
         if (states == PlayerStates.Dash) { return; }
 
@@ -338,14 +342,14 @@ public class PlayerMovement : CharacterBase
 
     public void DisablePlayerActions()
     {
-        disabled = true;
+        disableMovement = true;
         
         rb.velocity = Vector3.zero;
     }
 
     public void EnablePlayerActions()
     {
-        disabled = false;
+        disableMovement = false;
     }
 
     private IEnumerator WaitForDash()
@@ -359,6 +363,12 @@ public class PlayerMovement : CharacterBase
         //set gravity back to default after dash is over
         gravity = defaultGravity;
         rb.useGravity = true;
+
+        if (!IsGrounded())
+        {
+            currentJumpAmount = jumpAmount;
+            currentDashAmount--;
+        }
     }
 
     #endregion
