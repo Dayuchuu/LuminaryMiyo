@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -32,17 +31,10 @@ public class SceneLoader : MonoBehaviour
 			return;
 		}
 
-		int loadedScenes = SceneManager.sceneCount;
-		
-		for (int sceneIndex = 0; sceneIndex <= loadedScenes; sceneIndex++)
+		if (SceneManager.sceneCount < 2)
 		{
-			if (SceneManager.GetSceneAt(sceneIndex) != SceneManager.GetSceneAt(0))
-			{
-				SceneManager.UnloadSceneAsync(sceneIndex);
-			}
+			SceneManager.LoadScene((int)sceneStates, LoadSceneMode.Additive);
 		}
-		
-		SceneManager.LoadScene((int)sceneStates, LoadSceneMode.Additive);
 
 		currentScene = (int)sceneStates; 
 	}

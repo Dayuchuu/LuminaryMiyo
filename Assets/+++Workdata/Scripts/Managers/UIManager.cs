@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
 	public GameObject winScreen = null;
 	public GameObject loseScreen = null;
 	public GameObject pauseScreen = null;
+	public GameObject mainMenuScreen = null;
 
 	public TextMeshProUGUI scoreText = null;
 	public TextMeshProUGUI timeText = null;
@@ -33,7 +34,15 @@ public class UIManager : MonoBehaviour
 
 	public void ChangeScoreText(int score, string rank)
 	{
-		scoreText.text = rank + score.ToString();
+		scoreText.text = rank + score;
+	}
+
+	public void StartGame()
+	{
+		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
+		SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1);
+		
+		mainMenuScreen.gameObject.SetActive(false);
 	}
 
 	public void OpenMenu(GameObject menu, float timeScale)
@@ -60,8 +69,7 @@ public class UIManager : MonoBehaviour
 
 	public void Replay()
 	{
-		Scene currentScene = SceneManager.GetActiveScene();
-		SceneManager.LoadScene(currentScene.name);
+		SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, SceneLoader.Instance.currentScene, 1);
 	}
 	
 	public void StopPause()
@@ -76,9 +84,14 @@ public class UIManager : MonoBehaviour
 	
 	public void MainMenu()
 	{
-		//SceneLoader.Instance.LoadScene();
+		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
+		SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1);
+		
+	}
 
-		Time.timeScale = 1f;
+	public void Quit()
+	{
+		Application.Quit();
 	}
 	
 	#endregion
