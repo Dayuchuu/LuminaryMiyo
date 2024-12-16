@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -85,7 +84,7 @@ public class UIManager : MonoBehaviour
 
 	public void Replay()
 	{
-		SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, SceneLoader.Instance.currentScene, 1);
+		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, SceneLoader.Instance.currentScene, 1));
 	}
 	
 	public void StopPause()
@@ -101,7 +100,7 @@ public class UIManager : MonoBehaviour
 	public void MainMenu()
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
-		SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1);
+		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 		
 	}
 

@@ -3133,6 +3133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471001272}
+  - component: {fileID: 1471001273}
   m_Layer: 0
   m_Name: Bullets
   m_TagString: Untagged
@@ -3155,6 +3156,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1923480197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1471001273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471001271}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ccc75ee177b776428fe5e521c856106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 7423832328388153549, guid: 617809e7c368f31428650d296969e87b,
+    type: 3}
+  pooledObjectParent: {fileID: 1471001272}
+  amountToPool: 50
 --- !u!1 &1489091014
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,7 +4083,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1923480197}
   - component: {fileID: 1923480196}
-  - component: {fileID: 1923480198}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -4104,23 +4121,6 @@ Transform:
   - {fileID: 1471001272}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1923480198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923480195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ccc75ee177b776428fe5e521c856106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObjects: []
-  objectToPool: {fileID: 7423832328388153549, guid: 617809e7c368f31428650d296969e87b,
-    type: 3}
-  pooledObjectParent: {fileID: 1471001272}
-  amountToPool: 50
 --- !u!1 &1929976661
 GameObject:
   m_ObjectHideFlags: 0
