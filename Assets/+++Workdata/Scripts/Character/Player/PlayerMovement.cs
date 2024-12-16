@@ -1,9 +1,6 @@
-using JetBrains.Annotations;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : CharacterBase
@@ -168,9 +165,6 @@ public class PlayerMovement : CharacterBase
         {
             currentDashAmount = 1;
         }
-
-
-
     }
     
     private void FixedUpdate()
@@ -313,11 +307,6 @@ public class PlayerMovement : CharacterBase
             currentJumpAmount = jumpAmount;
             StartCoroutine(WaitForDash());
         }
-
-
-
-
-
     }
     
     private bool IsGrounded()
@@ -338,8 +327,6 @@ public class PlayerMovement : CharacterBase
         Gizmos.DrawLine(cameraTransform.position, cameraTransform.forward);
     }
     
-
-
     public void DisablePlayerActions()
     {
         disableMovement = true;
@@ -369,6 +356,11 @@ public class PlayerMovement : CharacterBase
             currentJumpAmount = jumpAmount;
             currentDashAmount--;
         }
+    }
+
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        UIManager.Instance.OpenMenu(UIManager.Instance.pauseScreen, CursorLockMode.None,  0);
     }
 
     #endregion

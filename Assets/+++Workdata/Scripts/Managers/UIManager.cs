@@ -45,7 +45,7 @@ public class UIManager : MonoBehaviour
 		mainMenuScreen.gameObject.SetActive(false);
 	}
 
-	public void OpenMenu(GameObject menu, float timeScale)
+	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
 		menu.SetActive(true);
 		
@@ -53,16 +53,20 @@ public class UIManager : MonoBehaviour
 		
 		player.GetComponent<PlayerMovement>().DisablePlayerActions();
 
+		Cursor.lockState = lockMode;
+
 		Time.timeScale = timeScale;
 	}
 
-	public void CloseMenu(GameObject menu, float timeScale)
+	public void CloseMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
 		menu.SetActive(false);
 		
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		
 		player.GetComponent<PlayerMovement>().EnablePlayerActions();
+		
+		Cursor.lockState = lockMode;
 
 		Time.timeScale = timeScale;
 	}
@@ -74,7 +78,7 @@ public class UIManager : MonoBehaviour
 	
 	public void StopPause()
 	{
-		CloseMenu(pauseScreen, 1f);
+		CloseMenu(pauseScreen, CursorLockMode.Locked, 1f);
 	}
 	
 	public void Settings()

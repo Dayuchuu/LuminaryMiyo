@@ -71,6 +71,15 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PauseGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""74af00a5-5b17-46bf-bd09-7ccaa8e35373"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -183,6 +192,17 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
                     ""action"": ""Dialogue Continue"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0937a59c-6d38-4c9a-b63e-ee7e887ad5c0"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -196,6 +216,7 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_DialogueContinue = m_Player.FindAction("Dialogue Continue", throwIfNotFound: true);
+        m_Player_PauseGame = m_Player.FindAction("PauseGame", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -262,6 +283,7 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_DialogueContinue;
+    private readonly InputAction m_Player_PauseGame;
     public struct PlayerActions
     {
         private @InputMap m_Wrapper;
@@ -271,6 +293,7 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @DialogueContinue => m_Wrapper.m_Player_DialogueContinue;
+        public InputAction @PauseGame => m_Wrapper.m_Player_PauseGame;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -295,6 +318,9 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
             @DialogueContinue.started += instance.OnDialogueContinue;
             @DialogueContinue.performed += instance.OnDialogueContinue;
             @DialogueContinue.canceled += instance.OnDialogueContinue;
+            @PauseGame.started += instance.OnPauseGame;
+            @PauseGame.performed += instance.OnPauseGame;
+            @PauseGame.canceled += instance.OnPauseGame;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -314,6 +340,9 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
             @DialogueContinue.started -= instance.OnDialogueContinue;
             @DialogueContinue.performed -= instance.OnDialogueContinue;
             @DialogueContinue.canceled -= instance.OnDialogueContinue;
+            @PauseGame.started -= instance.OnPauseGame;
+            @PauseGame.performed -= instance.OnPauseGame;
+            @PauseGame.canceled -= instance.OnPauseGame;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -338,5 +367,6 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnDialogueContinue(InputAction.CallbackContext context);
+        void OnPauseGame(InputAction.CallbackContext context);
     }
 }

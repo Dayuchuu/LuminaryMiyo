@@ -36,7 +36,7 @@ public class Goal : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			UIManager.Instance.OpenMenu(UIManager.Instance.winScreen, 0f);
+			UIManager.Instance.OpenMenu(UIManager.Instance.winScreen, CursorLockMode.None, 0f);
 
 			player.DisablePlayerActions();
 			

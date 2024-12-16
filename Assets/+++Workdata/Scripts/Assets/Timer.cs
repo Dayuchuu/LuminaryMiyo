@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
    {
       if (time <= 0)
       {
-        UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, 0f);
+        UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
          
          yield break;
       }

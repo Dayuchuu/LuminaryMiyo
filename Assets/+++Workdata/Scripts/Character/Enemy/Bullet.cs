@@ -38,7 +38,7 @@ public class Bullet : MonoBehaviour
 			{
 				Cursor.lockState = CursorLockMode.None;
 				
-				UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, 0f);
+				UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
 			}
 			
 			gameObject.SetActive(false);
