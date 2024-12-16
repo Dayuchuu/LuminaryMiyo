@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +19,7 @@ public class SceneLoader : MonoBehaviour
 	[HideInInspector]
 	public int currentScene;
 	
-	private void Awake()
+	private void Start()
 	{
 		if (Instance == null)
 		{
@@ -35,13 +36,22 @@ public class SceneLoader : MonoBehaviour
 		{
 			SceneManager.LoadScene((int)sceneStates, LoadSceneMode.Additive);
 		}
+		else
+		{
+			UIManager.Instance.CloseMenu(UIManager.Instance.mainMenuScreen, CursorLockMode.Locked, 1f);
+		}
 
 		currentScene = (int)sceneStates; 
 	}
 
-	public void LoadScene(int oldScene, int newScene, int timeScale)
+	public IEnumerator LoadScene(int oldScene, int newScene, int timeScale)
 	{
-		SceneManager.UnloadSceneAsync(oldScene);
+		var unloadedScene = SceneManager.GetSceneByBuildIndex(oldScene);
+		
+		if (unloadedScene.isLoaded)
+		{
+			yield return SceneManager.UnloadSceneAsync(unloadedScene);
+		}
 
 		SceneManager.LoadScene(newScene, LoadSceneMode.Additive);
 

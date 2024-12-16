@@ -44,7 +44,7 @@ public class Goal : MonoBehaviour
 
 			GetMaxScore();
 			
-			Time.timeScale = 0f;
+			//Time.timeScale = 0f;
 		}
 	}
 

@@ -27,7 +27,7 @@ public class ObjectPool : MonoBehaviour
 		}
 	}
 
-	private void StartSpawning()
+	private void Start()
 	{
 		pooledObjects = new List<GameObject>();
 		GameObject temp;

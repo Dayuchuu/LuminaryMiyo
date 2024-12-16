@@ -498,11 +498,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret Enemy (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 2598652285788852775, guid: e7412fd91d7a86543a3ebc8f7496f8d7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.49
-      objectReference: {fileID: 0}
     - target: {fileID: 3044780838656155641, guid: e7412fd91d7a86543a3ebc8f7496f8d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2105,6 +2100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 947786724224288697, guid: a44c70f277a5e2d4692ca313621074ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1113651898673352048, guid: a44c70f277a5e2d4692ca313621074ad,
         type: 3}
@@ -4864,12 +4864,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1861486332}
   m_SourcePrefab: {fileID: 100100000, guid: 0db963279cd91904faaed3ef2c5d338f, type: 3}
---- !u!1 &1487832069 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3510913932454524651, guid: 248071aa9492f8c42b5c36ef7d086e12,
-    type: 3}
-  m_PrefabInstance: {fileID: 4729877107585305534}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1489970201
 GameObject:
   m_ObjectHideFlags: 0
@@ -5053,27 +5047,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4729877107585305534}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1610244238
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487832069}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1614176792
 GameObject:
   m_ObjectHideFlags: 0
@@ -6500,6 +6473,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 906181158102280122, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
+      propertyPath: boxCastSize.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 906181158102280122, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: boxCastSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 906181158102280122, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: boxCastSize.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 906181158102280122, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1610244234}
@@ -6531,17 +6519,17 @@ PrefabInstance:
     - target: {fileID: 4915598094983698287, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.55
+      value: -13.02
       objectReference: {fileID: 0}
     - target: {fileID: 4915598094983698287, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.25
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 4915598094983698287, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.97
+      value: 34.69
       objectReference: {fileID: 0}
     - target: {fileID: 4915598094983698287, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
@@ -6671,11 +6659,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3510913932454524651, guid: 248071aa9492f8c42b5c36ef7d086e12,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1610244238}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 248071aa9492f8c42b5c36ef7d086e12, type: 3}
 --- !u!1001 &8157615725120997627
 PrefabInstance:

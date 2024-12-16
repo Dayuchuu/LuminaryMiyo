@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
 
 	public TextMeshProUGUI scoreText = null;
 	public TextMeshProUGUI timeText = null;
+
+	private bool uiOpen = false;
 	
 	#endregion
 
@@ -40,35 +42,45 @@ public class UIManager : MonoBehaviour
 	public void StartGame()
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
-		SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1);
+		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 		
 		mainMenuScreen.gameObject.SetActive(false);
 	}
 
 	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
-		menu.SetActive(true);
-		
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		
-		player.GetComponent<PlayerMovement>().DisablePlayerActions();
+		if (!uiOpen)
+		{
+			menu.SetActive(true);
+			
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			
+			player.GetComponent<PlayerMovement>().DisablePlayerActions();
 
-		Cursor.lockState = lockMode;
+			Cursor.lockState = lockMode;
 
-		Time.timeScale = timeScale;
+			Time.timeScale = timeScale;
+
+			uiOpen = true;
+		}
 	}
 
 	public void CloseMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
-		menu.SetActive(false);
-		
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
-		
-		player.GetComponent<PlayerMovement>().EnablePlayerActions();
-		
-		Cursor.lockState = lockMode;
+		if (uiOpen)
+		{
+			menu.SetActive(false);
+			
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			
+			player.GetComponent<PlayerMovement>().EnablePlayerActions();
+			
+			Cursor.lockState = lockMode;
 
-		Time.timeScale = timeScale;
+			Time.timeScale = timeScale;
+
+			uiOpen = false;
+		}
 	}
 
 	public void Replay()

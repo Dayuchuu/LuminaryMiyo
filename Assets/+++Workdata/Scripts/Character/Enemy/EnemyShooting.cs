@@ -18,11 +18,7 @@ public class EnemyShooting : CharacterBase
 
 	private Transform playerTransform = null;
 
-	private bool nextShotPossible = false;
-
-	private float waitUntilNextShot = 0f;
-	
-	[SerializeField] float shootCooldown = 0f;
+	private bool inRange = false;
 	
 	#endregion
 
@@ -30,31 +26,20 @@ public class EnemyShooting : CharacterBase
 
 	private void Awake()
 	{
-		waitUntilNextShot = shootCooldown;
-
 		playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
 	}
 
 	private void Update()
 	{
-		if (!nextShotPossible)
-		{
-			waitUntilNextShot -= Time.deltaTime;
-
-			if (waitUntilNextShot <= 0f)
-			{
-				nextShotPossible = true;
-				waitUntilNextShot = shootCooldown;
-			}
-		}
 		
-		if(Vector3.Distance(transform.position, playerTransform.position) < distance  && nextShotPossible)
+		if(Vector3.Distance(transform.position, playerTransform.position) < distance && !inRange)
 		{
+			inRange = true;
 			StartCoroutine(SpawnBullet());
 		}
-		else if (Vector3.Distance(transform.position, playerTransform.position) > distance)
+		else if (Vector3.Distance(transform.position, playerTransform.position) > distance && inRange)
 		{
-			StopCoroutine(SpawnBullet());
+			inRange = false;
 		}
 	}
 
@@ -72,11 +57,15 @@ public class EnemyShooting : CharacterBase
 
 	private IEnumerator SpawnBullet()
 	{
-		InstantiateBullet();
+		if (inRange)
+		{ 
+			InstantiateBullet();
+			
+			yield return new WaitForSeconds(bulletSpawnCooldown);
 
-		yield return new WaitForSeconds(bulletSpawnCooldown);
+			StartCoroutine(SpawnBullet());
+		}
 
-		StartCoroutine(SpawnBullet());
 	}
 	#endregion
 }
