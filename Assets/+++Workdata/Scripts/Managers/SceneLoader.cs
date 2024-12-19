@@ -51,6 +51,13 @@ public class SceneLoader : MonoBehaviour
 		if (unloadedScene.isLoaded)
 		{
 			yield return SceneManager.UnloadSceneAsync(unloadedScene);
+
+			sceneStates = (SceneStates)newScene;
+
+			if (sceneStates >= SceneStates.Level01)
+			{
+				ObjectPool.sharedInstance.gameObject.GetComponent<ObjectPool>().enabled = true;
+			}
 		}
 
 		SceneManager.LoadScene(newScene, LoadSceneMode.Additive);

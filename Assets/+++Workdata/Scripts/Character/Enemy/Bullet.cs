@@ -24,8 +24,6 @@ public class Bullet : MonoBehaviour
 	private void Awake()
 	{
 		rb = gameObject.GetComponent<Rigidbody>();
-		
-		playerTransform = GameObject.FindWithTag("Player").transform;
 	}
 	
 	private void OnTriggerEnter(Collider other)
@@ -58,6 +56,8 @@ public class Bullet : MonoBehaviour
 
 	private void Shoot()
 	{
+		playerTransform = GameObject.FindWithTag("Player").transform;
+		
 		shootDirection = playerTransform.position - transform.position;
 		
 		rb.velocity = shootDirection * shootSpeed;

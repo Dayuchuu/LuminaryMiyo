@@ -30,7 +30,7 @@ public class ObjectPool : MonoBehaviour
 	private void Start()
 	{
 		pooledObjects = new List<GameObject>();
-		GameObject temp;
+		GameObject temp = new GameObject();
 		for (int poolIndex = 0; poolIndex < amountToPool; poolIndex++)
 		{
 			temp = Instantiate(objectToPool, pooledObjectParent);
