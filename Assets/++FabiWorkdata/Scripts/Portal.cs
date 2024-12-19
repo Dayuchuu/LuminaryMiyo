@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using RenderPipeline = UnityEngine.Rendering.RenderPipelineManager;
@@ -53,7 +50,6 @@ public class Portal : MonoBehaviour
         {
             Debug.Log("Entered Collider");
             
-
             RaycastHit hit;
             if (Physics.Raycast(player.transform.position, Vector3.down, out hit, 30f))
             {
