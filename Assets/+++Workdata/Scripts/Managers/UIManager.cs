@@ -81,9 +81,31 @@ public class UIManager : MonoBehaviour
 			uiOpen = false;
 		}
 	}
+	
+	public void CloseMenu(GameObject firstMenu, GameObject secondMenu, CursorLockMode lockMode, float timeScale)
+	{
+		if (uiOpen)
+		{
+			firstMenu.SetActive(false);
+			
+			secondMenu.SetActive(false);
+			
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			
+			player.GetComponent<PlayerMovement>().EnablePlayerActions();
+			
+			Cursor.lockState = lockMode;
+
+			Time.timeScale = timeScale;
+
+			uiOpen = false;
+		}
+	}
 
 	public void Replay()
 	{
+		CloseMenu(winScreen, loseScreen, CursorLockMode.None, 1f);
+		
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, SceneLoader.Instance.currentScene, 1));
 	}
 	
@@ -101,7 +123,6 @@ public class UIManager : MonoBehaviour
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
-		
 	}
 
 	public void Quit()

@@ -62,6 +62,8 @@ public class SceneLoader : MonoBehaviour
 
 		SceneManager.LoadScene(newScene, LoadSceneMode.Additive);
 
+		currentScene = newScene;
+
 		Time.timeScale = timeScale;
 	}
 }
