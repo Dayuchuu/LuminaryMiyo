@@ -522,6 +522,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 906181158102280122, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 1714997350}
     - target: {fileID: 1690390470751849887, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
       propertyPath: m_Layer
@@ -2440,6 +2445,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0768fb8d7e5a042b842060449d0e08, type: 3}
+--- !u!4 &1714997350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5212311064682074393, guid: 248071aa9492f8c42b5c36ef7d086e12,
+    type: 3}
+  m_PrefabInstance: {fileID: 353524603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1717378027
 PrefabInstance:
   m_ObjectHideFlags: 0

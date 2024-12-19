@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
 	public TextMeshProUGUI scoreText = null;
 	public TextMeshProUGUI timeText = null;
 
-	private bool uiOpen = false;
+	private bool uiOpen = true;
 	
 	#endregion
 
