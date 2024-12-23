@@ -27,14 +27,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3510913932454524651}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: -0.25}
+  m_LocalRotation: {x: -0, y: -0.69511783, z: -0, w: 0.71889585}
+  m_LocalPosition: {x: 0, y: 0.74999964, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 605254427155739686}
   m_Father: {fileID: 6497568366757075012}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -88.073, z: 0}
 --- !u!20 &7483208606933732394
 Camera:
   m_ObjectHideFlags: 0
@@ -213,42 +213,16 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: -9.81
-      inSlope: -0.98100007
-      outSlope: -0.98100007
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 10
-      value: -19.62
-      inSlope: -0.98100007
-      outSlope: -0.98100007
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  disabled: 0
+  currentJumpAmount: 0
+  disableMovement: 0
   movementDirection: {x: 0, y: 0, z: 0}
   gravity: 0
-  falling: 0
   gravityReduction: 15
   maxGravity: -30
   cameraTransform: {fileID: 5212311064682074393}
   rotationSensibility: 0.25
   maxCameraPitch: 80
   invertCameraPitch: 1
-  jumpGracePeriod: 0
-  jumpButtonPressed: 0
 --- !u!136 &4592246763816529813
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -502,7 +476,8 @@ MonoBehaviour:
   attackLayer:
     serializedVersion: 2
     m_Bits: 8388608
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 5212311064682074393}
+  boxCastSize: {x: 0, y: 0, z: 0}
 --- !u!4 &605254427155739686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 427ec51a2b305b440a9a7a15de39abd2,

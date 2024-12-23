@@ -32,6 +32,8 @@ public class EnemyShooting : CharacterBase
 	private void Update()
 	{
 		
+		transform.LookAt(playerTransform);
+		
 		if(Vector3.Distance(transform.position, playerTransform.position) < distance && !inRange)
 		{
 			inRange = true;
