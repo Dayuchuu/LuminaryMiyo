@@ -48,6 +48,8 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private int currentJumpAmount = 0;
     private float noGravity = 0f;
 
+    [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
+
     
 
     [Space]
@@ -343,9 +345,13 @@ public class PlayerMovement : CharacterBase
     {
         if (!canDash) { yield break; }
         
+        speedlines.Play();
+        
         yield return new WaitForSeconds(dashTimer);
         
         states = PlayerStates.Default;
+        
+        speedlines.Stop();
 
         //set gravity back to default after dash is over
         gravity = defaultGravity;
