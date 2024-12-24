@@ -213,6 +213,8 @@ public class PlayerMovement : CharacterBase
     public void Jump(InputAction.CallbackContext context)
     {
         if (disableMovement) { return; }
+        
+        speedlines.Stop();
 
         states = PlayerStates.Default;
         StopAllCoroutines();
