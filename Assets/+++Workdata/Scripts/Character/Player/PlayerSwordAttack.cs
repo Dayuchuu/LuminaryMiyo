@@ -32,7 +32,7 @@ public class PlayerSwordAttack : MonoBehaviour
    
       swordAnim.SetTrigger("Attacks");
 
-      Physics.BoxCast(cameraTransform.position, boxCastSize, cameraTransform.forward, out hit, Quaternion.identity);
+      Physics.BoxCast(cameraTransform.position, boxCastSize, cameraTransform.forward * 0.1f, out hit, Quaternion.identity);
 
       if (hit.collider != null)
       {
