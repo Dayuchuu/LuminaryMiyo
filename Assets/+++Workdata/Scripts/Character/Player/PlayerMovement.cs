@@ -41,6 +41,12 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private float groundDistance = 0f;
     [SerializeField] private int jumpAmount = 0;
 
+    [SerializeField] private float coyoyteTime = 0.2f;
+    private float coyoteTimeCounter;
+
+    [SerializeField] private float jumpBufferTime = 0.2f;
+    private float jumpBufferCounter;
+
     [SerializeField] private Vector3 boxCastSize;
     [SerializeField] private LayerMask groundMask;
 
@@ -145,8 +151,7 @@ public class PlayerMovement : CharacterBase
         cameraRoll += mouseDelta.x * rotationSensibility;
 
         cameraTransform.localEulerAngles = new Vector3(cameraPitch, cameraRoll, 0f);
-
-
+        
         //increases gravity over time once the player starts falling
         if (rb.velocity.y < 0f && !IsGrounded() && states != PlayerStates.Dash)
         {
@@ -162,7 +167,15 @@ public class PlayerMovement : CharacterBase
             gravity = defaultGravity;
         }
 
-
+        if (IsGrounded())
+        {
+            coyoteTimeCounter = coyoyteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+        
         if (IsGrounded() && currentDashAmount == 0)
         {
             currentDashAmount = 1;
@@ -221,17 +234,27 @@ public class PlayerMovement : CharacterBase
         gravity = defaultGravity;
         rb.useGravity = true;
 
+        if (context.performed)
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+
         //jump on ground
-        if (context.performed && IsGrounded())
+        if (jumpBufferCounter > 0 && coyoteTimeCounter > 0)
         {
             rb.velocity = new Vector3(0f, jumpPower, 0f);
 
             //set gravity to default once grounded
             gravity = defaultGravity;
             currentDashAmount = dashAmount;
+            jumpBufferCounter = 0;
         }
         //jump in air if Jump amount is larger than 0
-        else if (context.performed && !IsGrounded() && currentJumpAmount > 0) 
+        else if (jumpBufferCounter > 0 &&  currentJumpAmount > 0) 
         {
             rb.velocity = new Vector3(0f, jumpPower, 0f);
 
@@ -243,6 +266,7 @@ public class PlayerMovement : CharacterBase
         if (context.canceled && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * 0.5f, rb.velocity.z);
+            coyoteTimeCounter = 0;
         }
     }
 

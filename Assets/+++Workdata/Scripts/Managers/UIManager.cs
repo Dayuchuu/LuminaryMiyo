@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class UIManager : MonoBehaviour
 	public void StartGame()
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
-		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
+		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates,  (int)SceneLoader.SceneStates.Portal, 1));
 		
 		mainMenuScreen.gameObject.SetActive(false);
 	}
