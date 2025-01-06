@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class EnemyShooting : CharacterBase
 {
-	#region MyRegion
+	#region Variables
 
 	[SerializeField] 
 	private Transform bulletSpawnPoint = null;
@@ -19,6 +18,9 @@ public class EnemyShooting : CharacterBase
 	private Transform playerTransform = null;
 
 	private bool inRange = false;
+
+	[FormerlySerializedAs("enemySounds")] [SerializeField] private AudioSource enemyIdleSounds;
+	[SerializeField] private AudioSource enemyDieSounds;
 	
 	#endregion
 
@@ -31,8 +33,12 @@ public class EnemyShooting : CharacterBase
 
 	private void Update()
 	{
-		
 		transform.LookAt(playerTransform);
+
+		if (healthPoints <= 0)
+		{
+			gameObject.SetActive(false);
+		}
 		
 		if(Vector3.Distance(transform.position, playerTransform.position) < distance && !inRange)
 		{

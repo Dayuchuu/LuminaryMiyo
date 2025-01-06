@@ -16,6 +16,8 @@ public class PlayerSwordAttack : MonoBehaviour
    [SerializeField] private Vector3 boxCastSize = new Vector3();
 
    private Animator swordAnim = null;
+
+   [SerializeField] private AudioSource swordAttackSound;
    
    #endregion
 
@@ -24,6 +26,18 @@ public class PlayerSwordAttack : MonoBehaviour
    private void Awake()
    {
       swordAnim = GetComponent<Animator>();
+
+      swordAttackSound = GetComponent<AudioSource>();
+   }
+
+   private void OnTriggerEnter(Collider other)
+   {
+      if (other.CompareTag("Enemy"))
+      {
+         other.GetComponent<MeshRenderer>().material.color = Color.red;
+         
+         other.GetComponent<CharacterBase>().healthPoints--;
+      }
    }
 
    public void Attack(InputAction.CallbackContext context)
@@ -31,25 +45,22 @@ public class PlayerSwordAttack : MonoBehaviour
       RaycastHit hit = new RaycastHit(); 
    
       swordAnim.SetTrigger("Attacks");
-
-      Physics.BoxCast(cameraTransform.position, boxCastSize, cameraTransform.forward * 0.1f, out hit, Quaternion.identity);
-
-      if (hit.collider != null)
-      {
-         Debug.Log(hit.collider.gameObject.name);
-      }
       
-      if (hit.collider != null && hit.collider.CompareTag("Enemy"))
-      {
-         hit.collider.GetComponent<CharacterBase>().healthPoints--;
-         
-         hit.collider.GetComponent<MeshRenderer>().material.color = Color.red;
-         
-         if (hit.collider.GetComponent<EnemyShooting>().healthPoints <= 0)
-         {
-            hit.collider.gameObject.gameObject.SetActive(false);
-         }
-      }
+      swordAttackSound.Play();
+
+      // Physics.BoxCast(cameraTransform.position, boxCastSize, cameraTransform.forward * 0.1f, out hit, Quaternion.identity);
+
+      // if (hit.collider != null)
+      // {
+      //    Debug.Log(hit.collider.gameObject.name);
+      // }
+      
+      // if (hit.collider != null && hit.collider.CompareTag("Enemy"))
+      // {
+      //    hit.collider.GetComponent<CharacterBase>().healthPoints--;
+      //    
+      //    hit.collider.GetComponent<MeshRenderer>().material.color = Color.red;
+      // }
    }
    #endregion
 } 

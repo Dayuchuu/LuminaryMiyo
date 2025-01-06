@@ -43,6 +43,8 @@ public class SceneLoader : MonoBehaviour
 		}
 
 		currentScene = (int)sceneStates; 
+		
+		
 	}
 
 	public IEnumerator LoadScene(int oldScene, int firstNewScene, int timeScale)

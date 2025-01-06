@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using RenderPipeline = UnityEngine.Rendering.RenderPipelineManager;
 
-[ExecuteInEditMode]
+// [ExecuteInEditMode]
 public class Portal : MonoBehaviour
 {
     [SerializeField] private Camera portalCamera;
@@ -14,6 +15,8 @@ public class Portal : MonoBehaviour
     [SerializeField] private LayerMask groundLayerMask;
     private float distanceEnter;
     private float distanceExit;
+
+    [SerializeField] private AudioSource portalSound;
 
     private void OnEnable()
     {

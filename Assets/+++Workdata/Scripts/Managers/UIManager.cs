@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,6 +15,8 @@ public class UIManager : MonoBehaviour
 	public TextMeshProUGUI scoreText = null;
 	public TextMeshProUGUI timeText = null;
 
+	[SerializeField] private AudioSource buttonSounds;
+	
 	private bool uiOpen = true;
 	
 	#endregion
@@ -32,6 +33,8 @@ public class UIManager : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+
+		buttonSounds = GetComponent<AudioSource>();
 	}
 
 	public void ChangeScoreText(int score, string rank)
@@ -41,6 +44,8 @@ public class UIManager : MonoBehaviour
 
 	public void StartGame()
 	{
+		buttonSounds.Play();
+		
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates,  (int)SceneLoader.SceneStates.Portal, 1));
 		
@@ -49,6 +54,8 @@ public class UIManager : MonoBehaviour
 
 	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
+		buttonSounds.Play();
+		
 		if (!uiOpen)
 		{
 			menu.SetActive(true);
@@ -67,6 +74,8 @@ public class UIManager : MonoBehaviour
 
 	public void CloseMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
+		buttonSounds.Play();
+		
 		if (uiOpen)
 		{
 			menu.SetActive(false);
@@ -85,6 +94,8 @@ public class UIManager : MonoBehaviour
 	
 	public void CloseMenu(GameObject firstMenu, GameObject secondMenu, CursorLockMode lockMode, float timeScale)
 	{
+		buttonSounds.Play();
+		
 		if (uiOpen)
 		{
 			firstMenu.SetActive(false);
@@ -105,6 +116,8 @@ public class UIManager : MonoBehaviour
 
 	public void Replay()
 	{
+		buttonSounds.Play();
+		
 		CloseMenu(winScreen, loseScreen, CursorLockMode.None, 1f);
 		
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, SceneLoader.Instance.currentScene, 1));
@@ -112,22 +125,30 @@ public class UIManager : MonoBehaviour
 	
 	public void StopPause()
 	{
+		buttonSounds.Play();
+		
 		CloseMenu(pauseScreen, CursorLockMode.Locked, 1f);
 	}
 	
 	public void Settings()
 	{
+		buttonSounds.Play();
+		
 		
 	}
 	
 	public void MainMenu()
 	{
+		buttonSounds.Play();
+		
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 	}
 
 	public void Quit()
 	{
+		buttonSounds.Play();
+		
 		Application.Quit();
 	}
 	
