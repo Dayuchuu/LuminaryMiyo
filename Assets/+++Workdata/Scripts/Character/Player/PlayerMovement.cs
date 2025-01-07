@@ -57,6 +57,8 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private int currentJumpAmount = 0;
     private float noGravity = 0f;
 
+    [SerializeField] private float moveSpeedAcceleration = 0f;
+
     [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
 
     
@@ -128,6 +130,8 @@ public class PlayerMovement : CharacterBase
     private void Update()
     {
         if (disableMovement) { return; }
+        
+        Debug.Log(moveSpeed);
         
         if (states == PlayerStates.Dash)
         {
@@ -227,8 +231,8 @@ public class PlayerMovement : CharacterBase
 
         if (speedUpCounter <= 0)
         {
-            moveSpeed += Time.deltaTime;
-            speedUpCounter = speedUpTimer;
+            moveSpeed += Time.deltaTime * moveSpeedAcceleration;
+            moveSpeed = Mathf.Clamp(moveSpeed ,0, 16);
         }
     }
     
