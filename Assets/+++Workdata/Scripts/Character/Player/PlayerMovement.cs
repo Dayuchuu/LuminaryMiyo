@@ -1,13 +1,15 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : CharacterBase
 {
     #region Definitions
 
-    private enum PlayerStates
+    public enum PlayerStates
     {
         Default,
         Dash
@@ -22,8 +24,7 @@ public class PlayerMovement : CharacterBase
 
     #region Movement Variables
     
-    [SerializeField]
-    private PlayerStates states = PlayerStates.Default;
+    public PlayerStates states = PlayerStates.Default;
     
     [SerializeField] private float maxDefaultMoveSpeed = 10f;
     [SerializeField] private int maxVelocityChange;
@@ -42,7 +43,7 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private float groundDistance = 0f;
     [SerializeField] private int jumpAmount = 0;
 
-    [SerializeField] private float coyoyteTime = 0.2f;
+    [SerializeField] private float coyoteTime = 0.2f;
     private float coyoteTimeCounter;
 
     [SerializeField] private float jumpBufferTime = 0.2f;
@@ -60,8 +61,6 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private float moveSpeedAcceleration = 0f;
 
     [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
-
-    
 
     [Space]
     public bool disableMovement = false;
@@ -81,7 +80,6 @@ public class PlayerMovement : CharacterBase
     //rate by which the gravity gets reduced once falling
     [SerializeField] private float gravityReduction = 1f;
     [SerializeField] private float maxGravity = -30f;
-
 
     [Space]
     private float inputX; 
@@ -105,8 +103,7 @@ public class PlayerMovement : CharacterBase
     
     private float cameraPitch;
     private float cameraRoll;
-
-
+    
     #endregion
 
     #endregion
@@ -126,12 +123,18 @@ public class PlayerMovement : CharacterBase
     {
         currentDashAmount = dashAmount;
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (states == PlayerStates.Dash && other.CompareTag("Enemy"))
+        {
+            other.GetComponent<CharacterBase>().healthPoints--;
+        }
+    }
+
     private void Update()
     {
         if (disableMovement) { return; }
-        
-        Debug.Log(moveSpeed);
         
         if (states == PlayerStates.Dash)
         {
@@ -177,7 +180,7 @@ public class PlayerMovement : CharacterBase
 
         if (IsGrounded())
         {
-            coyoteTimeCounter = coyoyteTime;
+            coyoteTimeCounter = coyoteTime;
         }
         else
         {

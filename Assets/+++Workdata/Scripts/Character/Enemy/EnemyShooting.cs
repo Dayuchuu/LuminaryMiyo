@@ -43,6 +43,10 @@ public class EnemyShooting : CharacterBase
 		if(Vector3.Distance(transform.position, playerTransform.position) < distance && !inRange)
 		{
 			inRange = true;
+			if (playerTransform.gameObject.GetComponent<PlayerMovement>().states == PlayerMovement.PlayerStates.Dash)
+			{
+				Physics.IgnoreCollision(transform.gameObject.GetComponent<Collider>(), playerTransform.gameObject.GetComponent<CapsuleCollider>());
+			}
 			StartCoroutine(SpawnBullet());
 		}
 		else if (Vector3.Distance(transform.position, playerTransform.position) > distance && inRange)
