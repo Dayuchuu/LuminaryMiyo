@@ -29,6 +29,7 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private int maxVelocityChange;
 
     [SerializeField] private float maxMoveSpeedDuringDash = 0f;
+    public float currentMoveSpeed;
     [SerializeField] private float dashPower = 5f;
     [SerializeField] private float dashTimer = 0f;
     [SerializeField] private int dashAmount = 0;
@@ -50,7 +51,9 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private Vector3 boxCastSize;
     [SerializeField] private LayerMask groundMask;
 
-
+    [SerializeField] private float speedUpTimer = 0f;
+    public float speedUpCounter = 0f;
+    
     [SerializeField] private int currentJumpAmount = 0;
     private float noGravity = 0f;
 
@@ -114,6 +117,7 @@ public class PlayerMovement : CharacterBase
         gravity = defaultGravity;
         moveSpeed = maxDefaultMoveSpeed;
         Cursor.lockState = CursorLockMode.Locked;
+        speedUpCounter = speedUpTimer;
     }
 
     private void Start()
@@ -129,7 +133,7 @@ public class PlayerMovement : CharacterBase
         {
             moveSpeed = maxMoveSpeedDuringDash;
         }
-        else
+        else if(rb.velocity.magnitude < 0.5f)
         {
             moveSpeed = maxDefaultMoveSpeed;
         }
@@ -211,6 +215,21 @@ public class PlayerMovement : CharacterBase
         velocityChange.y = 0;
         
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
+        
+        if (rb.velocity.magnitude > maxDefaultMoveSpeed - 0.5f && states != PlayerStates.Dash)
+        {
+            speedUpCounter -= Time.deltaTime;
+        }
+        else
+        {
+            speedUpCounter = speedUpTimer;
+        }
+
+        if (speedUpCounter <= 0)
+        {
+            moveSpeed += Time.deltaTime;
+            speedUpCounter = speedUpTimer;
+        }
     }
     
     // --- MOVE METHOD --- //
@@ -229,6 +248,11 @@ public class PlayerMovement : CharacterBase
         
         speedlines.Stop();
 
+        if (states == PlayerStates.Dash)
+        {
+            moveSpeed = currentMoveSpeed;
+        }
+
         states = PlayerStates.Default;
         StopAllCoroutines();
         gravity = defaultGravity;
@@ -240,7 +264,7 @@ public class PlayerMovement : CharacterBase
         }
         else
         {
-            jumpBufferCounter -= Time.deltaTime;
+            jumpBufferCounter -= Time.time;
         }
 
         //jump on ground
@@ -269,9 +293,7 @@ public class PlayerMovement : CharacterBase
             coyoteTimeCounter = 0;
         }
     }
-
-
-
+    
     // --- DASH METHOD --- //
     public void Dash(InputAction.CallbackContext context)
     {
@@ -279,6 +301,8 @@ public class PlayerMovement : CharacterBase
         
         if (states == PlayerStates.Dash) { return; }
 
+        currentMoveSpeed = moveSpeed;
+        
         //if on ground and not moving, move in direction of camera
         //checks if player is not moving by checking if the movement inputs return a value
         if (IsGrounded() && inputX == 0 && inputZ == 0)
@@ -374,6 +398,8 @@ public class PlayerMovement : CharacterBase
         speedlines.Play();
         
         yield return new WaitForSeconds(dashTimer);
+
+        moveSpeed = currentMoveSpeed;
         
         states = PlayerStates.Default;
         
