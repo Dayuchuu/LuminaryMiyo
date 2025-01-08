@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class UIManager : MonoBehaviour
 {
@@ -18,6 +21,10 @@ public class UIManager : MonoBehaviour
 	[SerializeField] private AudioSource buttonSounds;
 	
 	private bool uiOpen = true;
+	
+	private GameObject currentScreen = null;
+
+	[SerializeField] private List<GameObject> uiScreens;
 	
 	#endregion
 
@@ -133,8 +140,19 @@ public class UIManager : MonoBehaviour
 	public void Settings()
 	{
 		buttonSounds.Play();
-		
-		
+
+		for (int i = 0; i < uiScreens.Count; i++)
+		{
+			if (uiScreens[i].activeInHierarchy)
+			{
+				currentScreen = uiScreens[i];
+			}
+		}
+	}
+
+	public void BackToPreviousScreen()
+	{
+		currentScreen.SetActive(true);
 	}
 	
 	public void MainMenu()

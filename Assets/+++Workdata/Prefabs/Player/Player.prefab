@@ -5212,6 +5212,7 @@ GameObject:
   - component: {fileID: 3802460829245930385}
   - component: {fileID: 4600553743116613416}
   - component: {fileID: 3570288781112234023}
+  - component: {fileID: 5687490892446452611}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Player
@@ -5257,10 +5258,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 5
   states: 0
-  maxDefaultMoveSpeed: 10
+  maxDefaultMoveSpeed: 7
   maxVelocityChange: 10
   maxMoveSpeedDuringDash: 20
-  dashPower: 20
+  currentMoveSpeed: 0
+  dashPower: 25
   dashTimer: 0.25
   dashAmount: 1
   currentDashAmount: 0
@@ -5269,13 +5271,16 @@ MonoBehaviour:
   fallingGravity: -19.62
   groundDistance: 1
   jumpAmount: 1
-  coyoyteTime: 0.2
+  coyoteTime: 0.2
   jumpBufferTime: 0.2
   boxCastSize: {x: 1, y: 0.5, z: 1}
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  speedUpTimer: 1
+  speedUpCounter: 0
   currentJumpAmount: 0
+  moveSpeedAcceleration: 1.5
   speedlines: {fileID: 3410830121121518051}
   disableMovement: 0
   movementDirection: {x: 0, y: 0, z: 0}
@@ -5445,6 +5450,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &5687490892446452611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287199657284945601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3962555, y: 1.4746091, z: 1.8112373}
+  m_Center: {x: 0.005167961, y: 0.23730457, z: 0.09622002}
 --- !u!1 &7452502099272370598
 GameObject:
   m_ObjectHideFlags: 0
@@ -5621,6 +5647,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2374652273337158008}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 427ec51a2b305b440a9a7a15de39abd2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9219704055828687918}
   m_SourcePrefab: {fileID: 100100000, guid: 427ec51a2b305b440a9a7a15de39abd2, type: 3}
 --- !u!1 &229009706061524636 stripped
 GameObject:
@@ -5679,7 +5709,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5291027430321712415, guid: 2eb6fc599ab6cb644b38d1e14a71a038,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b3c1a550fd957604e99fb3156e67ef7a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5765,6 +5795,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &9219704055828687918
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229009706061524636}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.114921436
+  m_Height: 0.49167776
+  m_Direction: 1
+  m_Center: {x: -0.008888916, y: 0.29356575, z: 0.013753185}
 --- !u!4 &605254427155739686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 427ec51a2b305b440a9a7a15de39abd2,

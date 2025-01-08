@@ -33,6 +33,15 @@ public class SceneLoader : MonoBehaviour
 			return;
 		}
 
+		
+		// if (i >= (int)SceneStates.Level01)
+		// {
+		// 	currentScene = i;
+		// 	sceneStates = (SceneStates)i;
+		// 	UIManager.Instance.CloseMenu(UIManager.Instance.mainMenuScreen, CursorLockMode.Locked, 1f);
+		// }
+		
+
 		if (SceneManager.sceneCount < 2)
 		{
 			SceneManager.LoadScene((int)sceneStates, LoadSceneMode.Additive);
@@ -41,7 +50,7 @@ public class SceneLoader : MonoBehaviour
 		{
 			UIManager.Instance.CloseMenu(UIManager.Instance.mainMenuScreen, CursorLockMode.Locked, 1f);
 		}
-
+		
 		currentScene = (int)sceneStates; 
 		
 		

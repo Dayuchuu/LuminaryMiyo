@@ -1,8 +1,8 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : CharacterBase
@@ -67,7 +67,6 @@ public class PlayerMovement : CharacterBase
     
     private Rigidbody rb;
     
-    //serialize fielded
     [SerializeField] private Vector3 movementDirection = Vector3.zero;
     
     private float moveSpeed = 0f;

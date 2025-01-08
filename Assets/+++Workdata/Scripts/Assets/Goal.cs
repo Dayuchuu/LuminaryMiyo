@@ -29,7 +29,7 @@ public class Goal : MonoBehaviour
 
 		enemyAmount = FindObjectsOfType<EnemyShooting>().Length;
 
-		coinAmount = FindObjectsOfType<Coin>().Length;
+		coinAmount = FindObjectsOfType<Collectable>().Length;
 	}
 
 	private void OnTriggerEnter(Collider other)
