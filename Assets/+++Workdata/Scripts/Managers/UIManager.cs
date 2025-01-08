@@ -25,6 +25,10 @@ public class UIManager : MonoBehaviour
 	private GameObject currentScreen = null;
 
 	[SerializeField] private List<GameObject> uiScreens;
+
+	public float fovSettings;
+
+	public float cameraSensibility;
 	
 	#endregion
 

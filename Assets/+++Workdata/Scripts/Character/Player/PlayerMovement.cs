@@ -1,8 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : CharacterBase
@@ -235,6 +233,9 @@ public class PlayerMovement : CharacterBase
         {
             moveSpeed += Time.deltaTime * moveSpeedAcceleration;
             moveSpeed = Mathf.Clamp(moveSpeed ,0, 16);
+            
+            maxMoveSpeedDuringDash += Time.deltaTime * moveSpeedAcceleration;
+            maxMoveSpeedDuringDash = Mathf.Clamp(maxMoveSpeedDuringDash ,20, 26);
         }
     }
     

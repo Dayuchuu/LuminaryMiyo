@@ -34,16 +34,16 @@ public class Bullet : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			other.gameObject.GetComponent<PlayerMovement>().healthPoints--;
-
-			if (other.gameObject.GetComponent<PlayerMovement>().healthPoints <= 0)
-			{
-				Cursor.lockState = CursorLockMode.None;
-				
-				UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
-			}
+			// other.gameObject.GetComponent<PlayerMovement>().healthPoints--;
+			//
+			// if (other.gameObject.GetComponent<PlayerMovement>().healthPoints <= 0)
+			// {
+			// 	Cursor.lockState = CursorLockMode.None;
+			// 	
+			// 	UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
+			// }
 			
-			gameObject.SetActive(false);
+			// gameObject.SetActive(false);
 		}
 		else if(!other.CompareTag("Player") && !other.CompareTag("Enemy"))
 		{
