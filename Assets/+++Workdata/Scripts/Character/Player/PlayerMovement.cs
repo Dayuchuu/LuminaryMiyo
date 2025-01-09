@@ -119,6 +119,8 @@ public class PlayerMovement : CharacterBase
         speedUpCounter = speedUpTimer;
         currentDashCooldown = dashCooldown;
         currentDashAmount = dashAmount;
+
+        ChangeValues();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -431,6 +433,12 @@ public class PlayerMovement : CharacterBase
             currentJumpAmount = jumpAmount;
             currentDashAmount--;
         }
+    }
+
+    public void ChangeValues()
+    {
+        cameraTransform.gameObject.GetComponent<Camera>().fieldOfView = UIManager.Instance.fovSlider.value;
+        rotationSensibility = UIManager.Instance.cameraSensitivitySlider.value;
     }
 
     public void PauseGame(InputAction.CallbackContext context)

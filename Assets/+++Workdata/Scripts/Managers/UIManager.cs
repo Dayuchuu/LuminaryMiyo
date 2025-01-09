@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using Cursor = UnityEngine.Cursor;
 
 public class UIManager : MonoBehaviour
@@ -10,26 +11,30 @@ public class UIManager : MonoBehaviour
 	
 	public static UIManager Instance;
 
+	[Header("Screens")]
 	public GameObject winScreen = null;
 	public GameObject loseScreen = null;
 	public GameObject pauseScreen = null;
 	public GameObject mainMenuScreen = null;
-
+	[Space]
+	
+	[Header("Texts")]
 	public TextMeshProUGUI scoreText = null;
 	public TextMeshProUGUI timeText = null;
-
+	[Space]
+	
+	[Header("Audio")]
 	[SerializeField] private AudioSource buttonSounds;
+
+	public Slider fovSlider;
+
+	public Slider cameraSensitivitySlider;
 	
 	private bool uiOpen = true;
-	
 	private GameObject currentScreen = null;
 
 	[SerializeField] private List<GameObject> uiScreens;
-
-	public float fovSettings;
-
-	public float cameraSensibility;
-
+	
 	public GameObject player;
 	
 	#endregion
@@ -173,6 +178,16 @@ public class UIManager : MonoBehaviour
 		
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
+	}
+
+	public void OnSliderChanged()
+	{
+		player = GameObject.FindGameObjectWithTag("Player");
+
+		if (player != null)
+		{
+			player.GetComponent<PlayerMovement>().ChangeValues();
+		}
 	}
 
 	public void Quit()
