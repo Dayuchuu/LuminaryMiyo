@@ -208,7 +208,6 @@ public class PlayerMovement : CharacterBase
                 canDash = true;
             }
         }
-       
     }
     
     private void FixedUpdate()
@@ -344,7 +343,6 @@ public class PlayerMovement : CharacterBase
 
             rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
             
-            
             StartCoroutine(WaitForDash());
         }
         //if on ground and moving, move in current movement direction 
@@ -422,8 +420,6 @@ public class PlayerMovement : CharacterBase
     
     private IEnumerator WaitForDash()
     {
-        if (!canDash) { yield break; }
-        
         speedlines.Play();
         
         yield return new WaitForSeconds(dashTimer);
@@ -446,20 +442,6 @@ public class PlayerMovement : CharacterBase
             currentJumpAmount = jumpAmount;
             currentDashAmount--;
         }
-    }
-    
-    private void StartDashCooldown()
-    {
-        currentDashCooldown = dashCooldown;
-        
-        canDash = false;
-
-        while (currentDashCooldown > 0)
-        {
-            currentDashCooldown -= Time.deltaTime;
-        }
-
-        canDash = true;
     }
 
     public void PauseGame(InputAction.CallbackContext context)

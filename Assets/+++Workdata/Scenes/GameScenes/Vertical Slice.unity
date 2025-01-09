@@ -6431,6 +6431,16 @@ PrefabInstance:
       objectReference: {fileID: 832575518}
     - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
         type: 3}
+      propertyPath: dashCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
+      propertyPath: currentDashCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674882377346790463, guid: 248071aa9492f8c42b5c36ef7d086e12,
+        type: 3}
       propertyPath: rotationSensibility
       value: 0.2
       objectReference: {fileID: 0}
