@@ -29,10 +29,13 @@ public class PlayerMovement : CharacterBase
 
     [SerializeField] private float maxMoveSpeedDuringDash = 0f;
     public float currentMoveSpeed;
+    
     [SerializeField] private float dashPower = 5f;
     [SerializeField] private float dashTimer = 0f;
     [SerializeField] private int dashAmount = 0;
     [SerializeField] private int currentDashAmount = 0;
+    [SerializeField] private float dashCooldown = 0;
+    [SerializeField] private float currentDashCooldown = 0;
     private bool canDash = true;
     
     [SerializeField] private float jumpPower = 10f;
@@ -317,7 +320,7 @@ public class PlayerMovement : CharacterBase
         
         //if on ground and not moving, move in direction of camera
         //checks if player is not moving by checking if the movement inputs return a value
-        if (IsGrounded() && inputX == 0 && inputZ == 0)
+        if (IsGrounded() && inputX == 0 && inputZ == 0 && canDash)
         {
             Debug.Log("on ground and not moving");
             states = PlayerStates.Dash;
@@ -328,10 +331,11 @@ public class PlayerMovement : CharacterBase
 
             rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
             
+            
             StartCoroutine(WaitForDash());
         }
         //if on ground and moving, move in current movement direction 
-        else if (IsGrounded() && rb.velocity != Vector3.zero)
+        else if (IsGrounded() && rb.velocity != Vector3.zero && canDash)
         {
             Debug.Log("on ground and moving");
             states = PlayerStates.Dash;
@@ -339,7 +343,7 @@ public class PlayerMovement : CharacterBase
             movementDirection = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
             movementDirection.Normalize();
             rb.AddForce(movementDirection * dashPower, ForceMode.VelocityChange);
-
+            
             StartCoroutine(WaitForDash());
         }
         //if in air and not moving, move in direction of camera
@@ -402,7 +406,7 @@ public class PlayerMovement : CharacterBase
     {
         disableMovement = false;
     }
-
+    
     private IEnumerator WaitForDash()
     {
         if (!canDash) { yield break; }
@@ -416,16 +420,32 @@ public class PlayerMovement : CharacterBase
         states = PlayerStates.Default;
         
         speedlines.Stop();
-
+        
         //set gravity back to default after dash is over
         gravity = defaultGravity;
         rb.useGravity = true;
-
+        
+        // StartDashCooldown();
+        
         if (!IsGrounded())
         {
             currentJumpAmount = jumpAmount;
             currentDashAmount--;
         }
+    }
+    
+    private void StartDashCooldown()
+    {
+        currentDashCooldown = dashCooldown;
+        
+        canDash = false;
+
+        while (currentDashCooldown > 0)
+        {
+            currentDashCooldown -= Time.deltaTime;
+        }
+
+        canDash = true;
     }
 
     public void PauseGame(InputAction.CallbackContext context)
