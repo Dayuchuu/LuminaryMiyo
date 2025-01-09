@@ -196,6 +196,19 @@ public class PlayerMovement : CharacterBase
         {
             currentDashAmount = 1;
         }
+
+        if (!canDash)
+        {
+            currentDashCooldown -= Time.deltaTime;
+            
+            if (currentDashCooldown <= 0)
+            {
+                currentDashCooldown = dashCooldown;
+                
+                canDash = true;
+            }
+        }
+       
     }
     
     private void FixedUpdate()
@@ -424,7 +437,8 @@ public class PlayerMovement : CharacterBase
         //set gravity back to default after dash is over
         gravity = defaultGravity;
         rb.useGravity = true;
-        
+
+        canDash = false;
         // StartDashCooldown();
         
         if (!IsGrounded())

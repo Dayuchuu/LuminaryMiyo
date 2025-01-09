@@ -5266,7 +5266,9 @@ MonoBehaviour:
   dashTimer: 0.25
   dashAmount: 1
   currentDashAmount: 0
-  jumpPower: 15
+  dashCooldown: 5
+  currentDashCooldown: 5
+  jumpPower: 12
   defaultGravity: -9.81
   fallingGravity: -19.62
   groundDistance: 1
@@ -5482,7 +5484,7 @@ GameObject:
   - component: {fileID: 4915598094983698287}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
