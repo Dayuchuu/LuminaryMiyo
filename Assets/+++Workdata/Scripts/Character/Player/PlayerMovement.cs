@@ -127,6 +127,11 @@ public class PlayerMovement : CharacterBase
         {
             other.GetComponent<CharacterBase>().healthPoints--;
         }
+
+        if (other.CompareTag("Death"))
+        {
+            UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
+        }
     }
 
     private void Update()

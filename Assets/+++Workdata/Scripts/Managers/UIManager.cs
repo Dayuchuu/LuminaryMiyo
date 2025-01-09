@@ -29,6 +29,8 @@ public class UIManager : MonoBehaviour
 	public float fovSettings;
 
 	public float cameraSensibility;
+
+	public GameObject player;
 	
 	#endregion
 
@@ -60,7 +62,7 @@ public class UIManager : MonoBehaviour
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates,  (int)SceneLoader.SceneStates.Portal, 1));
 		
-		mainMenuScreen.gameObject.SetActive(false);
+		CloseMenu(mainMenuScreen, CursorLockMode.Locked, 1f);
 	}
 
 	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
@@ -71,9 +73,12 @@ public class UIManager : MonoBehaviour
 		{
 			menu.SetActive(true);
 			
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			
-			player.GetComponent<PlayerMovement>().DisablePlayerActions();
+			player = GameObject.FindGameObjectWithTag("Player");
+
+			if (player != null)
+			{
+				player.GetComponent<PlayerMovement>().DisablePlayerActions();
+			}
 
 			Cursor.lockState = lockMode;
 
@@ -91,9 +96,12 @@ public class UIManager : MonoBehaviour
 		{
 			menu.SetActive(false);
 			
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			
-			player.GetComponent<PlayerMovement>().EnablePlayerActions();
+			player = GameObject.FindGameObjectWithTag("Player");
+
+			if (player != null)
+			{
+				player.GetComponent<PlayerMovement>().EnablePlayerActions();
+			}
 			
 			Cursor.lockState = lockMode;
 
@@ -113,7 +121,7 @@ public class UIManager : MonoBehaviour
 			
 			secondMenu.SetActive(false);
 			
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			player = GameObject.FindGameObjectWithTag("Player");
 			
 			player.GetComponent<PlayerMovement>().EnablePlayerActions();
 			

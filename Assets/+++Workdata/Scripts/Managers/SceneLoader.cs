@@ -32,16 +32,17 @@ public class SceneLoader : MonoBehaviour
 
 			return;
 		}
-
 		
-		// if (i >= (int)SceneStates.Level01)
-		// {
-		// 	currentScene = i;
-		// 	sceneStates = (SceneStates)i;
-		// 	UIManager.Instance.CloseMenu(UIManager.Instance.mainMenuScreen, CursorLockMode.Locked, 1f);
-		// }
+		for (int i = 0; i < SceneManager.sceneCount; i++)
+		{
+			if (SceneManager.GetSceneAt(i).buildIndex >= (int)SceneStates.Level01)
+			{
+				int startScene = SceneManager.GetSceneAt(i).buildIndex;
+				sceneStates = (SceneStates)startScene;
+			}
+		}
 		
-
+		
 		if (SceneManager.sceneCount < 2)
 		{
 			SceneManager.LoadScene((int)sceneStates, LoadSceneMode.Additive);
@@ -52,8 +53,6 @@ public class SceneLoader : MonoBehaviour
 		}
 		
 		currentScene = (int)sceneStates; 
-		
-		
 	}
 
 	public IEnumerator LoadScene(int oldScene, int firstNewScene, int timeScale)
