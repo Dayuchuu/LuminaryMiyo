@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using Cursor = UnityEngine.Cursor;
 
@@ -10,6 +10,12 @@ public class UIManager : MonoBehaviour
 	#region Variables
 	
 	public static UIManager Instance;
+
+	public const string cameraSensibility = "camera";
+	public const string fov = "fov";
+	public const string master = "Master";
+	public const string music = "Music";
+	public const string sfx = "SFX";
 
 	[Header("Screens")]
 	public GameObject winScreen = null;
@@ -24,10 +30,14 @@ public class UIManager : MonoBehaviour
 	[Space]
 	
 	[Header("Audio")]
-	[SerializeField] private AudioSource buttonSounds;
-
+	[SerializeField] private AudioMixer mixer;
+	[SerializeField] private Slider masterSlider;
+	[SerializeField] private Slider musicSlider;
+	[SerializeField] private Slider sfxSlider;
+	[Space]
+	
+	[Header("Gameplay Settings")]
 	public Slider fovSlider;
-
 	public Slider cameraSensitivitySlider;
 	
 	private bool uiOpen = true;
@@ -51,8 +61,20 @@ public class UIManager : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+		
+		fovSlider.onValueChanged.AddListener(delegate { OnSliderChanged(fovSlider, fov);});
+		cameraSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderChanged(cameraSensitivitySlider, cameraSensibility);});
+		masterSlider.onValueChanged.AddListener(delegate { OnSliderChanged(masterSlider, master);});
+		musicSlider.onValueChanged.AddListener(delegate { OnSliderChanged(musicSlider, music);});
+		sfxSlider.onValueChanged.AddListener(delegate { OnSliderChanged(sfxSlider, sfx);});
 
-		buttonSounds = GetComponent<AudioSource>();
+		// sfxSlider.onValueChanged.AddListener((sliderValue) =>
+		// {
+		// 	mixer.SetFloat(name, sliderValue);
+		// 	
+		// 	PlayerPrefs.SetFloat(name, 1f);
+		// });
+
 	}
 
 	public void ChangeScoreText(int score, string rank)
@@ -62,8 +84,6 @@ public class UIManager : MonoBehaviour
 
 	public void StartGame()
 	{
-		buttonSounds.Play();
-		
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates,  (int)SceneLoader.SceneStates.Portal, 1));
 		
@@ -72,8 +92,6 @@ public class UIManager : MonoBehaviour
 
 	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
-		buttonSounds.Play();
-		
 		if (!uiOpen)
 		{
 			menu.SetActive(true);
@@ -95,8 +113,6 @@ public class UIManager : MonoBehaviour
 
 	public void CloseMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
-		buttonSounds.Play();
-		
 		if (uiOpen)
 		{
 			menu.SetActive(false);
@@ -118,8 +134,6 @@ public class UIManager : MonoBehaviour
 	
 	public void CloseMenu(GameObject firstMenu, GameObject secondMenu, CursorLockMode lockMode, float timeScale)
 	{
-		buttonSounds.Play();
-		
 		if (uiOpen)
 		{
 			firstMenu.SetActive(false);
@@ -140,8 +154,6 @@ public class UIManager : MonoBehaviour
 
 	public void Replay()
 	{
-		buttonSounds.Play();
-		
 		CloseMenu(winScreen, loseScreen, CursorLockMode.None, 1f);
 		
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, SceneLoader.Instance.currentScene, 1));
@@ -149,15 +161,11 @@ public class UIManager : MonoBehaviour
 	
 	public void StopPause()
 	{
-		buttonSounds.Play();
-		
 		CloseMenu(pauseScreen, CursorLockMode.Locked, 1f);
 	}
 	
 	public void Settings()
 	{
-		buttonSounds.Play();
-
 		for (int i = 0; i < uiScreens.Count; i++)
 		{
 			if (uiScreens[i].activeInHierarchy)
@@ -174,26 +182,33 @@ public class UIManager : MonoBehaviour
 	
 	public void MainMenu()
 	{
-		buttonSounds.Play();
-		
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 	}
 
-	public void OnSliderChanged()
+	private void OnSliderChanged(Slider slider, string keyName)
 	{
+		PlayerPrefs.SetFloat(keyName, slider.value);
+		
 		player = GameObject.FindGameObjectWithTag("Player");
 
 		if (player != null)
 		{
 			player.GetComponent<PlayerMovement>().ChangeValues();
 		}
+		
+		switch (keyName)
+		{
+			case master:
+			case music:
+			case sfx:
+				mixer.SetFloat(keyName, slider.value);
+				break;
+		}
 	}
 
 	public void Quit()
 	{
-		buttonSounds.Play();
-		
 		Application.Quit();
 	}
 	

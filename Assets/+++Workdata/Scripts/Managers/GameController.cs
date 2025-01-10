@@ -7,7 +7,6 @@ public class GameController : MonoBehaviour
     public enum GameStates
     {
         MainMenu,
-        Loading,
         Level
     }
     

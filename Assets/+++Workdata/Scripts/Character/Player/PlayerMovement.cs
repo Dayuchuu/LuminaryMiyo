@@ -437,8 +437,8 @@ public class PlayerMovement : CharacterBase
 
     public void ChangeValues()
     {
-        cameraTransform.gameObject.GetComponent<Camera>().fieldOfView = UIManager.Instance.fovSlider.value;
-        rotationSensibility = UIManager.Instance.cameraSensitivitySlider.value;
+        cameraTransform.gameObject.GetComponent<Camera>().fieldOfView = PlayerPrefs.GetFloat(UIManager.fov, 90f);
+        rotationSensibility = PlayerPrefs.GetFloat(UIManager.cameraSensibility, 0.2f);
     }
 
     public void PauseGame(InputAction.CallbackContext context)
