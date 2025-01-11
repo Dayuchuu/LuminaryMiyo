@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -22,6 +23,8 @@ public class UIManager : MonoBehaviour
 	public GameObject loseScreen = null;
 	public GameObject pauseScreen = null;
 	public GameObject mainMenuScreen = null;
+	public GameObject levelSelectionScreen = null;
+	[SerializeField] private List<GameObject> uiScreens;
 	[Space]
 	
 	[Header("Texts")]
@@ -39,13 +42,15 @@ public class UIManager : MonoBehaviour
 	[Header("Gameplay Settings")]
 	public Slider fovSlider;
 	public Slider cameraSensitivitySlider;
+
+	[Space] [Header("Level Selection")] 
+	public Button level01;
+	public Button level02;
 	
 	private bool uiOpen = true;
 	private GameObject currentScreen = null;
-
-	[SerializeField] private List<GameObject> uiScreens;
 	
-	public GameObject player;
+	private GameObject player;
 	
 	#endregion
 
@@ -62,19 +67,23 @@ public class UIManager : MonoBehaviour
 			Destroy(gameObject);
 		}
 		
+		if (Convert.ToBoolean(PlayerPrefs.GetInt(GameController.level01)))
+		{
+			level02.interactable = true;
+		}
+		
 		fovSlider.onValueChanged.AddListener(delegate { OnSliderChanged(fovSlider, fov);});
 		cameraSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderChanged(cameraSensitivitySlider, cameraSensibility);});
 		masterSlider.onValueChanged.AddListener(delegate { OnSliderChanged(masterSlider, master);});
 		musicSlider.onValueChanged.AddListener(delegate { OnSliderChanged(musicSlider, music);});
 		sfxSlider.onValueChanged.AddListener(delegate { OnSliderChanged(sfxSlider, sfx);});
-
+		
 		// sfxSlider.onValueChanged.AddListener((sliderValue) =>
 		// {
 		// 	mixer.SetFloat(name, sliderValue);
 		// 	
 		// 	PlayerPrefs.SetFloat(name, 1f);
 		// });
-
 	}
 
 	public void ChangeScoreText(int score, string rank)
@@ -82,12 +91,20 @@ public class UIManager : MonoBehaviour
 		scoreText.text = rank + score;
 	}
 
-	public void StartGame()
+	public void LoadLevel01()
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
-		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates,  (int)SceneLoader.SceneStates.Portal, 1));
+		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 		
-		CloseMenu(mainMenuScreen, CursorLockMode.Locked, 1f);
+		CloseMenu(levelSelectionScreen, CursorLockMode.Locked, 1f);
+	}
+	
+	public void LoadLevel02()
+	{
+		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level02;
+		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
+		
+		CloseMenu(levelSelectionScreen, CursorLockMode.Locked, 1f);
 	}
 
 	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
@@ -127,6 +144,8 @@ public class UIManager : MonoBehaviour
 			Cursor.lockState = lockMode;
 
 			Time.timeScale = timeScale;
+			
+			GetCurrentScreen();
 
 			uiOpen = false;
 		}
@@ -147,6 +166,8 @@ public class UIManager : MonoBehaviour
 			Cursor.lockState = lockMode;
 
 			Time.timeScale = timeScale;
+			
+			GetCurrentScreen();
 
 			uiOpen = false;
 		}
@@ -164,7 +185,7 @@ public class UIManager : MonoBehaviour
 		CloseMenu(pauseScreen, CursorLockMode.Locked, 1f);
 	}
 	
-	public void Settings()
+	public void GetCurrentScreen()
 	{
 		for (int i = 0; i < uiScreens.Count; i++)
 		{
@@ -184,6 +205,11 @@ public class UIManager : MonoBehaviour
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
+		
+		GetCurrentScreen();
+		CloseMenu(currentScreen, CursorLockMode.None, 1f);
+
+		OpenMenu(mainMenuScreen, CursorLockMode.None, 1f);
 	}
 
 	private void OnSliderChanged(Slider slider, string keyName)

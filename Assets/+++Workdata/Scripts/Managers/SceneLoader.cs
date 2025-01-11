@@ -10,9 +10,8 @@ public class SceneLoader : MonoBehaviour
 	{
 		Manager = 0,
 		MainMenu = 1,
-		Portal = 2,
-		Level01 = 3,
-		Level02 = 4
+		Level01 = 2,
+		Level02 = 3
 	}
 
 	public SceneStates sceneStates;
