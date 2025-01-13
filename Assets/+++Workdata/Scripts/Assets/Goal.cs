@@ -43,8 +43,18 @@ public class Goal : MonoBehaviour
 			Cursor.lockState = CursorLockMode.None;
 
 			GetMaxScore();
-			
-			//Time.timeScale = 0f;
+
+			Debug.Log(SceneLoader.Instance.sceneStates);
+			if (SceneLoader.Instance.sceneStates == SceneLoader.SceneStates.Level01)
+			{
+				GameController.Instance.level01Finished = true;
+				GameController.Instance.FinishedLevel01();
+			}
+			else if (SceneLoader.Instance.sceneStates == SceneLoader.SceneStates.Level02)
+			{
+				GameController.Instance.level01Finished = true;
+				GameController.Instance.FinishedLevel02();
+			}
 		}
 	}
 

@@ -22,64 +22,61 @@ public class PlayerMovement : CharacterBase
 
     #region Movement Variables
     
+    [HideInInspector]
     public PlayerStates states = PlayerStates.Default;
     
+    [Header("Movement Variables")]
     [SerializeField] private float maxDefaultMoveSpeed = 10f;
     [SerializeField] private int maxVelocityChange;
-
-    [SerializeField] private float maxMoveSpeedDuringDash = 0f;
-    public float currentMoveSpeed;
+    [SerializeField] private float speedUpTimer = 0f;
+    [SerializeField] private float moveSpeedAcceleration = 0f;
+    private Vector3 movementDirection = Vector3.zero;
+    private float currentMoveSpeed;
+    private float moveSpeed = 0f;
+    public float speedUpCounter = 0f;
+    [Space]
     
+    [Header("Dash Variables")]
+    [SerializeField] private float maxMoveSpeedDuringDash = 0f;
     [SerializeField] private float dashPower = 5f;
     [SerializeField] private float dashTimer = 0f;
     [SerializeField] private int dashAmount = 0;
-    [SerializeField] private int currentDashAmount = 0;
     [SerializeField] private float dashCooldown = 0;
-    [SerializeField] private float currentDashCooldown = 0;
+    private int currentDashAmount = 0;
+    private float currentDashCooldown = 0;
     private bool canDash = true;
+    [Space]
     
+    [Header("Jump Variables")]
     [SerializeField] private float jumpPower = 10f;
-    [SerializeField] private float defaultGravity = -9.81f;
-    [SerializeField] private float fallingGravity = -9.81f;
-    [SerializeField] private float groundDistance = 0f;
     [SerializeField] private int jumpAmount = 0;
-
     [SerializeField] private float coyoteTime = 0.2f;
-    private float coyoteTimeCounter;
-
     [SerializeField] private float jumpBufferTime = 0.2f;
-    private float jumpBufferCounter;
-
     [SerializeField] private Vector3 boxCastSize;
     [SerializeField] private LayerMask groundMask;
-
-    [SerializeField] private float speedUpTimer = 0f;
-    public float speedUpCounter = 0f;
-    
-    [SerializeField] private int currentJumpAmount = 0;
-    private float noGravity = 0f;
-
-    [SerializeField] private float moveSpeedAcceleration = 0f;
-
-    [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
-
+    private float coyoteTimeCounter = 0;
+    private float jumpBufferCounter = 0;
+    private int currentJumpAmount = 0;
     [Space]
+    
+    [HideInInspector]
     public bool disableMovement = false;
     
     private Rigidbody rb;
     
-    [SerializeField] private Vector3 movementDirection = Vector3.zero;
-    
-    private float moveSpeed = 0f;
-
-
-    [Header("Gravity Stuff")]
+    [Header("Gravity Variables")]
     //changed to serialize field so i can see shit in the inspector
     [SerializeField] private float gravity = 0f;
 
     //rate by which the gravity gets reduced once falling
     [SerializeField] private float gravityReduction = 1f;
+    [SerializeField] private float defaultGravity = -9.81f;
     [SerializeField] private float maxGravity = -30f;
+    private float noGravity = 0f;
+    [Space]
+    
+    [Header("Effect Variables")]
+    [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
 
     [Space]
     private float inputX; 
@@ -110,6 +107,9 @@ public class PlayerMovement : CharacterBase
 
     #region Methods
 
+    /// <summary>
+    /// We get multiple values/components at the start.
+    /// </summary>
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -117,20 +117,21 @@ public class PlayerMovement : CharacterBase
         moveSpeed = maxDefaultMoveSpeed;
         Cursor.lockState = CursorLockMode.Locked;
         speedUpCounter = speedUpTimer;
-    }
-
-    private void Start()
-    {
+        currentDashCooldown = dashCooldown;
         currentDashAmount = dashAmount;
+
+        ChangeValues();
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        //Attack for the enemies
         if (states == PlayerStates.Dash && other.CompareTag("Enemy"))
         {
             other.GetComponent<CharacterBase>().healthPoints--;
         }
 
+        //Death for the Player
         if (other.CompareTag("Death"))
         {
             UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
@@ -208,7 +209,6 @@ public class PlayerMovement : CharacterBase
                 canDash = true;
             }
         }
-       
     }
     
     private void FixedUpdate()
@@ -265,6 +265,7 @@ public class PlayerMovement : CharacterBase
     {
         if (disableMovement) { return; }
         
+        //Get the move values
         inputX = context.ReadValue<Vector3>().x;
         inputZ = context.ReadValue<Vector3>().z;
     }
@@ -335,7 +336,6 @@ public class PlayerMovement : CharacterBase
         //checks if player is not moving by checking if the movement inputs return a value
         if (IsGrounded() && inputX == 0 && inputZ == 0 && canDash)
         {
-            Debug.Log("on ground and not moving");
             states = PlayerStates.Dash;
             rb.velocity = Vector3.zero;
 
@@ -344,13 +344,11 @@ public class PlayerMovement : CharacterBase
 
             rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
             
-            
             StartCoroutine(WaitForDash());
         }
         //if on ground and moving, move in current movement direction 
         else if (IsGrounded() && rb.velocity != Vector3.zero && canDash)
         {
-            Debug.Log("on ground and moving");
             states = PlayerStates.Dash;
 
             movementDirection = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
@@ -363,7 +361,6 @@ public class PlayerMovement : CharacterBase
         //checks if player is not moving by checking if the movement inputs return a value
         else if (currentDashAmount > 0 && !IsGrounded() && inputX == 0 && inputZ == 0)
         {
-            Debug.Log("in air and not moving");
             states = PlayerStates.Dash;
             
             rb.velocity = Vector3.zero;
@@ -377,7 +374,6 @@ public class PlayerMovement : CharacterBase
         //if in air and moving, move in current movement direction 
         else if (currentDashAmount > 0 && !IsGrounded() && rb.velocity != Vector3.zero)
         {
-            Debug.Log("in air and moving");
             states = PlayerStates.Dash;
 
             movementDirection = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
@@ -401,12 +397,6 @@ public class PlayerMovement : CharacterBase
             return false;
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireCube(transform.position, boxCastSize);
-        Gizmos.DrawLine(cameraTransform.position, cameraTransform.forward);
-    }
     
     public void DisablePlayerActions()
     {
@@ -422,8 +412,6 @@ public class PlayerMovement : CharacterBase
     
     private IEnumerator WaitForDash()
     {
-        if (!canDash) { yield break; }
-        
         speedlines.Play();
         
         yield return new WaitForSeconds(dashTimer);
@@ -439,7 +427,6 @@ public class PlayerMovement : CharacterBase
         rb.useGravity = true;
 
         canDash = false;
-        // StartDashCooldown();
         
         if (!IsGrounded())
         {
@@ -447,19 +434,11 @@ public class PlayerMovement : CharacterBase
             currentDashAmount--;
         }
     }
-    
-    private void StartDashCooldown()
+
+    public void ChangeValues()
     {
-        currentDashCooldown = dashCooldown;
-        
-        canDash = false;
-
-        while (currentDashCooldown > 0)
-        {
-            currentDashCooldown -= Time.deltaTime;
-        }
-
-        canDash = true;
+        cameraTransform.gameObject.GetComponent<Camera>().fieldOfView = PlayerPrefs.GetFloat(UIManager.fov, 90f);
+        rotationSensibility = PlayerPrefs.GetFloat(UIManager.cameraSensibility, 0.2f);
     }
 
     public void PauseGame(InputAction.CallbackContext context)

@@ -5266,8 +5266,8 @@ MonoBehaviour:
   dashTimer: 0.25
   dashAmount: 1
   currentDashAmount: 0
-  dashCooldown: 5
-  currentDashCooldown: 5
+  dashCooldown: 0.25
+  currentDashCooldown: 1
   jumpPower: 12
   defaultGravity: -9.81
   fallingGravity: -19.62
@@ -5279,10 +5279,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  speedUpTimer: 1
+  speedUpTimer: 0.5
   speedUpCounter: 0
   currentJumpAmount: 0
-  moveSpeedAcceleration: 1.5
+  moveSpeedAcceleration: 5
   speedlines: {fileID: 3410830121121518051}
   disableMovement: 0
   movementDirection: {x: 0, y: 0, z: 0}
