@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
 	public static EnemyController Instance;
 
 	public EnemyShooting[] enemies = new EnemyShooting[0];
+
+	public int enemyAmount;
 	
 	#endregion
 
@@ -24,20 +26,19 @@ public class EnemyController : MonoBehaviour
 
 			return;
 		}
-		
-		FindEnemies();
 	}
 
 	public void FindEnemies()
 	{
 		enemies = FindObjectsOfType<EnemyShooting>();
+		enemyAmount = enemies.Length;
 	}
 	
 	public int FindCurrentEnemies()
 	{
 		int enemyInactive = 0;
 		
-		for (int enemyIndex = 0,  enemyAmount = enemies.Length; enemyIndex < enemyAmount; enemyIndex++)
+		for (int enemyIndex = 0,  currentEnemyAmount = enemies.Length; enemyIndex < currentEnemyAmount; enemyIndex++)
 		{
 			if (!enemies[enemyIndex].gameObject.activeInHierarchy)
 			{

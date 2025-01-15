@@ -54,6 +54,8 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private float jumpBufferTime = 0.2f;
     [SerializeField] private Vector3 boxCastSize;
     [SerializeField] private LayerMask groundMask;
+    float waitFrames;
+    [SerializeField] private float numWaitFrames;
     private float coyoteTimeCounter = 0;
     private float jumpBufferCounter = 0;
     private int currentJumpAmount = 0;
@@ -78,7 +80,11 @@ public class PlayerMovement : CharacterBase
     [Header("Effect Variables")]
     [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
 
+    [Space] 
+    [Header("Animations")] 
+    [SerializeField] private Animator anim;
     [Space]
+    
     private float inputX; 
     private float inputZ;
 
@@ -129,6 +135,7 @@ public class PlayerMovement : CharacterBase
         if (states == PlayerStates.Dash && other.CompareTag("Enemy"))
         {
             other.GetComponent<CharacterBase>().healthPoints--;
+            anim.SetBool( "DashAttack", true);
         }
 
         //Death for the Player
@@ -184,9 +191,12 @@ public class PlayerMovement : CharacterBase
             gravity = defaultGravity;
         }
 
-        if (IsGrounded())
+        waitFrames--;
+        
+        if (IsGrounded() && waitFrames <= 0f)
         {
             coyoteTimeCounter = coyoteTime;
+            UIManager.Instance.jumpIndicator.color = Color.blue;
         }
         else
         {
@@ -205,6 +215,8 @@ public class PlayerMovement : CharacterBase
             if (currentDashCooldown <= 0)
             {
                 currentDashCooldown = dashCooldown;
+
+                UIManager.Instance.dashIndicator.color = Color.yellow;
                 
                 canDash = true;
             }
@@ -258,6 +270,15 @@ public class PlayerMovement : CharacterBase
             maxMoveSpeedDuringDash += Time.deltaTime * moveSpeedAcceleration;
             maxMoveSpeedDuringDash = Mathf.Clamp(maxMoveSpeedDuringDash ,20, 26);
         }
+
+        if (rb.velocity.magnitude > 0.05f)
+        {
+            anim.SetBool( "IsRunning", true);
+        }
+        else
+        {
+            anim.SetBool( "IsRunning", false);
+        }
     }
     
     // --- MOVE METHOD --- //
@@ -305,6 +326,8 @@ public class PlayerMovement : CharacterBase
             gravity = defaultGravity;
             currentDashAmount = dashAmount;
             jumpBufferCounter = 0;
+            waitFrames = numWaitFrames;
+            UIManager.Instance.jumpIndicator.color = Color.red;
         }
         //jump in air if Jump amount is larger than 0
         else if (jumpBufferCounter > 0 &&  currentJumpAmount > 0) 
@@ -313,6 +336,7 @@ public class PlayerMovement : CharacterBase
 
             //reduce jump amount
             currentJumpAmount--;
+            UIManager.Instance.jumpIndicator.color = Color.white;
         }
 
         //jump button released
@@ -388,14 +412,12 @@ public class PlayerMovement : CharacterBase
     
     private bool IsGrounded()
     {        
-        if (Physics.BoxCast(transform.position, boxCastSize, Vector3.down, Quaternion.identity, boxCastSize.y, groundMask))
+        if (Physics.BoxCast(transform.position, boxCastSize, Vector3.down, out var hit, Quaternion.identity, boxCastSize.y, groundMask))
         {
-            return true;
+           if(Vector2.Angle(hit.normal, Vector3.up) < 45) 
+                return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
     
     public void DisablePlayerActions()
@@ -414,7 +436,13 @@ public class PlayerMovement : CharacterBase
     {
         speedlines.Play();
         
+        UIManager.Instance.dashIndicator.color = Color.white;
+        
         yield return new WaitForSeconds(dashTimer);
+        
+        UIManager.Instance.dashIndicator.color = Color.yellow;
+        
+        anim.SetBool( "DashAttack", false);
 
         moveSpeed = currentMoveSpeed;
         

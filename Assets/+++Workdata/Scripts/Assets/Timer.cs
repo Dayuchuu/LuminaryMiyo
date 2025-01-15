@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -15,7 +14,7 @@ public class Timer : MonoBehaviour
 
    #region Methods
    
-   private void Start()
+   public void StartCountdown()
    {
       timeText = UIManager.Instance.timeText;
       

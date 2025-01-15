@@ -5260,35 +5260,29 @@ MonoBehaviour:
   states: 0
   maxDefaultMoveSpeed: 7
   maxVelocityChange: 10
+  speedUpTimer: 0.5
+  moveSpeedAcceleration: 5
+  speedUpCounter: 0
   maxMoveSpeedDuringDash: 20
-  currentMoveSpeed: 0
   dashPower: 25
   dashTimer: 0.25
   dashAmount: 1
-  currentDashAmount: 0
   dashCooldown: 0.25
-  currentDashCooldown: 1
   jumpPower: 12
-  defaultGravity: -9.81
-  fallingGravity: -19.62
-  groundDistance: 1
   jumpAmount: 1
   coyoteTime: 0.2
   jumpBufferTime: 0.2
-  boxCastSize: {x: 1, y: 0.5, z: 1}
+  boxCastSize: {x: 0.5, y: 0.5, z: 0.5}
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  speedUpTimer: 0.5
-  speedUpCounter: 0
-  currentJumpAmount: 0
-  moveSpeedAcceleration: 5
-  speedlines: {fileID: 3410830121121518051}
+  numWaitFrames: 20
   disableMovement: 0
-  movementDirection: {x: 0, y: 0, z: 0}
   gravity: 0
   gravityReduction: 15
+  defaultGravity: -9.81
   maxGravity: -30
+  speedlines: {fileID: 3410830121121518051}
   cameraTransform: {fileID: 5212311064682074393}
   rotationSensibility: 0.2
   maxCameraPitch: 80
@@ -5693,12 +5687,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f470e45209e439f4d817f07a4328fb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 2.5
   attackLayer:
     serializedVersion: 2
     m_Bits: 8388608
-  cameraTransform: {fileID: 5212311064682074393}
-  boxCastSize: {x: 1.5, y: 1, z: 1.5}
   swordAttackSound: {fileID: 0}
 --- !u!82 &2374652273337158008
 AudioSource:

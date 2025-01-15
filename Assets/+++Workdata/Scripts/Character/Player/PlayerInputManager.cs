@@ -35,7 +35,7 @@ public class PlayerInputManager : MonoBehaviour
         
         inputMap.Player.Dash.performed += playerMovement.Dash;
 
-        inputMap.Player.Attack.performed += playerAttack.Attack;
+        // inputMap.Player.Attack.performed += playerAttack.Attack;
 
         inputMap.Player.PauseGame.performed += playerMovement.PauseGame;
     }

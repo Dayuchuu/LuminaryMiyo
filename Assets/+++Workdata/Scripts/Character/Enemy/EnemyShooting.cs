@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -31,12 +33,21 @@ public class EnemyShooting : CharacterBase
 		playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
 	}
 
+	private void OnCollisionEnter(Collision other)
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			other.gameObject.GetComponent<CharacterBase>().healthPoints--;
+		}
+	}
+
 	private void Update()
 	{
 		transform.LookAt(playerTransform);
 
 		if (healthPoints <= 0)
 		{
+			UIManager.Instance.timer.time += 5;
 			gameObject.SetActive(false);
 		}
 

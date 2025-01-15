@@ -24,6 +24,8 @@ public class UIManager : MonoBehaviour
 	public GameObject pauseScreen = null;
 	public GameObject mainMenuScreen = null;
 	public GameObject levelSelectionScreen = null;
+	public GameObject credits = null;
+	public GameObject uiCameras;
 	[SerializeField] private List<GameObject> uiScreens;
 	[Space]
 	
@@ -42,10 +44,23 @@ public class UIManager : MonoBehaviour
 	[Header("Gameplay Settings")]
 	public Slider fovSlider;
 	public Slider cameraSensitivitySlider;
-
-	[Space] [Header("Level Selection")] 
+	[Space] 
+	
+	[Header("Level Selection")] 
 	public Button level01;
 	public Button level02;
+
+	public Timer timer;
+
+	[Header("Dialogue")] 
+	public Dialogue tutorialDialogue;
+	[Space]
+	
+	[Header("InGame")]
+	public Image jumpIndicator;
+	public Image dashIndicator;
+	public GameObject inGameUi;
+	
 	
 	private bool uiOpen = true;
 	private GameObject currentScreen = null;
@@ -96,6 +111,12 @@ public class UIManager : MonoBehaviour
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 		
+		timer.StartCountdown();
+		
+		ResetInGameUi();
+		
+		inGameUi.SetActive(true);
+		
 		CloseMenu(levelSelectionScreen, CursorLockMode.Locked, 1f);
 	}
 	
@@ -104,7 +125,13 @@ public class UIManager : MonoBehaviour
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level02;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 		
-		CloseMenu(levelSelectionScreen, CursorLockMode.Locked, 1f);
+		timer.StartCountdown();
+		
+		ResetInGameUi();
+		
+		inGameUi.SetActive(true);
+		
+		CloseMenu(levelSelectionScreen, winScreen, CursorLockMode.Locked, 1f);
 	}
 
 	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
@@ -119,6 +146,8 @@ public class UIManager : MonoBehaviour
 			{
 				player.GetComponent<PlayerMovement>().DisablePlayerActions();
 			}
+			
+			uiCameras.SetActive(true);
 
 			Cursor.lockState = lockMode;
 
@@ -141,6 +170,8 @@ public class UIManager : MonoBehaviour
 				player.GetComponent<PlayerMovement>().EnablePlayerActions();
 			}
 			
+			uiCameras.SetActive(false);
+			
 			Cursor.lockState = lockMode;
 
 			Time.timeScale = timeScale;
@@ -162,6 +193,8 @@ public class UIManager : MonoBehaviour
 			player = GameObject.FindGameObjectWithTag("Player");
 			
 			player.GetComponent<PlayerMovement>().EnablePlayerActions();
+			
+			uiCameras.SetActive(false);
 			
 			Cursor.lockState = lockMode;
 
@@ -231,6 +264,17 @@ public class UIManager : MonoBehaviour
 				mixer.SetFloat(keyName, slider.value);
 				break;
 		}
+	}
+
+	private void ResetInGameUi()
+	{
+		dashIndicator.color = Color.yellow;
+		jumpIndicator.color = Color.blue;
+	}
+
+	private void ResetTimer()
+	{
+		timer.time = 60;
 	}
 
 	public void Quit()

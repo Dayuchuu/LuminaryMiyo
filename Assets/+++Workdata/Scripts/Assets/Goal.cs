@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class Goal : MonoBehaviour
@@ -7,24 +6,27 @@ public class Goal : MonoBehaviour
 
 	private PlayerMovement player = null;
 
-	[SerializeField]
-	private TextMeshProUGUI scoreText;
-
 	[SerializeField] 
 	private int maxTimePoints = 0;
+
+	[SerializeField] private bool showCredits;
 
 	private int enemyAmount = 0;
 	
 	private int coinAmount = 0;
 
 	private int scoreAmount = 0;
+
+	private GameObject dialogueSystem;
 	
 	#endregion
 
 	#region Methods
 	
-	private void OnValidate()
+	private void Start()
 	{
+		EnemyController.Instance.FindEnemies();
+		
 		player = FindObjectOfType<PlayerMovement>();
 
 		enemyAmount = FindObjectsOfType<EnemyShooting>().Length;
@@ -37,14 +39,7 @@ public class Goal : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			UIManager.Instance.OpenMenu(UIManager.Instance.winScreen, CursorLockMode.None, 0f);
-
-			player.DisablePlayerActions();
 			
-			Cursor.lockState = CursorLockMode.None;
-
-			GetMaxScore();
-
-			Debug.Log(SceneLoader.Instance.sceneStates);
 			if (SceneLoader.Instance.sceneStates == SceneLoader.SceneStates.Level01)
 			{
 				GameController.Instance.level01Finished = true;
@@ -54,6 +49,11 @@ public class Goal : MonoBehaviour
 			{
 				GameController.Instance.level01Finished = true;
 				GameController.Instance.FinishedLevel02();
+			}
+
+			if (showCredits == true)
+			{
+				
 			}
 		}
 	}

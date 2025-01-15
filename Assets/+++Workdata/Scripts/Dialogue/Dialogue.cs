@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
@@ -93,6 +92,25 @@ public class Dialogue : MonoBehaviour
 
         //what happens after all dialogue has been exhausted, in this case probably loading the next scene
         else
-            gameObject.SetActive(false);
+        {
+            AfterText();
+            gameObject.transform.parent.gameObject.SetActive(false);
+        }
+    }
+
+    private void AfterText()
+    {
+        UIManager.Instance.OpenMenu(UIManager.Instance.winScreen, CursorLockMode.None, 0f);
+			
+        if (SceneLoader.Instance.sceneStates == SceneLoader.SceneStates.Level01)
+        {
+            GameController.Instance.level01Finished = true;
+            GameController.Instance.FinishedLevel01();
+        }
+        else if (SceneLoader.Instance.sceneStates == SceneLoader.SceneStates.Level02)
+        {
+            GameController.Instance.level01Finished = true;
+            GameController.Instance.FinishedLevel02();
+        }
     }
 }
