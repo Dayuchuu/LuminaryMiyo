@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 81c89993dcbc59b47a1f39ce9c89425e
+guid: f3a3ed6fc8345f749ab7f593e94f06a0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,64 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Level Selection Details UI_1
+      name: Back Button UI_0
       rect:
         serializedVersion: 2
-        x: 1096
-        y: 549
-        width: 583
-        height: 37
+        x: 517
+        y: 269
+        width: 877
+        height: 752
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2efe3be73732eff449f231aa8845a322
-      internalID: 857475813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level Selection Details UI_2
-      rect:
-        serializedVersion: 2
-        x: 801
-        y: 288
-        width: 200
-        height: 224
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9b5be6254a6adb4597974690035c589
-      internalID: -696961979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level Selection Details UI_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 79
-        width: 1816
-        height: 178
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 236a21c8141051643a3fbafda1510008
-      internalID: -514855066
+      spriteID: d11ba4f5b261a6648873ada21ebb77eb
+      internalID: 1954286683
       vertices: []
       indices: 
       edges: []
@@ -175,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 229e0102fe3f5964facda6483200a7fc
+    spriteID: 8dc115504a99e224ab01c4f7d8e7f6a3
     internalID: 0
     vertices: []
     indices: 
@@ -183,10 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Level Selection Details UI_0: -416924790
-      Level Selection Details UI_1: 857475813
-      Level Selection Details UI_2: -696961979
-      Level Selection Details UI_3: -514855066
+      Back Button UI_0: 1954286683
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
