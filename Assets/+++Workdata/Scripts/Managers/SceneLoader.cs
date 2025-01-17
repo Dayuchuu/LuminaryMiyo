@@ -37,6 +37,9 @@ public class SceneLoader : MonoBehaviour
 			if (SceneManager.GetSceneAt(i).buildIndex >= (int)SceneStates.Level01)
 			{
 				int startScene = SceneManager.GetSceneAt(i).buildIndex;
+				GameController.Instance.gameStates = GameController.GameStates.InGame;
+				UIManager.Instance.inGameUi.SetActive(true);
+				UIManager.Instance.timer.StartCountdown();
 				sceneStates = (SceneStates)startScene;
 			}
 		}

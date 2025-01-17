@@ -21,6 +21,8 @@ public class EnemyShooting : CharacterBase
 
 	private bool inRange = false;
 
+	private Animator anim;
+
 	[FormerlySerializedAs("enemySounds")] [SerializeField] private AudioSource enemyIdleSounds;
 	[SerializeField] private AudioSource enemyDieSounds;
 	
@@ -31,6 +33,8 @@ public class EnemyShooting : CharacterBase
 	private void Awake()
 	{
 		playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
+
+		anim = GetComponent<Animator>();
 	}
 
 	private void OnCollisionEnter(Collision other)
@@ -58,6 +62,8 @@ public class EnemyShooting : CharacterBase
 		if(dist < distance && !inRange)
 		{
 			inRange = true;
+			
+			anim.SetBool("InRange", inRange);
 			if (playerTransform.gameObject.GetComponent<PlayerMovement>().states == PlayerMovement.PlayerStates.Dash)
 			{
 				//Think about changing this (doesnt really work) 
@@ -68,6 +74,8 @@ public class EnemyShooting : CharacterBase
 		else if (dist > distance && inRange)
 		{
 			inRange = false;
+			anim.SetBool("InRange", inRange);
+
 		}
 	}
 
