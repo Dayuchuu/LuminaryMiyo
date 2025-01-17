@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameController : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class GameController : MonoBehaviour
     public enum GameStates
     {
         MainMenu,
-        Level
+        InGame
     }
     
     #endregion
@@ -21,8 +22,7 @@ public class GameController : MonoBehaviour
     
     public GameStates gameStates;
     
-    public int coinPoints = 0;
-    public int timePoints = 0;
+    [FormerlySerializedAs("currenPoints")] public int currentPoints;
 
     public bool level01Finished;
     public bool level02Finished;
@@ -43,10 +43,7 @@ public class GameController : MonoBehaviour
 
             return;
         }
-
-// #if UNITY_EDITOR
-//         PlayerPrefs.DeleteAll();
-// #endif
+        
     }
 
     public void FinishedLevel01()
@@ -62,8 +59,13 @@ public class GameController : MonoBehaviour
 
     public void ResetGameStats()
     {
-        coinPoints = 0;
-        timePoints = 0;
+        currentPoints = 0;
+    }
+
+    public void ChangeScore(int currentAdd)
+    {
+        currentPoints += currentAdd;
+        UIManager.Instance.scoreText.text = currentPoints.ToString();
     }
     
     #endregion

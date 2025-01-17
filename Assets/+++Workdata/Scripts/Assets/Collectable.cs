@@ -13,7 +13,9 @@ public class Collectable : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			GameController.Instance.coinPoints++;
+			GameController.Instance.ChangeScore(500);
+			
+			UIManager.Instance.inGameScoreText.text = "Score: " + GameController.Instance.currentPoints;
 			
 			collectedSound.Play();
 			

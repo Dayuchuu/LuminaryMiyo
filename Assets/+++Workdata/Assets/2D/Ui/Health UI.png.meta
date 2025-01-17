@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a47ae170045aa274ebd63b8faa29485f
+guid: cfa6edd3ff3607044831eaa5e6e30540
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,8 +37,8 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -50,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Health UI_3
+      name: Health UI 1_4
       rect:
         serializedVersion: 2
-        x: 1131
+        x: 1149
         y: 495
-        width: 1473
-        height: 1442
+        width: 1437
+        height: 1481
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b657062c27b2b44a8c6e1a642f4fa51
-      internalID: -1504477518
+      spriteID: 8f81c13542bb8864fafa84c3fbacd362
+      internalID: 1452416504
       vertices: []
       indices: 
       edges: []
@@ -141,15 +141,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Health UI_0: 1559701017
-      Health UI_1: -259935713
-      Health UI_2: -1556898004
-      Health UI_3: -1504477518
-      Health UI_4: 649010652
-      Health UI_5: 441282185
-      Health UI_6: -210258698
-      Health UI_7: 891988230
-      Health UI_8: -758656001
+      Health UI 1_0: -57794249
+      Health UI 1_1: -1782508311
+      Health UI 1_2: -1444301838
+      Health UI 1_3: -1366485332
+      Health UI 1_4: 1452416504
+      Health UI 1_5: -88120452
+      Health UI 1_6: -1149183276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

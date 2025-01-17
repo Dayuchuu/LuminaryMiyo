@@ -50,6 +50,8 @@ public class Goal : MonoBehaviour
 				GameController.Instance.level01Finished = true;
 				GameController.Instance.FinishedLevel02();
 			}
+			
+			GetMaxScore();
 
 			if (showCredits == true)
 			{
@@ -73,11 +75,9 @@ public class Goal : MonoBehaviour
 
 	private void GetScore(int currentMaxScore)
 	{
-		scoreAmount += EnemyController.Instance.FindCurrentEnemies() * 500;
-		
-		scoreAmount += GameController.Instance.coinPoints * 500;
+		scoreAmount += GameController.Instance.currentPoints;
 
-		scoreAmount += GameController.Instance.timePoints;
+		scoreAmount += (int)UIManager.Instance.timer.time;
 		
 		GetRank(scoreAmount, currentMaxScore);
 	}

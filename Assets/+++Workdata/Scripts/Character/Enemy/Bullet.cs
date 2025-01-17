@@ -36,6 +36,8 @@ public class Bullet : MonoBehaviour
 		{
 			other.gameObject.GetComponent<PlayerMovement>().healthPoints--;
 			
+			UIManager.Instance.ChangeHearts();
+			
 			if (other.gameObject.GetComponent<PlayerMovement>().healthPoints <= 0)
 			{
 				Cursor.lockState = CursorLockMode.None;

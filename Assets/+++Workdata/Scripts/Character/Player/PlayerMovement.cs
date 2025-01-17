@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : CharacterBase
@@ -285,6 +286,11 @@ public class PlayerMovement : CharacterBase
     public void Move(InputAction.CallbackContext context)
     {
         if (disableMovement) { return; }
+        
+        if (!UIManager.Instance.timer.countDownIsRunning && rb.velocity.magnitude > 0)
+        {
+            UIManager.Instance.StartCountdown();
+        }
         
         //Get the move values
         inputX = context.ReadValue<Vector3>().x;

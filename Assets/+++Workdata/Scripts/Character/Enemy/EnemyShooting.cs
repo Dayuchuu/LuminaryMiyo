@@ -48,6 +48,8 @@ public class EnemyShooting : CharacterBase
 		if (healthPoints <= 0)
 		{
 			UIManager.Instance.timer.time += 5;
+			GameController.Instance.ChangeScore(500);
+			UIManager.Instance.inGameScoreText.text = "Score: " + GameController.Instance.currentPoints;
 			gameObject.SetActive(false);
 		}
 

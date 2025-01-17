@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
 		enemyAmount = enemies.Length;
 	}
 	
-	public int FindCurrentEnemies()
+	public int FindInactiveEnemies()
 	{
 		int enemyInactive = 0;
 		

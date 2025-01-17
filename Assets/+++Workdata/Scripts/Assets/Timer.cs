@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
    
    private TextMeshProUGUI timeText;
 
+   public bool countDownIsRunning;
+
    #endregion
 
    #region Methods
@@ -20,19 +22,20 @@ public class Timer : MonoBehaviour
       
       timeText.text = time.ToString();
 
-      if (GameController.Instance.gameStates == GameController.GameStates.Level)
+      if (GameController.Instance.gameStates == GameController.GameStates.InGame)
       {
          timeText.gameObject.SetActive(true);
       }
-      
-      StartCoroutine(CountDown());
    }
 
-   IEnumerator CountDown()
+   public IEnumerator CountDown()
    {
+      countDownIsRunning = true;
+      
       if (time <= 0)
       {
-        UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
+         countDownIsRunning = false;
+         UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
          
          yield break;
       }
@@ -41,11 +44,17 @@ public class Timer : MonoBehaviour
 
       time--;
 
-      GameController.Instance.timePoints = time;
-
       timeText.text = time.ToString();
 
       StartCoroutine(CountDown());
+   }
+
+   public void ResetTimer()
+   {
+      StopAllCoroutines();
+      time = 60;
+      timeText.text = time.ToString();
+      countDownIsRunning = false;
    }
    #endregion
 }

@@ -25,13 +25,13 @@ public class UIManager : MonoBehaviour
 	public GameObject mainMenuScreen = null;
 	public GameObject levelSelectionScreen = null;
 	public GameObject credits = null;
-	public GameObject uiCameras;
 	[SerializeField] private List<GameObject> uiScreens;
 	[Space]
 	
 	[Header("Texts")]
 	public TextMeshProUGUI scoreText = null;
 	public TextMeshProUGUI timeText = null;
+	public TextMeshProUGUI inGameScoreText = null;
 	[Space]
 	
 	[Header("Audio")]
@@ -60,10 +60,11 @@ public class UIManager : MonoBehaviour
 	public Image jumpIndicator;
 	public Image dashIndicator;
 	public GameObject inGameUi;
-	
+	public List<Image> hearts;
 	
 	private bool uiOpen = true;
 	private GameObject currentScreen = null;
+	private int currentHealth = 5;
 	
 	private GameObject player;
 	
@@ -116,8 +117,16 @@ public class UIManager : MonoBehaviour
 		ResetInGameUi();
 		
 		inGameUi.SetActive(true);
+
+		ResetHearts();
+
+		ResetTimer();
 		
-		CloseMenu(levelSelectionScreen, CursorLockMode.Locked, 1f);
+		GameController.Instance.ResetGameStats();
+
+		GameController.Instance.gameStates = GameController.GameStates.InGame;
+		
+		CloseMenu(levelSelectionScreen,winScreen, CursorLockMode.Locked, 1f);
 	}
 	
 	public void LoadLevel02()
@@ -130,6 +139,14 @@ public class UIManager : MonoBehaviour
 		ResetInGameUi();
 		
 		inGameUi.SetActive(true);
+
+		inGameScoreText.text = "Score: 0";
+
+		ResetHearts();
+
+		ResetTimer();
+		
+		GameController.Instance.ResetGameStats();
 		
 		CloseMenu(levelSelectionScreen, winScreen, CursorLockMode.Locked, 1f);
 	}
@@ -146,8 +163,6 @@ public class UIManager : MonoBehaviour
 			{
 				player.GetComponent<PlayerMovement>().DisablePlayerActions();
 			}
-			
-			uiCameras.SetActive(true);
 
 			Cursor.lockState = lockMode;
 
@@ -170,8 +185,6 @@ public class UIManager : MonoBehaviour
 				player.GetComponent<PlayerMovement>().EnablePlayerActions();
 			}
 			
-			uiCameras.SetActive(false);
-			
 			Cursor.lockState = lockMode;
 
 			Time.timeScale = timeScale;
@@ -192,9 +205,10 @@ public class UIManager : MonoBehaviour
 			
 			player = GameObject.FindGameObjectWithTag("Player");
 			
-			player.GetComponent<PlayerMovement>().EnablePlayerActions();
-			
-			uiCameras.SetActive(false);
+			if (player != null)
+			{
+				player.GetComponent<PlayerMovement>().EnablePlayerActions();
+			}
 			
 			Cursor.lockState = lockMode;
 
@@ -209,6 +223,14 @@ public class UIManager : MonoBehaviour
 	public void Replay()
 	{
 		CloseMenu(winScreen, loseScreen, CursorLockMode.None, 1f);
+		
+		ResetHearts();
+
+		ResetTimer();
+		
+		inGameScoreText.text = "Score: 0";
+		
+		GameController.Instance.ResetGameStats();
 		
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, SceneLoader.Instance.currentScene, 1));
 	}
@@ -245,6 +267,27 @@ public class UIManager : MonoBehaviour
 		OpenMenu(mainMenuScreen, CursorLockMode.None, 1f);
 	}
 
+	public void ChangeHearts()
+	{
+		hearts[currentHealth -1].gameObject.SetActive(false);
+		currentHealth--;
+	}
+
+	public void StartCountdown()
+	{
+		timer.StartCoroutine(timer.CountDown());
+	}
+
+	private void ResetHearts()
+	{
+		currentHealth = 5;
+
+		for (int i = 0, maxHearts = hearts.Count; i < maxHearts; i++)
+		{
+			hearts[i].gameObject.SetActive(true);
+		}
+	}
+
 	private void OnSliderChanged(Slider slider, string keyName)
 	{
 		PlayerPrefs.SetFloat(keyName, slider.value);
@@ -271,10 +314,10 @@ public class UIManager : MonoBehaviour
 		dashIndicator.color = Color.yellow;
 		jumpIndicator.color = Color.blue;
 	}
-
+	
 	private void ResetTimer()
 	{
-		timer.time = 60;
+		timer.ResetTimer();
 	}
 
 	public void Quit()
