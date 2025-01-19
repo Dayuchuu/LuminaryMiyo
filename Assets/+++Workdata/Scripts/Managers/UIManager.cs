@@ -49,18 +49,16 @@ public class UIManager : MonoBehaviour
 	[Header("Level Selection")] 
 	public Button level01;
 	public Button level02;
-
-	public Timer timer;
-
-	[Header("Dialogue")] 
-	public Dialogue tutorialDialogue;
 	[Space]
 	
 	[Header("InGame")]
+	public GameObject inGameUi;
 	public Image jumpIndicator;
 	public Image dashIndicator;
-	public GameObject inGameUi;
+	public Timer timer;
 	public List<Image> hearts;
+	public GameObject tutorialDialogue;
+	public GameObject levelDialogue;
 	
 	private bool uiOpen = true;
 	private GameObject currentScreen = null;
@@ -93,7 +91,18 @@ public class UIManager : MonoBehaviour
 		masterSlider.onValueChanged.AddListener(delegate { OnSliderChanged(masterSlider, master);});
 		musicSlider.onValueChanged.AddListener(delegate { OnSliderChanged(musicSlider, music);});
 		sfxSlider.onValueChanged.AddListener(delegate { OnSliderChanged(sfxSlider, sfx);});
-		
+
+
+		fovSlider.value = PlayerPrefs.GetFloat(fov);
+		cameraSensitivitySlider.value = PlayerPrefs.GetFloat(cameraSensibility);
+		masterSlider.value = PlayerPrefs.GetFloat(master);
+		musicSlider.value = PlayerPrefs.GetFloat(music);
+		sfxSlider.value = PlayerPrefs.GetFloat(sfx);
+
+		mixer.SetFloat(master, masterSlider.value);
+		mixer.SetFloat(music, musicSlider.value);
+		mixer.SetFloat(sfx, sfxSlider.value);
+
 		// sfxSlider.onValueChanged.AddListener((sliderValue) =>
 		// {
 		// 	mixer.SetFloat(name, sliderValue);
@@ -114,10 +123,10 @@ public class UIManager : MonoBehaviour
 		
 		timer.StartCountdown();
 		
+		tutorialDialogue.SetActive(true);
+		
 		ResetInGameUi();
 		
-		inGameUi.SetActive(true);
-
 		ResetHearts();
 
 		ResetTimer();
@@ -127,6 +136,8 @@ public class UIManager : MonoBehaviour
 		GameController.Instance.gameStates = GameController.GameStates.InGame;
 		
 		CloseMenu(levelSelectionScreen,winScreen, CursorLockMode.Locked, 1f);
+		
+		OpenMenu(tutorialDialogue, CursorLockMode.None, 1f);
 	}
 	
 	public void LoadLevel02()
@@ -138,7 +149,6 @@ public class UIManager : MonoBehaviour
 		
 		ResetInGameUi();
 		
-		inGameUi.SetActive(true);
 
 		inGameScoreText.text = "Score: 0";
 
@@ -149,6 +159,8 @@ public class UIManager : MonoBehaviour
 		GameController.Instance.ResetGameStats();
 		
 		CloseMenu(levelSelectionScreen, winScreen, CursorLockMode.Locked, 1f);
+		
+		OpenMenu(levelDialogue, CursorLockMode.None, 1f);
 	}
 
 	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
@@ -237,6 +249,7 @@ public class UIManager : MonoBehaviour
 	
 	public void StopPause()
 	{
+		inGameUi.SetActive(true);
 		CloseMenu(pauseScreen, CursorLockMode.Locked, 1f);
 	}
 	
@@ -275,7 +288,7 @@ public class UIManager : MonoBehaviour
 
 	public void StartCountdown()
 	{
-		timer.StartCoroutine(timer.CountDown());
+		timer.startCountDown = true;
 	}
 
 	private void ResetHearts()

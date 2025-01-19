@@ -6,11 +6,15 @@ public class Timer : MonoBehaviour
 {
    #region Variables
 
-   public int time = 0;
+   public float time = 0;
+   private float milliseconds;
    
    private TextMeshProUGUI timeText;
 
    public bool countDownIsRunning;
+
+   public bool startCountDown;
+   
 
    #endregion
 
@@ -20,7 +24,7 @@ public class Timer : MonoBehaviour
    {
       timeText = UIManager.Instance.timeText;
       
-      timeText.text = time.ToString();
+      timeText.text = string.Format("{0}:{1}", 60, 00);
 
       if (GameController.Instance.gameStates == GameController.GameStates.InGame)
       {
@@ -28,32 +32,36 @@ public class Timer : MonoBehaviour
       }
    }
 
-   public IEnumerator CountDown()
+   public void Update()
    {
-      countDownIsRunning = true;
-      
-      if (time <= 0)
+      if (!startCountDown)
       {
-         countDownIsRunning = false;
-         UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
-         
-         yield break;
+         return;
       }
       
-      yield return new WaitForSeconds(1);
+      countDownIsRunning = true;
 
-      time--;
-
-      timeText.text = time.ToString();
-
-      StartCoroutine(CountDown());
+      if(milliseconds <= 0)
+      {
+         time--;
+         if(time <= 0){
+            UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
+         }
+         
+         milliseconds = 100;
+      }
+    		
+      milliseconds -= Time.deltaTime * 100;
+    		
+      //Debug.Log(string.Format("{0}:{1}:{2}", minutes, seconds, (int)miliseconds));
+      timeText.text = string.Format("{0}:{1}", time, (int)milliseconds);
    }
 
    public void ResetTimer()
    {
-      StopAllCoroutines();
       time = 60;
-      timeText.text = time.ToString();
+      startCountDown = false;
+      timeText.text = string.Format("{0}:{1}", 60, 00);
       countDownIsRunning = false;
    }
    #endregion

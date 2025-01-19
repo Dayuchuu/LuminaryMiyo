@@ -8,8 +8,7 @@ public class EnemyShooting : CharacterBase
 {
 	#region Variables
 
-	[SerializeField] 
-	private Transform bulletSpawnPoint = null;
+	[SerializeField] private Transform bulletSpawnPoint = null;
 
 	[SerializeField] private float bulletSpawnCooldown = 0f;
 	
@@ -25,6 +24,10 @@ public class EnemyShooting : CharacterBase
 
 	[FormerlySerializedAs("enemySounds")] [SerializeField] private AudioSource enemyIdleSounds;
 	[SerializeField] private AudioSource enemyDieSounds;
+	[Space]
+	
+	[Header("Effect")]
+	[SerializeField] private ParticleSystem deathEffect;
 	
 	#endregion
 
@@ -47,13 +50,15 @@ public class EnemyShooting : CharacterBase
 
 	private void Update()
 	{
-		transform.LookAt(playerTransform);
-
+		Vector3 target = new Vector3(playerTransform.position.x, transform.position.y, playerTransform.position.z);
+		transform.LookAt(target);
+		
 		if (healthPoints <= 0)
 		{
 			UIManager.Instance.timer.time += 5;
 			GameController.Instance.ChangeScore(500);
 			UIManager.Instance.inGameScoreText.text = "Score: " + GameController.Instance.currentPoints;
+			deathEffect.Play();
 			gameObject.SetActive(false);
 		}
 
@@ -71,11 +76,10 @@ public class EnemyShooting : CharacterBase
 			}
 			StartCoroutine(SpawnBullet());
 		}
-		else if (dist > distance && inRange)
+		else if (dist > distance)
 		{
 			inRange = false;
 			anim.SetBool("InRange", inRange);
-
 		}
 	}
 
@@ -101,7 +105,6 @@ public class EnemyShooting : CharacterBase
 
 			StartCoroutine(SpawnBullet());
 		}
-
 	}
 	#endregion
 }

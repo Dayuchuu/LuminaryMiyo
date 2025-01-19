@@ -38,6 +38,7 @@ public class Goal : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
+			UIManager.Instance.inGameUi.SetActive(false);
 			UIManager.Instance.OpenMenu(UIManager.Instance.winScreen, CursorLockMode.None, 0f);
 			
 			if (SceneLoader.Instance.sceneStates == SceneLoader.SceneStates.Level01)
@@ -52,11 +53,6 @@ public class Goal : MonoBehaviour
 			}
 			
 			GetMaxScore();
-
-			if (showCredits == true)
-			{
-				
-			}
 		}
 	}
 

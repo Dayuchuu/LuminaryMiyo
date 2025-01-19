@@ -90,27 +90,13 @@ public class Dialogue : MonoBehaviour
             StartCoroutine (TypeLine());
         }
 
-        //what happens after all dialogue has been exhausted, in this case probably loading the next scene
+        //what happens after all dialogue has been exhausted, in this case activating movement and closing Dialogue ui.
         else
         {
-            AfterText();
-            gameObject.transform.parent.gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().disableMovement = false;
+            UIManager.Instance.CloseMenu(UIManager.Instance.tutorialDialogue,UIManager.Instance.levelDialogue, CursorLockMode.Locked, 1f);
+            UIManager.Instance.inGameUi.SetActive(true);
         }
     }
-
-    private void AfterText()
-    {
-        UIManager.Instance.OpenMenu(UIManager.Instance.winScreen, CursorLockMode.None, 0f);
-			
-        if (SceneLoader.Instance.sceneStates == SceneLoader.SceneStates.Level01)
-        {
-            GameController.Instance.level01Finished = true;
-            GameController.Instance.FinishedLevel01();
-        }
-        else if (SceneLoader.Instance.sceneStates == SceneLoader.SceneStates.Level02)
-        {
-            GameController.Instance.level01Finished = true;
-            GameController.Instance.FinishedLevel02();
-        }
-    }
+    
 }

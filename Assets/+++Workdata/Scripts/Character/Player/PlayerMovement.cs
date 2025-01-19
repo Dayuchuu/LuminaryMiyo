@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : CharacterBase
@@ -62,8 +61,7 @@ public class PlayerMovement : CharacterBase
     private int currentJumpAmount = 0;
     [Space]
     
-    [HideInInspector]
-    public bool disableMovement = false;
+    public bool disableMovement = true;
     
     private Rigidbody rb;
     
@@ -136,7 +134,6 @@ public class PlayerMovement : CharacterBase
         if (states == PlayerStates.Dash && other.CompareTag("Enemy"))
         {
             other.GetComponent<CharacterBase>().healthPoints--;
-            anim.SetBool( "DashAttack", true);
         }
 
         //Death for the Player
@@ -303,6 +300,8 @@ public class PlayerMovement : CharacterBase
         if (disableMovement) { return; }
         
         speedlines.Stop();
+        
+        anim.SetBool( "DashAttack", false);
 
         if (states == PlayerStates.Dash)
         {
@@ -361,6 +360,8 @@ public class PlayerMovement : CharacterBase
         if (states == PlayerStates.Dash) { return; }
 
         currentMoveSpeed = moveSpeed;
+        
+        anim.SetBool( "DashAttack", true);
         
         //if on ground and not moving, move in direction of camera
         //checks if player is not moving by checking if the movement inputs return a value
@@ -477,6 +478,7 @@ public class PlayerMovement : CharacterBase
 
     public void PauseGame(InputAction.CallbackContext context)
     {
+        UIManager.Instance.inGameUi.SetActive(false);
         UIManager.Instance.OpenMenu(UIManager.Instance.pauseScreen, CursorLockMode.None,  0);
     }
 
