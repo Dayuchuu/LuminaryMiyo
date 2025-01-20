@@ -5466,6 +5466,7 @@ MonoBehaviour:
   speakerTextComponent: {fileID: 559548896}
   speakerPortrait: {fileID: 1552032682}
   textSpeed: 0.01
+  isPlaying: 0
 --- !u!114 &917788618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7264,7 +7265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Magical Girl Platformer
+  m_text: Ember Dusk
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c448e44507caceb48b4fa855ec661e7a, type: 2}
   m_sharedMaterial: {fileID: -2626976860378220653, guid: c448e44507caceb48b4fa855ec661e7a,
@@ -9820,6 +9821,7 @@ MonoBehaviour:
   speakerTextComponent: {fileID: 357749630}
   speakerPortrait: {fileID: 1019339485}
   textSpeed: 0.01
+  isPlaying: 0
 --- !u!114 &1538332522
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -98,9 +98,7 @@ public class PlayerMovement : CharacterBase
     
     [Range(0, 1)]
     [SerializeField] private float rotationSensibility;
-
     [SerializeField] private float maxCameraPitch = 80f;
-
     [SerializeField] private bool invertCameraPitch = false;
     
     private float cameraPitch;
@@ -125,6 +123,15 @@ public class PlayerMovement : CharacterBase
         currentDashCooldown = dashCooldown;
         currentDashAmount = dashAmount;
 
+        if (UIManager.Instance.tutorialDialogue.GetComponentInChildren<Dialogue>().isPlaying)
+        {
+            disableMovement = true;
+        }
+        else
+        {
+            disableMovement = false;
+        }
+
         ChangeValues();
     }
 
@@ -139,7 +146,9 @@ public class PlayerMovement : CharacterBase
         //Death for the Player
         if (other.CompareTag("Death"))
         {
+            UIManager.Instance.inGameUi.SetActive(false);
             UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
+            
         }
     }
 

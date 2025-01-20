@@ -21,8 +21,9 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speakerTextComponent;
     [SerializeField] private Image speakerPortrait;
 
-
     [SerializeField] private float textSpeed;
+
+    public bool isPlaying;
 
     private int dialogueDataIndex;
 
@@ -64,6 +65,7 @@ public class Dialogue : MonoBehaviour
     private void StartDialogue()
     {
         dialogueDataIndex = 0;
+        isPlaying = true;
         StartCoroutine(TypeLine());
     }
 
@@ -94,8 +96,10 @@ public class Dialogue : MonoBehaviour
         else
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().disableMovement = false;
+            isPlaying = false;
             UIManager.Instance.CloseMenu(UIManager.Instance.tutorialDialogue,UIManager.Instance.levelDialogue, CursorLockMode.Locked, 1f);
             UIManager.Instance.inGameUi.SetActive(true);
+            gameObject.transform.parent.gameObject.SetActive(false);
         }
     }
     

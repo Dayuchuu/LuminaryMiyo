@@ -93,11 +93,11 @@ public class UIManager : MonoBehaviour
 		sfxSlider.onValueChanged.AddListener(delegate { OnSliderChanged(sfxSlider, sfx);});
 
 
-		fovSlider.value = PlayerPrefs.GetFloat(fov);
-		cameraSensitivitySlider.value = PlayerPrefs.GetFloat(cameraSensibility);
-		masterSlider.value = PlayerPrefs.GetFloat(master);
-		musicSlider.value = PlayerPrefs.GetFloat(music);
-		sfxSlider.value = PlayerPrefs.GetFloat(sfx);
+		GetSliderValues(fovSlider, fov);
+		GetSliderValues(cameraSensitivitySlider, cameraSensibility);
+		GetSliderValues(masterSlider, master);
+		GetSliderValues(musicSlider, music);
+		GetSliderValues(sfxSlider, sfx);
 
 		mixer.SetFloat(master, masterSlider.value);
 		mixer.SetFloat(music, musicSlider.value);
@@ -236,6 +236,8 @@ public class UIManager : MonoBehaviour
 	{
 		CloseMenu(winScreen, loseScreen, CursorLockMode.None, 1f);
 		
+		inGameUi.SetActive(false);
+		
 		ResetHearts();
 
 		ResetTimer();
@@ -319,6 +321,14 @@ public class UIManager : MonoBehaviour
 			case sfx:
 				mixer.SetFloat(keyName, slider.value);
 				break;
+		}
+	}
+
+	private void GetSliderValues(Slider slider, string keyName)
+	{
+		if (PlayerPrefs.GetFloat(keyName) != 0)
+		{
+			slider.value = PlayerPrefs.GetFloat(keyName);
 		}
 	}
 

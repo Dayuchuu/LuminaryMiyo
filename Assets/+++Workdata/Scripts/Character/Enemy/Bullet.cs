@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -51,6 +52,11 @@ public class Bullet : MonoBehaviour
 		{
 			gameObject.SetActive(false);
 		}
+	}
+
+	private void Update()
+	{
+		transform.Rotate(Time.deltaTime * 5, 0, 0);
 	}
 
 	public void StartBullet()
