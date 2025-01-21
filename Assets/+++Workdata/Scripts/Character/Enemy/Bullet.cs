@@ -18,8 +18,6 @@ public class Bullet : MonoBehaviour
 	
 	Vector3 shootDirection = Vector3.zero;
 
-	[SerializeField] private AudioSource bulletSound;
-
 	#endregion
 
 	#region Methods
@@ -27,8 +25,6 @@ public class Bullet : MonoBehaviour
 	private void Awake()
 	{
 		rb = gameObject.GetComponent<Rigidbody>();
-
-		bulletSound = GetComponent<AudioSource>();
 	}
 	
 	private void OnTriggerEnter(Collider other)

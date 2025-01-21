@@ -78,6 +78,7 @@ public class PlayerMovement : CharacterBase
     
     [Header("Effect Variables")]
     [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
+    private AudioSource audioSource;
 
     [Space] 
     [Header("Animations")] 
@@ -115,14 +116,18 @@ public class PlayerMovement : CharacterBase
     /// </summary>
     private void Awake()
     {
+        //Getting components
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
+        
+        //Getting Values
         gravity = defaultGravity;
         moveSpeed = maxDefaultMoveSpeed;
-        Cursor.lockState = CursorLockMode.Locked;
         speedUpCounter = speedUpTimer;
         currentDashCooldown = dashCooldown;
         currentDashAmount = dashAmount;
-
+        
+        
         if (UIManager.Instance.tutorialDialogue.GetComponentInChildren<Dialogue>().isPlaying)
         {
             disableMovement = true;
@@ -367,6 +372,8 @@ public class PlayerMovement : CharacterBase
         if (disableMovement) { return; }
         
         if (states == PlayerStates.Dash) { return; }
+        
+        audioSource.PlayOneShot(MusicManager.instance.playerAttack);
 
         currentMoveSpeed = moveSpeed;
         
@@ -483,6 +490,16 @@ public class PlayerMovement : CharacterBase
     {
         cameraTransform.gameObject.GetComponent<Camera>().fieldOfView = PlayerPrefs.GetFloat(UIManager.fov, 90f);
         rotationSensibility = PlayerPrefs.GetFloat(UIManager.cameraSensibility, 0.2f);
+    }
+
+    private void PlayerSteps()
+    {
+        audioSource.PlayOneShot(MusicManager.instance.playerSteps[Random.Range(0,MusicManager.instance.playerSteps.Length)]);
+    }
+
+    private void PlayerAttack()
+    {
+        audioSource.PlayOneShot(MusicManager.instance.playerAttack);
     }
 
     public void PauseGame(InputAction.CallbackContext context)

@@ -228,6 +228,17 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c1c75916-b1e6-42a3-a6d3-65255ce44e53"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9a5463dd-0bc5-44e1-b225-ed308494716d"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",

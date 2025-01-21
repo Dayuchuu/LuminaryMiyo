@@ -21,7 +21,7 @@ public class EnemyShooting : CharacterBase
 	private Animator anim;
 
 	[FormerlySerializedAs("enemySounds")] [SerializeField] private AudioSource enemyIdleSounds;
-	[SerializeField] private AudioSource enemyDieSounds;
+	[SerializeField] private AudioSource enemySounds;
 	[Space]
 	
 	[Header("Effect")]
@@ -56,6 +56,7 @@ public class EnemyShooting : CharacterBase
 			UIManager.Instance.timer.time += 5;
 			GameController.Instance.ChangeScore(500);
 			UIManager.Instance.inGameScoreText.text = "Score: " + GameController.Instance.currentPoints;
+			enemySounds.PlayOneShot(MusicManager.instance.enemyDeathSound);
 			deathEffect.Play();
 			gameObject.SetActive(false);
 		}
@@ -98,6 +99,8 @@ public class EnemyShooting : CharacterBase
 		if (inRange)
 		{ 
 			InstantiateBullet();
+			
+			enemySounds.PlayOneShot(MusicManager.instance.enemyShootSound);
 			
 			yield return new WaitForSeconds(bulletSpawnCooldown);
 

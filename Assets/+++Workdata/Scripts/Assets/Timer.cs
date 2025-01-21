@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
    {
       timeText = UIManager.Instance.timeText;
       
-      timeText.text = string.Format("{0}:{1}", 60, 00);
+      timeText.text = string.Format("{0}.{1}", 60, 00);
 
       if (GameController.Instance.gameStates == GameController.GameStates.InGame)
       {
@@ -44,7 +44,9 @@ public class Timer : MonoBehaviour
       if(milliseconds <= 0)
       {
          time--;
-         if(time <= 0){
+         if(time <= 0)
+         {
+            time = (int)0;
             UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
          }
          
@@ -54,14 +56,14 @@ public class Timer : MonoBehaviour
       milliseconds -= Time.deltaTime * 100;
     		
       //Debug.Log(string.Format("{0}:{1}:{2}", minutes, seconds, (int)miliseconds));
-      timeText.text = string.Format("{0}:{1}", time, (int)milliseconds);
+      timeText.text = string.Format("{0}.{1}", time, (int)milliseconds);
    }
 
    public void ResetTimer()
    {
       time = 60;
       startCountDown = false;
-      timeText.text = string.Format("{0}:{1}", 60, 00);
+      timeText.text = string.Format("{0}.{1}", 60, 00);
       countDownIsRunning = false;
    }
    #endregion

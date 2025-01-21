@@ -32,9 +32,9 @@ public class UIManager : MonoBehaviour
 	public TextMeshProUGUI scoreText = null;
 	public TextMeshProUGUI timeText = null;
 	public TextMeshProUGUI inGameScoreText = null;
-	[Space]
-	
-	[Header("Audio")]
+
+	[Space] [Header("Audio")] 
+	[SerializeField] private AudioSource audioSource;
 	[SerializeField] private AudioMixer mixer;
 	[SerializeField] private Slider masterSlider;
 	[SerializeField] private Slider musicSlider;
@@ -91,8 +91,7 @@ public class UIManager : MonoBehaviour
 		masterSlider.onValueChanged.AddListener(delegate { OnSliderChanged(masterSlider, master);});
 		musicSlider.onValueChanged.AddListener(delegate { OnSliderChanged(musicSlider, music);});
 		sfxSlider.onValueChanged.AddListener(delegate { OnSliderChanged(sfxSlider, sfx);});
-
-
+		
 		GetSliderValues(fovSlider, fov);
 		GetSliderValues(cameraSensitivitySlider, cameraSensibility);
 		GetSliderValues(masterSlider, master);
@@ -118,6 +117,7 @@ public class UIManager : MonoBehaviour
 
 	public void LoadLevel01()
 	{
+		
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 		
@@ -236,7 +236,7 @@ public class UIManager : MonoBehaviour
 	{
 		CloseMenu(winScreen, loseScreen, CursorLockMode.None, 1f);
 		
-		inGameUi.SetActive(false);
+		inGameUi.SetActive(true);
 		
 		ResetHearts();
 
@@ -330,6 +330,11 @@ public class UIManager : MonoBehaviour
 		{
 			slider.value = PlayerPrefs.GetFloat(keyName);
 		}
+	}
+
+	public void PlayButtonSound()
+	{
+		audioSource.PlayOneShot(MusicManager.instance.buttonClickSound);
 	}
 
 	private void ResetInGameUi()
