@@ -58,6 +58,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d17fe896d9708141824f6f16e0321af,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b692c3a01a3c394ca2ad3a0a05fd45f, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d17fe896d9708141824f6f16e0321af,
         type: 3}
       propertyPath: m_Name
@@ -73,24 +78,24 @@ PrefabInstance:
     - {fileID: 4006163558817911843, guid: 9d17fe896d9708141824f6f16e0321af, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2746264469989027339, guid: 9d17fe896d9708141824f6f16e0321af,
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d17fe896d9708141824f6f16e0321af,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1353383747790239636}
+      addedObject: {fileID: 8325595563053672854}
   m_SourcePrefab: {fileID: 100100000, guid: 9d17fe896d9708141824f6f16e0321af, type: 3}
---- !u!1 &2202226019660846904 stripped
+--- !u!1 &3770139371197695074 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2746264469989027339, guid: 9d17fe896d9708141824f6f16e0321af,
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d17fe896d9708141824f6f16e0321af,
     type: 3}
   m_PrefabInstance: {fileID: 4076690158453864755}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1353383747790239636
-MeshCollider:
+--- !u!65 &8325595563053672854
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2202226019660846904}
+  m_GameObject: {fileID: 3770139371197695074}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -102,7 +107,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3354185732391726495, guid: 9d17fe896d9708141824f6f16e0321af, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.59999996, y: 1.230103, z: 0.68069565}
+  m_Center: {x: 0, y: 0.6150514, z: 0}

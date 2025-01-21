@@ -58,6 +58,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6488778160258547413, guid: cea10af5fe5180a47900b7f604b69498,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a01a7ce40f94ab344b43c491e4754240, type: 2}
     - target: {fileID: -2688129094825048637, guid: cea10af5fe5180a47900b7f604b69498,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -86,26 +91,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9089775943925491661, guid: cea10af5fe5180a47900b7f604b69498, type: 3}
+    - {fileID: 6814541665635117033, guid: cea10af5fe5180a47900b7f604b69498, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3062356789946986644, guid: cea10af5fe5180a47900b7f604b69498,
+    - targetCorrespondingSourceObject: {fileID: 5996052537122093399, guid: cea10af5fe5180a47900b7f604b69498,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8094369446636408204}
+      addedObject: {fileID: 3184253383485486246}
   m_SourcePrefab: {fileID: 100100000, guid: cea10af5fe5180a47900b7f604b69498, type: 3}
---- !u!1 &8260554115274197403 stripped
+--- !u!1 &858654219081154648 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3062356789946986644, guid: cea10af5fe5180a47900b7f604b69498,
+  m_CorrespondingSourceObject: {fileID: 5996052537122093399, guid: cea10af5fe5180a47900b7f604b69498,
     type: 3}
   m_PrefabInstance: {fileID: 6403220872043493647}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &8094369446636408204
+--- !u!64 &3184253383485486246
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8260554115274197403}
+  m_GameObject: {fileID: 858654219081154648}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -120,4 +126,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 3663859916998926073, guid: cea10af5fe5180a47900b7f604b69498, type: 3}
+  m_Mesh: {fileID: -3945789708714738503, guid: cea10af5fe5180a47900b7f604b69498, type: 3}
