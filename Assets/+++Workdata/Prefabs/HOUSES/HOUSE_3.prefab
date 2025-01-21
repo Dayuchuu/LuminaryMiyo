@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621332986221555361}
   - component: {fileID: 2566998332688719251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HOUSE_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,6 +450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -523,6 +528,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (167)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -598,6 +608,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Stairs_BertaH_M (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4213099690150948711, guid: 0fc5d44666ef03c45a9e273ea3f6fc6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -671,6 +686,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -746,6 +766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (170)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -819,6 +844,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (213)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -894,6 +924,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (224)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -917,6 +952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_wLong_BertaH_M (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762590991983890427, guid: 28fa309881c369941a654d865e031c79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4586936818560787847, guid: 28fa309881c369941a654d865e031c79,
         type: 3}
@@ -1042,6 +1082,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1115,6 +1160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1190,6 +1240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (150)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1263,6 +1318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (178)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1338,6 +1398,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (180)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1411,6 +1476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1486,6 +1556,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1559,6 +1634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1634,6 +1714,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1707,6 +1792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1782,6 +1872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (161)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1855,6 +1950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1930,6 +2030,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2003,6 +2108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (218)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2078,6 +2188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2151,6 +2266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2226,6 +2346,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2299,6 +2424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (184)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2374,6 +2504,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (185)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2447,6 +2582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2522,6 +2662,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2595,6 +2740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2670,6 +2820,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2743,6 +2898,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (240)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2818,6 +2978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (236)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2891,6 +3056,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2966,6 +3136,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (151)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3039,6 +3214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3114,6 +3294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3187,6 +3372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3262,6 +3452,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (143)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3335,6 +3530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (121)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3410,6 +3610,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3483,6 +3688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3558,6 +3768,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3631,6 +3846,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (191)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3706,6 +3926,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3779,6 +4004,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (116)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3854,6 +4084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (136)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3927,6 +4162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (183)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4002,6 +4242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4075,6 +4320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4150,6 +4400,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4223,6 +4478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (165)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4298,6 +4558,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (193)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4371,6 +4636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (231)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4446,6 +4716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4519,6 +4794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (177)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4594,6 +4874,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4667,6 +4952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4742,6 +5032,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (222)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4815,6 +5110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (140)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4890,6 +5190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (215)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4963,6 +5268,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5038,6 +5348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5111,6 +5426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5186,6 +5506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (146)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5259,6 +5584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (163)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5334,6 +5664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5407,6 +5742,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (243)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5482,6 +5822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5555,6 +5900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5630,6 +5980,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5703,6 +6058,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (221)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5778,6 +6138,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5851,6 +6216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (168)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5926,6 +6296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5999,6 +6374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (230)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6074,6 +6454,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6147,6 +6532,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6222,6 +6612,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6295,6 +6690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Stairs_BertaH_M
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213099690150948711, guid: 0fc5d44666ef03c45a9e273ea3f6fc6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6370,6 +6770,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6443,6 +6848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6518,6 +6928,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (155)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6591,6 +7006,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6666,6 +7086,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (211)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6739,6 +7164,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (131)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6814,6 +7244,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (135)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6887,6 +7322,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (123)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6962,6 +7402,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7035,6 +7480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (212)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7110,6 +7560,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (247)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7183,6 +7638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7258,6 +7718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (205)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7331,6 +7796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (226)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7406,6 +7876,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7479,6 +7954,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (229)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7554,6 +8034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Stairs_BertaH_M (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4213099690150948711, guid: 0fc5d44666ef03c45a9e273ea3f6fc6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7627,6 +8112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (112)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7702,6 +8192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7775,6 +8270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (115)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7850,6 +8350,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7923,6 +8428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (227)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7998,6 +8508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (242)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8071,6 +8586,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8146,6 +8666,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8219,6 +8744,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (125)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8294,6 +8824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (181)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8367,6 +8902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (223)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8442,6 +8982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8515,6 +9060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8590,6 +9140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (154)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8663,6 +9218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8738,6 +9298,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8811,6 +9376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (141)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8886,6 +9456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8959,6 +9534,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (117)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9034,6 +9614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9107,6 +9692,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (238)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9182,6 +9772,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (209)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9255,6 +9850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (208)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9330,6 +9930,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Stairs_BertaH_M (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4213099690150948711, guid: 0fc5d44666ef03c45a9e273ea3f6fc6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9403,6 +10008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (190)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9478,6 +10088,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (148)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9551,6 +10166,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (198)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9626,6 +10246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9699,6 +10324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (107)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9774,6 +10404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (241)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9847,6 +10482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (195)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9922,6 +10562,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9995,6 +10640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10070,6 +10720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (106)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10143,6 +10798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10218,6 +10878,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10291,6 +10956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (132)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10366,6 +11036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (210)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10439,6 +11114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10514,6 +11194,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10587,6 +11272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10662,6 +11352,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (246)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10735,6 +11430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (149)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10810,6 +11510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10883,6 +11588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (201)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10958,6 +11668,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11031,6 +11746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11106,6 +11826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11179,6 +11904,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11254,6 +11984,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11327,6 +12062,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (173)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11402,6 +12142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (235)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11475,6 +12220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11550,6 +12300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (249)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11623,6 +12378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (188)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11698,6 +12458,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11771,6 +12536,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11846,6 +12616,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (217)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11919,6 +12694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11994,6 +12774,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12067,6 +12852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12142,6 +12932,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (158)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12215,6 +13010,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12290,6 +13090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (101)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12363,6 +13168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12438,6 +13248,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12511,6 +13326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (174)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12586,6 +13406,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (142)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12659,6 +13484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12734,6 +13564,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (220)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12807,6 +13642,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12882,6 +13722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (232)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12955,6 +13800,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13030,6 +13880,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13103,6 +13958,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13178,6 +14038,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13251,6 +14116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (147)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13326,6 +14196,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13399,6 +14274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13474,6 +14354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13547,6 +14432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (164)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13622,6 +14512,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (207)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13695,6 +14590,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13770,6 +14670,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (110)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13843,6 +14748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (189)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13918,6 +14828,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13991,6 +14906,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (128)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14066,6 +14986,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14139,6 +15064,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14214,6 +15144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14288,6 +15223,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (144)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14311,6 +15251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_wLong_BertaH_M (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762590991983890427, guid: 28fa309881c369941a654d865e031c79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4586936818560787847, guid: 28fa309881c369941a654d865e031c79,
         type: 3}
@@ -14436,6 +15381,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14509,6 +15459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (228)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14584,6 +15539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (153)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14657,6 +15617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (118)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14732,6 +15697,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14805,6 +15775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (196)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14880,6 +15855,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (122)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14953,6 +15933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (244)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15028,6 +16013,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15101,6 +16091,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15176,6 +16171,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15249,6 +16249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15324,6 +16329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15397,6 +16407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15472,6 +16487,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15545,6 +16565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (162)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15620,6 +16645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15693,6 +16723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (233)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15768,6 +16803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15841,6 +16881,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15916,6 +16961,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15989,6 +17039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16064,6 +17119,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16137,6 +17197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16212,6 +17277,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16285,6 +17355,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16360,6 +17435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (239)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16433,6 +17513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (225)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16508,6 +17593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16581,6 +17671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16656,6 +17751,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (194)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16729,6 +17829,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16804,6 +17909,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (159)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16877,6 +17987,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (124)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16952,6 +18067,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17025,6 +18145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (248)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17100,6 +18225,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (237)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17173,6 +18303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Stairs_BertaH_M (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213099690150948711, guid: 0fc5d44666ef03c45a9e273ea3f6fc6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17248,6 +18383,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (219)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17321,6 +18461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17396,6 +18541,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17469,6 +18619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (179)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17544,6 +18699,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17617,6 +18777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17692,6 +18857,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (127)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17765,6 +18935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (129)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17840,6 +19015,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (138)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17914,6 +19094,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (166)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17937,6 +19122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_wLong_BertaH_M (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762590991983890427, guid: 28fa309881c369941a654d865e031c79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4586936818560787847, guid: 28fa309881c369941a654d865e031c79,
         type: 3}
@@ -18062,6 +19252,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18135,6 +19330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18210,6 +19410,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18283,6 +19488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (206)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18358,6 +19568,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18431,6 +19646,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (145)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18506,6 +19726,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18579,6 +19804,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18654,6 +19884,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (176)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18727,6 +19962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18802,6 +20042,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (199)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18875,6 +20120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18950,6 +20200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (203)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19023,6 +20278,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (197)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19098,6 +20358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (171)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19171,6 +20436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19246,6 +20516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (175)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19319,6 +20594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19394,6 +20674,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (186)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19467,6 +20752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (133)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19542,6 +20832,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19616,6 +20911,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (204)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19639,6 +20939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_wLong_BertaH_M
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762590991983890427, guid: 28fa309881c369941a654d865e031c79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4586936818560787847, guid: 28fa309881c369941a654d865e031c79,
         type: 3}
@@ -19764,6 +21069,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19837,6 +21147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19912,6 +21227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (202)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19985,6 +21305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (156)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20060,6 +21385,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (172)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20133,6 +21463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20208,6 +21543,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20282,6 +21622,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20305,6 +21650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_wLong_BertaH_M (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762590991983890427, guid: 28fa309881c369941a654d865e031c79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4586936818560787847, guid: 28fa309881c369941a654d865e031c79,
         type: 3}
@@ -20430,6 +21780,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (157)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20503,6 +21858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (214)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20578,6 +21938,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20651,6 +22016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (200)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20726,6 +22096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20799,6 +22174,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20874,6 +22254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20947,6 +22332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (152)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21022,6 +22412,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21095,6 +22490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (245)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21170,6 +22570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21243,6 +22648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21318,6 +22728,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (88)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21391,6 +22806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21466,6 +22886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21539,6 +22964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (137)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21614,6 +23044,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21688,6 +23123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (160)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21711,6 +23151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_wLong_BertaH_M (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762590991983890427, guid: 28fa309881c369941a654d865e031c79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4586936818560787847, guid: 28fa309881c369941a654d865e031c79,
         type: 3}
@@ -21836,6 +23281,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21909,6 +23359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21984,6 +23439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22057,6 +23517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22132,6 +23597,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22205,6 +23675,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22280,6 +23755,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22353,6 +23833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (139)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22428,6 +23913,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (102)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22501,6 +23991,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (182)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22576,6 +24071,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Stairs_BertaH_M (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4213099690150948711, guid: 0fc5d44666ef03c45a9e273ea3f6fc6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22649,6 +24149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (109)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22724,6 +24229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22797,6 +24307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (216)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22872,6 +24387,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M
       objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22945,6 +24465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (100)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23020,6 +24545,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23093,6 +24623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (126)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23168,6 +24703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (187)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23241,6 +24781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23316,6 +24861,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (134)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23389,6 +24939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23464,6 +25019,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23537,6 +25097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23612,6 +25177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23685,6 +25255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (103)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23760,6 +25335,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23833,6 +25413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (234)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23908,6 +25493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23981,6 +25571,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24056,6 +25651,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (169)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24129,6 +25729,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Balcony_lDecal_BertaH_M (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230547583696508462, guid: dafb678aa718b2c4e89632aa00f4f7bf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24204,6 +25809,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (192)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24277,6 +25887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (120)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24352,6 +25967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (130)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24425,6 +26045,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Corner_NOWINDOW__BertaH_M (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821609351324069190, guid: d0f9d27d42b183e4ea99e2e5a28ff63f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24500,6 +26125,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24573,6 +26203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (105)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24648,6 +26283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (108)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24721,6 +26361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24796,6 +26441,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24869,6 +26519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24944,6 +26599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25018,6 +26678,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_NOWINDOW_M (114)
       objectReference: {fileID: 0}
+    - target: {fileID: 7233914847185882206, guid: 5e15f9bb8f189e3408dd0cbe04bfde83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25091,6 +26756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Environment_ModularBuildingSet_Middle_wSlide_BertaH_M (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438449291374084960, guid: 966b70a930f147c44b24160e529a962e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6204808961371574111}
   - component: {fileID: 5110547683328223219}
   - component: {fileID: 120685645624343017}
-  - component: {fileID: 6822280647463136392}
   m_Layer: 0
   m_Name: Environment_ModularBuildingSet_Balcony_sDecal_BertaH_M
   m_TagString: Untagged
@@ -84,24 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6822280647463136392
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3983730317733749824}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.498867, y: 1.2000003, z: 1.0000002}
-  m_Center: {x: 0, y: 0.60000014, z: 0.49999988}
