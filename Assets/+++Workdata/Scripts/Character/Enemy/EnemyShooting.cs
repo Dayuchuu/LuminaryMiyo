@@ -56,7 +56,7 @@ public class EnemyShooting : CharacterBase
 			UIManager.Instance.timer.time += 5;
 			GameController.Instance.ChangeScore(500);
 			UIManager.Instance.inGameScoreText.text = "Score: " + GameController.Instance.currentPoints;
-			enemySounds.PlayOneShot(MusicManager.instance.enemyDeathSound);
+			// enemySounds.PlayOneShot(MusicManager.instance.enemyDeathSound);
 			deathEffect.Play();
 			gameObject.SetActive(false);
 		}
@@ -100,7 +100,7 @@ public class EnemyShooting : CharacterBase
 		{ 
 			InstantiateBullet();
 			
-			enemySounds.PlayOneShot(MusicManager.instance.enemyShootSound);
+			// enemySounds.PlayOneShot(MusicManager.instance.enemyShootSound);
 			
 			yield return new WaitForSeconds(bulletSpawnCooldown);
 
