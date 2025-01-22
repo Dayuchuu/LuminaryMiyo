@@ -16,6 +16,8 @@ public class EnemyShooting : CharacterBase
 
 	private bool inRange = false;
 
+	[SerializeField] private bool canAttack;
+
 	private Animator anim;
 
 	[FormerlySerializedAs("enemySounds")] [SerializeField] private AudioSource enemyIdleSounds;
@@ -60,7 +62,7 @@ public class EnemyShooting : CharacterBase
 
 		var dist = Vector3.Distance(transform.position, playerTransform.position);
 		
-		if(dist < distance && !inRange)
+		if(dist < distance && !inRange && canAttack)
 		{
 			inRange = true;
 			

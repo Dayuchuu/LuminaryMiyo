@@ -14038,10 +14038,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 1
   bulletSpawnPoint: {fileID: 2598652285788852775}
-  bulletSpawnCooldown: 1
   distance: 10
+  canAttack: 1
   enemyIdleSounds: {fileID: 9209981324937246455}
-  enemySounds: {fileID: 9209981324937246455}
   deathEffect: {fileID: 4436577328079355965}
 --- !u!136 &7287514883991398117
 CapsuleCollider:
