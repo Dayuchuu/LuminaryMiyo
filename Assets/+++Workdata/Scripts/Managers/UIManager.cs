@@ -57,6 +57,7 @@ public class UIManager : MonoBehaviour
 	public Image dashIndicator;
 	public Timer timer;
 	public List<Image> hearts;
+	public GameObject preTutorial;
 	public GameObject tutorialDialogue;
 	public GameObject levelDialogue;
 	

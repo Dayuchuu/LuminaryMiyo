@@ -20,7 +20,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueTextComponent;
     [SerializeField] private TextMeshProUGUI speakerTextComponent;
     [SerializeField] private Image speakerPortrait;
-
+    [SerializeField] private bool isPreTutorial;
+    
     [SerializeField] private float textSpeed;
 
     public bool isPlaying;
@@ -95,12 +96,24 @@ public class Dialogue : MonoBehaviour
         //what happens after all dialogue has been exhausted, in this case activating movement and closing Dialogue ui.
         else
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().disableMovement = false;
-            isPlaying = false;
-            UIManager.Instance.CloseMenu(UIManager.Instance.tutorialDialogue,UIManager.Instance.levelDialogue, CursorLockMode.Locked, 1f);
-            UIManager.Instance.inGameUi.SetActive(true);
-            gameObject.transform.parent.gameObject.SetActive(false);
+            if (!isPreTutorial)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().disableMovement = false;
+                isPlaying = false;
+                UIManager.Instance.CloseMenu(UIManager.Instance.tutorialDialogue,UIManager.Instance.levelDialogue, CursorLockMode.Locked, 1f);
+                UIManager.Instance.inGameUi.SetActive(true);
+                gameObject.transform.parent.gameObject.SetActive(false);
+            }
+            else
+            {
+                UIManager.Instance.CloseMenu(UIManager.Instance.preTutorial.transform.parent.gameObject, CursorLockMode.None, 1f);
+                UIManager.Instance.OpenMenu(UIManager.Instance.levelSelectionScreen, CursorLockMode.None, 1f);
+            }
         }
     }
-    
+
+    private void AfterText()
+    {
+      
+    }
 }

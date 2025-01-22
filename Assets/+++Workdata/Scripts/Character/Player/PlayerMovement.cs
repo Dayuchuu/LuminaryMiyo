@@ -153,7 +153,6 @@ public class PlayerMovement : CharacterBase
         {
             UIManager.Instance.inGameUi.SetActive(false);
             UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
-            
         }
     }
 
@@ -279,11 +278,23 @@ public class PlayerMovement : CharacterBase
             moveSpeed += Time.deltaTime * moveSpeedAcceleration;
             moveSpeed = Mathf.Clamp(moveSpeed ,0, 16);
             
+            if (anim.GetBool("IsRunning"))
+            {
+                anim.speed = moveSpeed * 0.1f;
+            }
+            else
+            {
+                anim.speed = 1;
+            }
+            
             maxMoveSpeedDuringDash += Time.deltaTime * moveSpeedAcceleration;
             maxMoveSpeedDuringDash = Mathf.Clamp(maxMoveSpeedDuringDash ,20, 26);
         }
 
-        if (rb.velocity.magnitude > 0.05f)
+        Vector3 moveVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3 jumpVelocity = new Vector3(0f, rb.velocity.y, 0f);
+        
+        if (moveVelocity.magnitude > 0.05f && jumpVelocity.magnitude < 0.05 && jumpVelocity.magnitude > -0.05f)
         {
             anim.SetBool( "IsRunning", true);
         }
@@ -291,6 +302,8 @@ public class PlayerMovement : CharacterBase
         {
             anim.SetBool( "IsRunning", false);
         }
+        
+        anim.SetFloat("JumpVelocity", rb.velocity.y);
     }
     
     // --- MOVE METHOD --- //
