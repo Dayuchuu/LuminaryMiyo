@@ -25,10 +25,15 @@ public class Bullet : MonoBehaviour
 	
 	private void Awake()
 	{
+		// Gets these components
 		rb = gameObject.GetComponent<Rigidbody>();
 		audioSource = GetComponent<AudioSource>();
 	}
 	
+	/// <summary>
+	/// When it hits the Player it counts 1 health point down, gets deactivated when colliding.
+	/// </summary>
+	/// <param name="other"></param>
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.CompareTag("Player"))
@@ -54,11 +59,17 @@ public class Bullet : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Rotates the bullet slightly. 
+	/// </summary>
 	private void Update()
 	{
 		transform.Rotate(Time.deltaTime * 5, 0, 0);
 	}
 
+	/// <summary>
+	/// Shoots the bullet and start a coroutine. 
+	/// </summary>
 	public void StartBullet()
 	{
 		Shoot();
@@ -66,6 +77,9 @@ public class Bullet : MonoBehaviour
 		StartCoroutine(SetInactiveAfterTime());
 	}
 
+	/// <summary>
+	/// Calculates the movememnt of the bullet.
+	/// </summary>
 	private void Shoot()
 	{
 		playerTransform = GameObject.FindWithTag("Player").transform;
@@ -75,6 +89,10 @@ public class Bullet : MonoBehaviour
 		rb.velocity = shootDirection * shootSpeed;
 	}
 
+	/// <summary>
+	/// Set the bullet inactive after certain amou tof time. 
+	/// </summary>
+	/// <returns></returns>
 	IEnumerator SetInactiveAfterTime()
 	{
 		yield return new WaitForSeconds(setTimer);

@@ -23,6 +23,9 @@ public class Goal : MonoBehaviour
 
 	#region Methods
 	
+	/// <summary>
+	/// Gets component on gameObject and finds all enemies.
+	/// </summary>
 	private void Start()
 	{
 		EnemyController.Instance.FindEnemies();
@@ -34,6 +37,10 @@ public class Goal : MonoBehaviour
 		coinAmount = FindObjectsOfType<Collectable>().Length;
 	}
 
+	/// <summary>
+	/// pens the win screen, sets the level finished bool to true an calls the FinishedLevel methdo. 
+	/// </summary>
+	/// <param name="other"></param>
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("Player"))
@@ -56,6 +63,9 @@ public class Goal : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Calculates the max score amount in the level possible. 
+	/// </summary>
 	private void GetMaxScore()
 	{
 		int maxScoreAmount = 0;
@@ -69,6 +79,10 @@ public class Goal : MonoBehaviour
 		GetScore(maxScoreAmount);
 	}
 
+	/// <summary>
+	/// Calculates the score amount. 
+	/// </summary>
+	/// <param name="currentMaxScore"></param>
 	private void GetScore(int currentMaxScore)
 	{
 		scoreAmount += GameController.Instance.currentPoints;
@@ -78,6 +92,11 @@ public class Goal : MonoBehaviour
 		GetRank(scoreAmount, currentMaxScore);
 	}
 
+	/// <summary>
+	/// Allocates the rank depending on the score achieved and the max score possible. 
+	/// </summary>
+	/// <param name="currentScore"></param>
+	/// <param name="currentMaxScore"></param>
 	private void GetRank(int currentScore, int currentMaxScore)
 	{
 		if (currentScore >= (int)(currentMaxScore * 0) && currentScore <= (int)(currentMaxScore * 0.25))
@@ -96,8 +115,6 @@ public class Goal : MonoBehaviour
 		{
 			UIManager.Instance.ChangeScoreText(currentScore, "S ");
 		}
-		
-		
 	}
 	#endregion
 }

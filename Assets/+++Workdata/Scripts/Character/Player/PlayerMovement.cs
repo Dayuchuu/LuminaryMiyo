@@ -55,8 +55,8 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private float jumpBufferTime = 0.2f;
     [SerializeField] private Vector3 boxCastSize;
     [SerializeField] private LayerMask groundMask;
-    float waitFrames;
     [SerializeField] private float numWaitFrames;
+    private float waitFrames;
     private float coyoteTimeCounter = 0;
     private float jumpBufferCounter = 0;
     private int currentJumpAmount = 0;
@@ -128,7 +128,6 @@ public class PlayerMovement : CharacterBase
         currentDashCooldown = dashCooldown;
         currentDashAmount = dashAmount;
         
-        
         // if (UIManager.Instance.tutorialDialogue.GetComponentInChildren<Dialogue>().isPlaying)
         // {
         //     disableMovement = true;
@@ -138,8 +137,9 @@ public class PlayerMovement : CharacterBase
         //     disableMovement = false;
         // }
 
-        ChangeValues();
+        ChangeSettings();
 
+        //This is to allow the Player to move after pressing replay.
         if (UIManager.Instance.tutorialDialogue.activeInHierarchy)
         {
             disableMovement = true;
@@ -152,7 +152,7 @@ public class PlayerMovement : CharacterBase
             return;
         }
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         //Attack for the enemies
@@ -217,6 +217,7 @@ public class PlayerMovement : CharacterBase
 
         waitFrames--;
         
+        //Sets the coyote time / calculates when off ground 
         if (IsGrounded() && waitFrames <= 0f)
         {
             coyoteTimeCounter = coyoteTime;
@@ -270,13 +271,14 @@ public class PlayerMovement : CharacterBase
         Vector3 velocity = rb.velocity;
         Vector3 velocityChange = (targetVelocity - velocity);
         
-        //changes velocity of the rigidbody, e.g. moves the player
+        //changes velocity of the rigidbody.
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
         velocityChange.y = 0;
         
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
         
+        //Calculates when to speed up the Player.
         if (rb.velocity.magnitude > maxDefaultMoveSpeed - 0.5f && states != PlayerStates.Dash)
         {
             speedUpCounter -= Time.deltaTime;
@@ -286,6 +288,7 @@ public class PlayerMovement : CharacterBase
             speedUpCounter = speedUpTimer;
         }
 
+        //Speeds up the player over time when running for a while.
         if (speedUpCounter <= 0)
         {
             moveSpeed += Time.deltaTime * moveSpeedAcceleration;
@@ -307,6 +310,7 @@ public class PlayerMovement : CharacterBase
         Vector3 moveVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         Vector3 jumpVelocity = new Vector3(0f, rb.velocity.y, 0f);
         
+        //Changes the animation.
         if (moveVelocity.magnitude > 0.05f && jumpVelocity.magnitude < 0.05 && jumpVelocity.magnitude > -0.05f)
         {
             anim.SetBool( "IsRunning", true);
@@ -465,6 +469,7 @@ public class PlayerMovement : CharacterBase
     
     private bool IsGrounded()
     {        
+        // Looks if the ground is beneath you and that the angle isnt to steep. 
         if (Physics.BoxCast(transform.position, boxCastSize, Vector3.down, out var hit, Quaternion.identity, boxCastSize.y, groundMask))
         {
            if(Vector2.Angle(hit.normal, Vector3.up) < 45) 
@@ -473,8 +478,10 @@ public class PlayerMovement : CharacterBase
         return false;
     }
 
+    
     private bool SlopeMovement()
     {
+        //Calculates the angle of the ground to remove moving up slopes that are to high.
         if (Physics.BoxCast(transform.position, boxCastSize * 1.5f, Vector3.down, out var hit, Quaternion.identity, boxCastSize.y, groundMask))
         {
             float angle = Vector2.Angle(hit.normal, Vector3.up);
@@ -486,8 +493,10 @@ public class PlayerMovement : CharacterBase
         return true;
     }
     
+    
     public void DisablePlayerActions()
     {
+        //Disables the player Actions
         disableMovement = true;
         
         rb.velocity = Vector3.zero;
@@ -495,9 +504,14 @@ public class PlayerMovement : CharacterBase
 
     public void EnablePlayerActions()
     {
+        //Enables the player Actions
         disableMovement = false;
     }
     
+    /// <summary>
+    /// Waits the given time to Dash.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator WaitForDash()
     {
         speedlines.Play();
@@ -529,22 +543,27 @@ public class PlayerMovement : CharacterBase
         }
     }
 
-    public void ChangeValues()
+    /// <summary>
+    /// Changes the settings of the fov and the camera move sensitivity. 
+    /// </summary>
+    public void ChangeSettings()
     {
         cameraTransform.gameObject.GetComponent<Camera>().fieldOfView = PlayerPrefs.GetFloat(UIManager.fov, 90f);
         rotationSensibility = PlayerPrefs.GetFloat(UIManager.cameraSensibility, 0.2f);
     }
 
+    /// <summary>
+    /// Calls the Player steps.
+    /// </summary>
     private void PlayerSteps()
     {
         audioSource.PlayOneShot(MusicManager.instance.playerSteps[Random.Range(0,MusicManager.instance.playerSteps.Length)]);
     }
 
-    private void PlayerAttack()
-    {
-        audioSource.PlayOneShot(MusicManager.instance.playerAttack);
-    }
-
+    /// <summary>
+    /// Pauses the game in game. 
+    /// </summary>
+    /// <param name="context"></param>
     public void PauseGame(InputAction.CallbackContext context)
     {
         UIManager.Instance.inGameUi.SetActive(false);

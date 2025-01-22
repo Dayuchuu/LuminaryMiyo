@@ -20,6 +20,9 @@ public class Timer : MonoBehaviour
 
    #region Methods
    
+   /// <summary>
+   /// Starts the countdown of the timer. 
+   /// </summary>
    public void StartCountdown()
    {
       timeText = UIManager.Instance.timeText;
@@ -32,6 +35,9 @@ public class Timer : MonoBehaviour
       }
    }
 
+   /// <summary>
+   /// Calcuates and formats the timer.
+   /// </summary>
    public void Update()
    {
       if (!startCountDown)
@@ -59,9 +65,12 @@ public class Timer : MonoBehaviour
       timeText.text = string.Format("{0}.{1}", time, (int)milliseconds);
    }
 
+   /// <summary>
+   /// Resets the format and time. 
+   /// </summary>
    public void ResetTimer()
    {
-      time = 60;
+      time = 90;
       startCountDown = false;
       timeText.text = string.Format("{0}.{1}", 60, 00);
       countDownIsRunning = false;

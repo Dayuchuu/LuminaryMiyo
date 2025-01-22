@@ -14,6 +14,9 @@ public class EnemyController : MonoBehaviour
 
 	#region Methods
 	
+	/// <summary>
+	/// Creates the instance
+	/// </summary>
 	private void Awake()
 	{
 		if (Instance == null)
@@ -28,12 +31,19 @@ public class EnemyController : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Finds all enemy shooting objects, sets the enemyAmount. 
+	/// </summary>
 	public void FindEnemies()
 	{
 		enemies = FindObjectsOfType<EnemyShooting>();
 		enemyAmount = enemies.Length;
 	}
 	
+	/// <summary>
+	/// Calculates all inactive enemies currently in scene. 
+	/// </summary>
+	/// <returns></returns>
 	public int FindInactiveEnemies()
 	{
 		int enemyInactive = 0;

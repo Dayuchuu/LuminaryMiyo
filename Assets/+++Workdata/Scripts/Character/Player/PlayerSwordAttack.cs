@@ -15,6 +15,9 @@ public class PlayerSwordAttack : MonoBehaviour
 
    #region Methods
    
+   /// <summary>
+   /// Gets components.
+   /// </summary>
    private void Awake()
    {
       swordAnim = GetComponent<Animator>();
@@ -22,6 +25,10 @@ public class PlayerSwordAttack : MonoBehaviour
       swordAttackSound = GetComponent<AudioSource>();
    }
 
+   /// <summary>
+   /// Changes enemies color and damages them.
+   /// </summary>
+   /// <param name="other"></param>
    private void OnTriggerEnter(Collider other)
    {
       if (other.CompareTag("Enemy"))
@@ -32,6 +39,10 @@ public class PlayerSwordAttack : MonoBehaviour
       }
    }
 
+   /// <summary>
+   /// Plays the attack animation and a sound effect. 
+   /// </summary>
+   /// <param name="context"></param>
    public void Attack(InputAction.CallbackContext context)
    { 
       swordAnim.SetTrigger("Attacks");

@@ -19,6 +19,9 @@ public class SceneLoader : MonoBehaviour
 	[HideInInspector]
 	public int currentScene;
 	
+	/// <summary>
+	/// Creates the instance, looks through current scenes and changes ui based on current active scene. 
+	/// </summary>
 	private void Start()
 	{
 		if (Instance == null)
@@ -57,6 +60,13 @@ public class SceneLoader : MonoBehaviour
 		currentScene = (int)sceneStates; 
 	}
 
+	/// <summary>
+	/// Loads the given scene and unloads the old scene. 
+	/// </summary>
+	/// <param name="oldScene"></param>
+	/// <param name="firstNewScene"></param>
+	/// <param name="timeScale"></param>
+	/// <returns></returns>
 	public IEnumerator LoadScene(int oldScene, int firstNewScene, int timeScale)
 	{
 		var unloadedScene = SceneManager.GetSceneByBuildIndex(oldScene);
@@ -80,6 +90,14 @@ public class SceneLoader : MonoBehaviour
 		Time.timeScale = timeScale;
 	}
     
+	/// <summary>
+	/// Unloads the given scene and loads 2 new given scenes.
+	/// </summary>
+	/// <param name="oldScene"></param>
+	/// <param name="firstNewScene"></param>
+	/// <param name="secondNewScene"></param>
+	/// <param name="timeScale"></param>
+	/// <returns></returns>
 	public IEnumerator LoadScene(int oldScene, int firstNewScene , int secondNewScene, int timeScale)
 	{
 		var unloadedScene = SceneManager.GetSceneByBuildIndex(oldScene);

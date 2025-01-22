@@ -27,8 +27,10 @@ public class Dialogue : MonoBehaviour
     public bool isPlaying;
 
     private int dialogueDataIndex;
-
-    // Start is called before the first frame update
+    
+    /// <summary>
+    /// Sets dialogue values.
+    /// </summary>
     void Start()
     {
         dialogueTextComponent.text = string.Empty;
@@ -58,11 +60,10 @@ public class Dialogue : MonoBehaviour
             }
         }
     }
-
-
-
-
-
+    
+    /// <summary>
+    /// Starts the dialogue and sets needed values.
+    /// </summary>
     private void StartDialogue()
     {
         dialogueDataIndex = 0;
@@ -70,6 +71,10 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(TypeLine());
     }
 
+    /// <summary>
+    /// Writes each character after a short pause.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator TypeLine()
     {
         foreach (char c in dialogueData[dialogueDataIndex].line.ToCharArray())
@@ -80,8 +85,10 @@ public class Dialogue : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
         }
     }
-
-
+    
+    /// <summary>
+    /// Writes the next line if available, if not calls AfterText.
+    /// </summary>
     private void NextLine()
     {
         if (dialogueDataIndex < dialogueData.Length - 1)
@@ -100,6 +107,9 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Depending if isPreTutorial is active ether opens the level selector menu or sets the player action and in game ui active.
+    /// </summary>
     private void AfterText()
     {
         if (!isPreTutorial)

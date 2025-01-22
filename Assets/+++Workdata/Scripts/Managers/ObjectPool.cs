@@ -15,6 +15,9 @@ public class ObjectPool : MonoBehaviour
 
 	#region Methods
 	
+	/// <summary>
+	/// Creates the instance
+	/// </summary>
 	private void Awake()
 	{
 		if (sharedInstance == null)
@@ -27,6 +30,9 @@ public class ObjectPool : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Spawns and sets all bullets.
+	/// </summary>
 	private void Start()
 	{
 		pooledObjects = new List<GameObject>();
@@ -39,6 +45,10 @@ public class ObjectPool : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Gets the next inactive bullet. 
+	/// </summary>
+	/// <returns></returns>
 	public GameObject GetPooledObject()
 	{
 		for (int pooledIndex = 0; pooledIndex < amountToPool; pooledIndex++)

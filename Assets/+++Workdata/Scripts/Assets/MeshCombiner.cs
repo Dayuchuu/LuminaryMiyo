@@ -8,6 +8,7 @@ public class MeshCombiner : MonoBehaviour
     [ContextMenu("Combine Meshes")]
     void CombineMeshes()
     {
+        //Combines a meshes children to one. 
         CombineInstance[] combine = new CombineInstance[transform.childCount];
 
         int index = 0;

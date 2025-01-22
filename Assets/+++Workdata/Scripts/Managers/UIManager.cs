@@ -71,6 +71,9 @@ public class UIManager : MonoBehaviour
 
 	#region Methods
 	
+	/// <summary>
+	/// Creates the instance and sets different values
+	/// </summary>
 	private void Awake()
 	{
 		if (Instance == null)
@@ -82,17 +85,20 @@ public class UIManager : MonoBehaviour
 			Destroy(gameObject);
 		}
 		
+		//Gets the info if we have beaten level 01 already
 		if (Convert.ToBoolean(PlayerPrefs.GetInt(GameController.level01)))
 		{
 			level02.interactable = true;
 		}
 		
+		//Sets all sliders to the OnSliderChanged method
 		fovSlider.onValueChanged.AddListener(delegate { OnSliderChanged(fovSlider, fov);});
 		cameraSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderChanged(cameraSensitivitySlider, cameraSensibility);});
 		masterSlider.onValueChanged.AddListener(delegate { OnSliderChanged(masterSlider, master);});
 		musicSlider.onValueChanged.AddListener(delegate { OnSliderChanged(musicSlider, music);});
 		sfxSlider.onValueChanged.AddListener(delegate { OnSliderChanged(sfxSlider, sfx);});
 		
+		//Gets alls slider values
 		GetSliderValues(fovSlider, fov);
 		GetSliderValues(cameraSensitivitySlider, cameraSensibility);
 		GetSliderValues(masterSlider, master);
@@ -107,6 +113,9 @@ public class UIManager : MonoBehaviour
 		// });
 	}
 
+	/// <summary>
+	/// Gets mixer values when already saved.
+	/// </summary>
 	private void Start()
 	{
 		mixer.SetFloat(master, Mathf.Log10(masterSlider.value) * 20);
@@ -114,11 +123,19 @@ public class UIManager : MonoBehaviour
 		mixer.SetFloat(sfx, Mathf.Log10(sfxSlider.value) * 20);
 	}
 
+	/// <summary>
+	/// Changes score text.
+	/// </summary>
+	/// <param name="score"></param>
+	/// <param name="rank"></param>
 	public void ChangeScoreText(int score, string rank)
 	{
 		scoreText.text = rank + score;
 	}
 
+	/// <summary>
+	/// Loads level 01 and starts everything necessary for it.
+	/// </summary>
 	public void LoadLevel01()
 	{
 		
@@ -144,6 +161,9 @@ public class UIManager : MonoBehaviour
 		OpenMenu(tutorialDialogue, CursorLockMode.None, 1f);
 	}
 	
+	/// <summary>
+	/// Loads level 02 and starts everything necessary for it.
+	/// </summary>
 	public void LoadLevel02()
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level02;
@@ -166,6 +186,9 @@ public class UIManager : MonoBehaviour
 		OpenMenu(levelDialogue, CursorLockMode.None, 1f);
 	}
 
+	/// <summary>
+	/// Opens a menu with given values and prevents other menu to get opened
+	/// </summary>
 	public void OpenMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
 		if (!uiOpen)
@@ -187,6 +210,9 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Closes a menu with given values and prevents other menu to get opened.
+	/// </summary>
 	public void CloseMenu(GameObject menu, CursorLockMode lockMode, float timeScale)
 	{
 		if (uiOpen)
@@ -210,6 +236,9 @@ public class UIManager : MonoBehaviour
 		}
 	}
 	
+	/// <summary>
+	/// Closes multiple menus with given values and prevents other menu to get opened.
+	/// </summary>
 	public void CloseMenu(GameObject firstMenu, GameObject secondMenu, CursorLockMode lockMode, float timeScale)
 	{
 		if (uiOpen)
@@ -235,6 +264,9 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Restarts the last scene and resets all values.
+	/// </summary>
 	public void Replay()
 	{
 		CloseMenu(winScreen, loseScreen, CursorLockMode.Locked, 1f);
@@ -252,12 +284,18 @@ public class UIManager : MonoBehaviour
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, SceneLoader.Instance.currentScene, 1));
 	}
 	
+	/// <summary>
+	/// Stops the pause menu. 
+	/// </summary>
 	public void StopPause()
 	{
 		inGameUi.SetActive(true);
 		CloseMenu(pauseScreen, CursorLockMode.Locked, 1f);
 	}
 	
+	/// <summary>
+	/// Gets the current ui screen and saves it.
+	/// </summary>
 	public void GetCurrentScreen()
 	{
 		for (int i = 0; i < uiScreens.Count; i++)
@@ -269,11 +307,17 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Sets the screen back to the last saved screen.
+	/// </summary>
 	public void BackToPreviousScreen()
 	{
 		currentScreen.SetActive(true);
 	}
 	
+	/// <summary>
+	/// Loads the main menu scene, closes the last open ui menu and opens the main menu screen.
+	/// </summary>
 	public void MainMenu()
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
@@ -285,17 +329,26 @@ public class UIManager : MonoBehaviour
 		OpenMenu(mainMenuScreen, CursorLockMode.None, 1f);
 	}
 
+	/// <summary>
+	/// Changes hearts depending on life of the player.
+	/// </summary>
 	public void ChangeHearts()
 	{
 		hearts[currentHealth -1].gameObject.SetActive(false);
 		currentHealth--;
 	}
 
+	/// <summary>
+	/// Starts the timer countdown.
+	/// </summary>
 	public void StartCountdown()
 	{
 		timer.startCountDown = true;
 	}
 
+	/// <summary>
+	/// Resets the hearts amount when starting or retrying level.
+	/// </summary>
 	private void ResetHearts()
 	{
 		currentHealth = 5;
@@ -306,6 +359,9 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Saves slider data to given key name, sets mixer value when key name is a correct one.
+	/// </summary>
 	private void OnSliderChanged(Slider slider, string keyName)
 	{
 		PlayerPrefs.SetFloat(keyName, slider.value);
@@ -314,7 +370,7 @@ public class UIManager : MonoBehaviour
 
 		if (player != null)
 		{
-			player.GetComponent<PlayerMovement>().ChangeValues();
+			player.GetComponent<PlayerMovement>().ChangeSettings();
 		}
 		
 		switch (keyName)
@@ -327,6 +383,9 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Gets the slider values saved in the player prefs. 
+	/// </summary>
 	private void GetSliderValues(Slider slider, string keyName)
 	{
 		if (PlayerPrefs.GetFloat(keyName) != 0)
@@ -335,22 +394,34 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Plays the Ui button click sound.
+	/// </summary>
 	public void PlayButtonSound()
 	{
 		audioSource.PlayOneShot(MusicManager.instance.buttonClickSound);
 	}
 
+	/// <summary>
+	/// Resets ingame ui indicators.
+	/// </summary>
 	private void ResetInGameUi()
 	{
 		dashIndicator.color = Color.yellow;
 		jumpIndicator.color = Color.blue;
 	}
 	
+	/// <summary>
+	/// Resets the timer.
+	/// </summary>
 	private void ResetTimer()
 	{
 		timer.ResetTimer();
 	}
 
+	/// <summary>
+	/// Quits the game. 
+	/// </summary>
 	public void Quit()
 	{
 		Application.Quit();

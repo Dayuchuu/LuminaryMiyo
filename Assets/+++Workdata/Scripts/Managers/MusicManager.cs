@@ -15,6 +15,9 @@ public class MusicManager : MonoBehaviour
 	public AudioClip jumpingSound;
 	public AudioClip[] playerSteps;
 	
+	/// <summary>
+	/// Creates the instance
+	/// </summary>
  	private void Awake()
 	{
 		if (instance == null)

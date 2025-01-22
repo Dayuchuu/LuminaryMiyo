@@ -32,11 +32,16 @@ public class EnemyShooting : CharacterBase
 
 	private void Awake()
 	{
+		//Gets these components.
 		playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
 
 		anim = GetComponent<Animator>();
 	}
 
+	/// <summary>
+	/// Damages the player
+	/// </summary>
+	/// <param name="other"></param>
 	private void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.CompareTag("Player"))
@@ -45,6 +50,9 @@ public class EnemyShooting : CharacterBase
 		}
 	}
 
+	/// <summary>
+	/// Calculates the distance between the player amd this gameObject and calls a shoot method when the distance is small enough. 
+	/// </summary>
 	private void Update()
 	{
 		Vector3 target = new Vector3(playerTransform.position.x, transform.position.y, playerTransform.position.z);
@@ -80,6 +88,9 @@ public class EnemyShooting : CharacterBase
 		}
 	}
 
+	/// <summary>
+	/// Sets the spawned bullets values and shoots it. 
+	/// </summary>
 	private void InstantiateBullet()
 	{
 		GameObject bullet = ObjectPool.sharedInstance.GetPooledObject();
@@ -91,9 +102,10 @@ public class EnemyShooting : CharacterBase
 			bullet.GetComponent<Bullet>().StartBullet();	
 		}
 	}
-
+	
 	private void SpawnBullet()
 	{
+		//Calls ´the bullet and plays sound effect. 
 		InstantiateBullet();
 		
 		enemyIdleSounds.PlayOneShot(MusicManager.instance.enemyShootSound);
