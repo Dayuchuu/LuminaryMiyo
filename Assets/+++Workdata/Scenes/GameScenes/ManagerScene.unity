@@ -27,7 +27,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: e982dcf9a411919429f06e2485b1220d, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -98,8 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 088b30e09512c9f42a56220e5587c76b,
-    type: 2}
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6455,11 +6454,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyShootSound: {fileID: 8300000, guid: 9cba3c3e9781b704ca015f507252d6e2, type: 3}
   enemyDeathSound: {fileID: 8300000, guid: 1d1491531f907fa4a8f5d264482791f4, type: 3}
-  bulletSound: {fileID: 0}
   playerAttack: {fileID: 8300000, guid: 9ba369d316b42e843956f143230885c5, type: 3}
+  playerHurt: {fileID: 8300000, guid: 406d5fc9b1556f744ad71494a4f8c116, type: 3}
   buttonClickSound: {fileID: 8300000, guid: 2812660e3733b3b41a3d00b141b567d2, type: 3}
-  landingSound: {fileID: 0}
-  jumpingSound: {fileID: 0}
+  landingSound: {fileID: 8300000, guid: c0a7d43d43de0af49a172cf590a7fb1d, type: 3}
+  jumpingSound: {fileID: 8300000, guid: eca0e5c9064c9494e963ea96eb24cfe8, type: 3}
   playerSteps:
   - {fileID: 8300000, guid: f2e2b522eedf78d44b0ab26899d71d2e, type: 3}
   - {fileID: 8300000, guid: 9bb40990011d79d4bba9dc707366b517, type: 3}

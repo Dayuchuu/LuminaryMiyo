@@ -8,8 +8,8 @@ public class MusicManager : MonoBehaviour
 	[Header("SFX")] 
 	public AudioClip enemyShootSound;
 	public AudioClip enemyDeathSound;
-	public AudioClip bulletSound;
 	public AudioClip playerAttack;
+	public AudioClip playerHurt;
 	public AudioClip buttonClickSound;
 	public AudioClip landingSound;
 	public AudioClip jumpingSound;

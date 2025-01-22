@@ -9,8 +9,9 @@ public class Bullet : MonoBehaviour
 	[SerializeField] 
 	private float shootSpeed = 0f;
 
-	[SerializeField]
-	private int setTimer = 0;
+	[SerializeField] private int setTimer = 0;
+
+	[SerializeField] private AudioSource audioSource;
 	
 	private Transform playerTransform = null;
 
@@ -25,6 +26,7 @@ public class Bullet : MonoBehaviour
 	private void Awake()
 	{
 		rb = gameObject.GetComponent<Rigidbody>();
+		audioSource = GetComponent<AudioSource>();
 	}
 	
 	private void OnTriggerEnter(Collider other)
@@ -32,6 +34,8 @@ public class Bullet : MonoBehaviour
 		if (other.gameObject.CompareTag("Player"))
 		{
 			other.gameObject.GetComponent<PlayerMovement>().healthPoints--;
+			
+			audioSource.PlayOneShot(MusicManager.instance.playerHurt);
 			
 			UIManager.Instance.ChangeHearts();
 			

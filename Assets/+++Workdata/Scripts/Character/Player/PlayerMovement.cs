@@ -128,14 +128,14 @@ public class PlayerMovement : CharacterBase
         currentDashAmount = dashAmount;
         
         
-        if (UIManager.Instance.tutorialDialogue.GetComponentInChildren<Dialogue>().isPlaying)
-        {
-            disableMovement = true;
-        }
-        else
-        {
-            disableMovement = false;
-        }
+        // if (UIManager.Instance.tutorialDialogue.GetComponentInChildren<Dialogue>().isPlaying)
+        // {
+        //     disableMovement = true;
+        // }
+        // else
+        // {
+        //     disableMovement = false;
+        // }
 
         ChangeValues();
     }
@@ -346,6 +346,7 @@ public class PlayerMovement : CharacterBase
             currentDashAmount = dashAmount;
             jumpBufferCounter = 0;
             waitFrames = numWaitFrames;
+            audioSource.PlayOneShot(MusicManager.instance.jumpingSound);
             UIManager.Instance.jumpIndicator.color = Color.red;
         }
         //jump in air if Jump amount is larger than 0
