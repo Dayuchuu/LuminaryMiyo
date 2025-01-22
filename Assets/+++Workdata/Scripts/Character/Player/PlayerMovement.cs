@@ -328,11 +328,13 @@ public class PlayerMovement : CharacterBase
         {
             UIManager.Instance.StartCountdown();
         }
-        
-        //Get the move values
-        inputX = context.ReadValue<Vector3>().x;
-        inputZ = context.ReadValue<Vector3>().z;
-    
+
+        if (SlopeMovement())
+        {
+            //Get the move values
+            inputX = context.ReadValue<Vector3>().x;
+            inputZ = context.ReadValue<Vector3>().z;
+        }
     }
     
     // --- JUMP METHOD --- //

@@ -99,16 +99,19 @@ public class UIManager : MonoBehaviour
 		GetSliderValues(musicSlider, music);
 		GetSliderValues(sfxSlider, sfx);
 
-		mixer.SetFloat(master, masterSlider.value);
-		mixer.SetFloat(music, musicSlider.value);
-		mixer.SetFloat(sfx, sfxSlider.value);
-
 		// sfxSlider.onValueChanged.AddListener((sliderValue) =>
 		// {
 		// 	mixer.SetFloat(name, sliderValue);
 		// 	
 		// 	PlayerPrefs.SetFloat(name, 1f);
 		// });
+	}
+
+	private void Start()
+	{
+		mixer.SetFloat(master, Mathf.Log10(masterSlider.value) * 20);
+		mixer.SetFloat(music, Mathf.Log10(musicSlider.value) * 20);
+		mixer.SetFloat(sfx, Mathf.Log10(sfxSlider.value) * 20);
 	}
 
 	public void ChangeScoreText(int score, string rank)
@@ -319,7 +322,7 @@ public class UIManager : MonoBehaviour
 			case master:
 			case music:
 			case sfx:
-				mixer.SetFloat(keyName, slider.value);
+				mixer.SetFloat(keyName, Mathf.Log10(slider.value) * 20);
 				break;
 		}
 	}
