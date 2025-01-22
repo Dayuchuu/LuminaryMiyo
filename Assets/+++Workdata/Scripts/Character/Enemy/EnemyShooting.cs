@@ -70,7 +70,7 @@ public class EnemyShooting : CharacterBase
 			if (playerTransform.gameObject.GetComponent<PlayerMovement>().states == PlayerMovement.PlayerStates.Dash)
 			{
 				//Think about changing this (doesnt really work) 
-				Physics.IgnoreCollision(transform.gameObject.GetComponent<Collider>(), playerTransform.gameObject.GetComponent<CapsuleCollider>());
+				Physics.IgnoreCollision(transform.gameObject.GetComponent<Collider>(), playerTransform.gameObject.GetComponent<MeshCollider>());
 			}
 		}
 		else if (dist > distance)

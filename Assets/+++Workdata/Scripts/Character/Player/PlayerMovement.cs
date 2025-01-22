@@ -30,6 +30,7 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private int maxVelocityChange;
     [SerializeField] private float speedUpTimer = 0f;
     [SerializeField] private float moveSpeedAcceleration = 0f;
+    [SerializeField] private float maxSlopeAngle;
     private Vector3 movementDirection = Vector3.zero;
     private float currentMoveSpeed;
     private float moveSpeed = 0f;
@@ -114,7 +115,7 @@ public class PlayerMovement : CharacterBase
     /// <summary>
     /// We get multiple values/components at the start.
     /// </summary>
-    private void Awake()
+    private void Start()
     {
         //Getting components
         rb = GetComponent<Rigidbody>();
@@ -331,6 +332,7 @@ public class PlayerMovement : CharacterBase
         //Get the move values
         inputX = context.ReadValue<Vector3>().x;
         inputZ = context.ReadValue<Vector3>().z;
+    
     }
     
     // --- JUMP METHOD --- //
@@ -467,6 +469,19 @@ public class PlayerMovement : CharacterBase
                 return true;
         }
         return false;
+    }
+
+    private bool SlopeMovement()
+    {
+        if (Physics.BoxCast(transform.position, boxCastSize * 1.5f, Vector3.down, out var hit, Quaternion.identity, boxCastSize.y, groundMask))
+        {
+            float angle = Vector2.Angle(hit.normal, Vector3.up);
+            if (angle > maxSlopeAngle)
+            {
+                return false;
+            }
+        }
+        return true;
     }
     
     public void DisablePlayerActions()
