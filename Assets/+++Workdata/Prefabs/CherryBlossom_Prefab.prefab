@@ -78,6 +78,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CherryBlossom_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3767040408147655138, guid: 1785a403a28034d4c894c8d889424e22,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -323911045083670295, guid: 1785a403a28034d4c894c8d889424e22, type: 3}

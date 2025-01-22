@@ -73,6 +73,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetRailing_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6025ba424a1a7734ebd33ede139235b8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4192124706998035764, guid: 6025ba424a1a7734ebd33ede139235b8, type: 3}
