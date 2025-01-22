@@ -96,6 +96,8 @@ public class Goal : MonoBehaviour
 		{
 			UIManager.Instance.ChangeScoreText(currentScore, "S ");
 		}
+		
+		
 	}
 	#endregion
 }

@@ -73,7 +73,6 @@ public class EnemyShooting : CharacterBase
 				//Think about changing this (doesnt really work) 
 				Physics.IgnoreCollision(transform.gameObject.GetComponent<Collider>(), playerTransform.gameObject.GetComponent<CapsuleCollider>());
 			}
-			StartCoroutine(SpawnBullet());
 		}
 		else if (dist > distance)
 		{
@@ -94,18 +93,13 @@ public class EnemyShooting : CharacterBase
 		}
 	}
 
-	private IEnumerator SpawnBullet()
+	private void SpawnBullet()
 	{
-		if (inRange)
-		{ 
-			InstantiateBullet();
-			
-			// enemySounds.PlayOneShot(MusicManager.instance.enemyShootSound);
-			
-			yield return new WaitForSeconds(bulletSpawnCooldown);
-
-			StartCoroutine(SpawnBullet());
-		}
+		
+		InstantiateBullet();
+		
+		// enemySounds.PlayOneShot(MusicManager.instance.enemyShootSound);
+		
 	}
 	#endregion
 }

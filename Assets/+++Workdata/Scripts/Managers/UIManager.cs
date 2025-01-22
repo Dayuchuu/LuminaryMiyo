@@ -149,7 +149,6 @@ public class UIManager : MonoBehaviour
 		timer.StartCountdown();
 		
 		ResetInGameUi();
-		
 
 		inGameScoreText.text = "Score: 0";
 

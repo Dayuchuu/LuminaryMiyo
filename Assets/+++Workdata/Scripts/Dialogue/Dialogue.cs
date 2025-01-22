@@ -96,24 +96,24 @@ public class Dialogue : MonoBehaviour
         //what happens after all dialogue has been exhausted, in this case activating movement and closing Dialogue ui.
         else
         {
-            if (!isPreTutorial)
-            {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().disableMovement = false;
-                isPlaying = false;
-                UIManager.Instance.CloseMenu(UIManager.Instance.tutorialDialogue,UIManager.Instance.levelDialogue, CursorLockMode.Locked, 1f);
-                UIManager.Instance.inGameUi.SetActive(true);
-                gameObject.transform.parent.gameObject.SetActive(false);
-            }
-            else
-            {
-                UIManager.Instance.CloseMenu(UIManager.Instance.preTutorial.transform.parent.gameObject, CursorLockMode.None, 1f);
-                UIManager.Instance.OpenMenu(UIManager.Instance.levelSelectionScreen, CursorLockMode.None, 1f);
-            }
+           AfterText();
         }
     }
 
     private void AfterText()
     {
-      
+        if (!isPreTutorial)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().disableMovement = false;
+            isPlaying = false;
+            UIManager.Instance.CloseMenu(UIManager.Instance.tutorialDialogue,UIManager.Instance.levelDialogue, CursorLockMode.Locked, 1f);
+            UIManager.Instance.inGameUi.SetActive(true);
+            gameObject.transform.parent.gameObject.SetActive(false);
+        }
+        else
+        {
+            UIManager.Instance.CloseMenu(UIManager.Instance.preTutorial, CursorLockMode.None, 1f);
+            UIManager.Instance.OpenMenu(UIManager.Instance.levelSelectionScreen, CursorLockMode.None, 1f);
+        }
     }
 }
