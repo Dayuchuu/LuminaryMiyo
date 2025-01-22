@@ -14041,7 +14041,7 @@ MonoBehaviour:
   bulletSpawnCooldown: 1
   distance: 10
   enemyIdleSounds: {fileID: 9209981324937246455}
-  enemySounds: {fileID: 0}
+  enemySounds: {fileID: 9209981324937246455}
   deathEffect: {fileID: 4436577328079355965}
 --- !u!136 &7287514883991398117
 CapsuleCollider:

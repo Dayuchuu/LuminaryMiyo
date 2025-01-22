@@ -234,7 +234,7 @@ public class UIManager : MonoBehaviour
 
 	public void Replay()
 	{
-		CloseMenu(winScreen, loseScreen, CursorLockMode.None, 1f);
+		CloseMenu(winScreen, loseScreen, CursorLockMode.Locked, 1f);
 		
 		inGameUi.SetActive(true);
 		

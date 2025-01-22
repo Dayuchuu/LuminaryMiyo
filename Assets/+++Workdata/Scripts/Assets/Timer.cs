@@ -47,6 +47,7 @@ public class Timer : MonoBehaviour
          if(time <= 0)
          {
             time = (int)0;
+            UIManager.Instance.inGameUi.SetActive(false);
             UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
          }
          
@@ -54,8 +55,7 @@ public class Timer : MonoBehaviour
       }
     		
       milliseconds -= Time.deltaTime * 100;
-    		
-      //Debug.Log(string.Format("{0}:{1}:{2}", minutes, seconds, (int)miliseconds));
+      
       timeText.text = string.Format("{0}.{1}", time, (int)milliseconds);
    }
 

@@ -138,6 +138,18 @@ public class PlayerMovement : CharacterBase
         // }
 
         ChangeValues();
+
+        if (UIManager.Instance.tutorialDialogue.activeInHierarchy)
+        {
+            disableMovement = true;
+            return;
+        }
+
+        if (UIManager.Instance.levelDialogue.activeInHierarchy)
+        {
+            disableMovement = true;
+            return;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
