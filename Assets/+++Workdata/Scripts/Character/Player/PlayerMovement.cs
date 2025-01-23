@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -26,7 +28,7 @@ public class PlayerMovement : CharacterBase
     
     [HideInInspector]
     public PlayerStates states = PlayerStates.Default;
-    
+
     [Header("Movement Variables")]
     [SerializeField] private float maxDefaultMoveSpeed = 10f;
     [SerializeField] private int maxVelocityChange;
@@ -37,6 +39,9 @@ public class PlayerMovement : CharacterBase
     private float currentMoveSpeed;
     private float moveSpeed = 0f;
     public float speedUpCounter = 0f;
+
+    public bool slopeCheck = false;
+
     [Space]
     
     [Header("Dash Variables")]
@@ -85,6 +90,7 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private Material swordIndicator;
     [SerializeField] private SkinnedMeshRenderer handRenderer;
     private AudioSource audioSource;
+    public GameObject localVolume;
 
     [Space] 
     [Header("Animations")] 
@@ -205,7 +211,8 @@ public class PlayerMovement : CharacterBase
         {
             cameraPitch += mouseDelta.y * rotationSensibility;
         }
-        
+
+
         cameraPitch = Mathf.Clamp(cameraPitch, -maxCameraPitch, maxCameraPitch);
 
         cameraRoll += mouseDelta.x * rotationSensibility;
@@ -283,13 +290,11 @@ public class PlayerMovement : CharacterBase
         Vector3 velocity = rb.velocity;
         Vector3 velocityChange = (targetVelocity - velocity);
 
-        if(SlopeMovement())
-        {
-            //changes velocity of the rigidbody.
-            velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
-            velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
-            velocityChange.y = 0;
-        }
+
+        velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+        velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+        velocityChange.y = 0;
+
         
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
 
@@ -547,20 +552,21 @@ public class PlayerMovement : CharacterBase
         return false;
     }
 
-    
     private bool SlopeMovement()
     {
         //Calculates the angle of the ground to remove moving up slopes that are to high.
         if (Physics.Raycast(transform.position, new Vector3(rb.velocity.x, 0, rb.velocity.z),out var hit, 2f, groundMask))
         {
-            float angle = Vector2.Angle(hit.normal, Vector3.up);
-            if (angle > maxSlopeAngle)
+            //float angle = Vector2.Angle(hit.normal, Vector3.up);
+            /*if (angle > maxSlopeAngle)
             {
                 return false;
-            }
+            }*/
+            return false;
         }
         return true;
     }
+
     
     private float CheckAngle()
     {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Bullet : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class Bullet : MonoBehaviour
 		{
 			other.gameObject.GetComponent<PlayerMovement>().healthPoints--;
 			
+			StartCoroutine(DisableVolume(other.gameObject.GetComponent<PlayerMovement>().localVolume));
+
 			audioSource.PlayOneShot(MusicManager.instance.playerHurt);
 			
 			UIManager.Instance.ChangeHearts();
@@ -51,11 +54,6 @@ public class Bullet : MonoBehaviour
 				UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
 			}
 			
-			gameObject.SetActive(false);
-		}
-		else if(!other.CompareTag("Player") && !other.CompareTag("Enemy"))
-		{
-			gameObject.SetActive(false);
 		}
 	}
 
@@ -100,4 +98,13 @@ public class Bullet : MonoBehaviour
 		gameObject.SetActive(false);
 	}
 	#endregion
+
+	private IEnumerator DisableVolume(GameObject volume)
+	{
+        volume.SetActive(true);
+		yield return new WaitForSeconds(0.2f);
+        volume.SetActive(false);
+        gameObject.SetActive(false);
+
+    }
 }

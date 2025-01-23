@@ -83,7 +83,10 @@ public class SceneLoader : MonoBehaviour
 			}
 		}
 
+
 		SceneManager.LoadScene(firstNewScene, LoadSceneMode.Additive);
+        yield return 0;
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(firstNewScene));
 
 		currentScene = firstNewScene;
 

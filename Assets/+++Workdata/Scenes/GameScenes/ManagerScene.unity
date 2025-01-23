@@ -27,7 +27,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: e982dcf9a411919429f06e2485b1220d, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2384,7 +2384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8622480966180b645acdd9d7000146e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 90
+  time: 60
   countDownIsRunning: 0
   startCountDown: 0
 --- !u!4 &304767946
@@ -3225,7 +3225,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 70
   m_MaxValue: 110
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 90
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5796,6 +5796,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 74af00a5-5b17-46bf-bd09-7ccaa8e35373
     m_ActionName: Player/PauseGame[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 01f520b9-3f6b-4007-bee4-bd69caa3e78a
+    m_ActionName: Player/StartMoving[/Keyboard/anyKey,/Mouse/rightButton,/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -5814,24 +5818,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData:
-  - speaker: NPC 1
-    line: 'Hello you, I really like dash mechanics and especially how well they work
-      together with Unity physics. '
+  - speaker: ???
+    line: Alright, this is your first real mission, I hope you're ready. Try to take
+      as many souls as you can with you and your mother's will eventually be among
+      them.
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: NPC 2
-    line: "You be kinda weird ain't gonna lie, chief.\t"
+  - speaker: ???
+    line: Just remember that you'll have to be fast, otherwise the realm's atmosphere
+      might seriously hurt you. Getting rid of the masked demons will delay these
+      effects but don't be too daring.
     portrait: {fileID: 21300000, guid: 0c565b4ffe8dbc94bb71d398b4bfa422, type: 3}
-  - speaker: NPC 1
-    line: Shut up (I don't know what else to write I just need some lines that aren't
-      too short oof).
+  - speaker: ???
+    line: There will be a Torii gate at the end. Its divine power forces the demons
+      to stay away from it, but you will be able to pass through and safely return
+      to base.
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: NPC 2
-    line: Text Text Text TextText TextText TextText TextText TextText TextText TextText
-      TextText TextText Text
+  - speaker: ???
+    line: The organization believes in you and welcomes you to our cause. Now, good
+      luck.
     portrait: {fileID: 21300000, guid: 0c565b4ffe8dbc94bb71d398b4bfa422, type: 3}
-  - speaker: NPC 1
-    line: Yeah kinda like that.
-    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   dialogueTextComponent: {fileID: 1434218012}
   speakerTextComponent: {fileID: 559548896}
   speakerPortrait: {fileID: 1552032682}
@@ -8412,18 +8417,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1045617508}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1949309540}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: PlayButtonSound
@@ -8436,13 +8429,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2071980297}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1248818703}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
