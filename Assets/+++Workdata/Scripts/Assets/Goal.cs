@@ -74,7 +74,7 @@ public class Goal : MonoBehaviour
 
 		maxScoreAmount += coinAmount * 500;
 
-		maxScoreAmount += maxTimePoints;
+		maxScoreAmount += maxTimePoints * 100;
 		
 		GetScore(maxScoreAmount);
 	}
@@ -99,19 +99,19 @@ public class Goal : MonoBehaviour
 	/// <param name="currentMaxScore"></param>
 	private void GetRank(int currentScore, int currentMaxScore)
 	{
-		if (currentScore >= (int)(currentMaxScore * 0) && currentScore <= (int)(currentMaxScore * 0.25))
+		if (currentScore >= (int)(currentMaxScore * 0) && currentScore <= (int)(currentMaxScore * 0.10))
 		{
 			UIManager.Instance.ChangeScoreText(currentScore, "C ");
 		}
-		else if (currentScore >= (int)(currentMaxScore * 0.25) && currentScore <= (int)(currentMaxScore * 0.5))
+		else if (currentScore >= (int)(currentMaxScore * 0.10) && currentScore <= (int)(currentMaxScore * 0.5))
 		{
 			UIManager.Instance.ChangeScoreText(currentScore, "B ");
 		}
-		else if (currentScore >= (int)(currentMaxScore * 0.5) && currentScore <= (int)(currentMaxScore * 0.75))
+		else if (currentScore >= (int)(currentMaxScore * 0.25) && currentScore <= (int)(currentMaxScore * 0.75))
 		{
 			UIManager.Instance.ChangeScoreText(currentScore, "A ");
 		}
-		else if (currentScore >= (int)(currentMaxScore * 0.75))
+		else if (currentScore >= (int)(currentMaxScore * 0.50))
 		{
 			UIManager.Instance.ChangeScoreText(currentScore, "S ");
 		}

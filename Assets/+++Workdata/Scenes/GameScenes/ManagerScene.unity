@@ -15,19 +15,19 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.11, g: 0.0792, b: 0.0792, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.003
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.32156864, g: 0.32941177, b: 0.4627451, a: 1}
+  m_AmbientEquatorColor: {r: 0.2627451, g: 0.21568628, b: 0.20392157, a: 1}
+  m_AmbientGroundColor: {r: 0.13725491, g: 0.08627451, b: 0.078431375, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e982dcf9a411919429f06e2485b1220d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 088b30e09512c9f42a56220e5587c76b,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8094,6 +8095,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 74af00a5-5b17-46bf-bd09-7ccaa8e35373
     m_ActionName: Player/PauseGame[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 01f520b9-3f6b-4007-bee4-bd69caa3e78a
+    m_ActionName: Player/StartMoving[/Keyboard/anyKey,/Mouse/rightButton,/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -8112,46 +8117,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData:
-  - speaker: ???
-    line: "Something strange has been happening in the city, I\u2019m sure you\u2019ve
-      realized as well. The people are changing. It might be a slow process but once
-      you figure out the pattern it\u2019s hard to unsee. "
+  - speaker: Miyo
+    line: I feel like Mom is acting kind of weird lately, always forgetting something...
+      Looks like it's her lunch box this time. She's been so distant recently. Well,
+      guess it's up to me to save her lunch break. I should still be able to catch
+      up to her if I leave now.
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: ???
-    line: "They first lose their emotions and cease all social interaction before
-      experiencing violent breakdowns that ultimately culminate in\u2026 well, you\u2019ve
-      probably seen the news."
+  - speaker: Miyo
+    line: "There she is! Huh, is that a shortcut I don\u2018t know about?"
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: '*Your mother seems to be in a trance-like state and walks into a small,
+      dark alleyway.*'
     portrait: {fileID: 21300000, guid: 0c565b4ffe8dbc94bb71d398b4bfa422, type: 3}
-  - speaker: ???
-    line: "The space you got dragged into is the reason for all this, not some kind
-      of mass depression like the one\u2019s up top want you to believe. "
-    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: ???
-    line: "Something dangerous is lurking beyond the threshold of our world and we
-      are the reason it hasn\u2019t gotten out of hand yet."
+  - speaker: Miyo
+    line: Mom?
     portrait: {fileID: 21300000, guid: 0c565b4ffe8dbc94bb71d398b4bfa422, type: 3}
-  - speaker: ???
-    line: " Now, you told us that your mother left behind a note that led you to
-      said space and if you still wish to find her after everything that\u2019s already
-      happened we are your best bet. "
+  - speaker: Miyo
+    line: '*You follow your mother into the alleyway.*'
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: '!!!'
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: '*The alleyway is a dead end and your mother is nowhere to be seen.*'
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: '*You run into the darkness but when you turn around you find yourself
+      in a place you''ve never seen before...*'
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: '*The sight is surreal and doesn''t make sense in your head but right before
+      your mind is able to comprehend anything you feel a grip on your shoulder and
+      just a moment later your''re back in the alleyway.*'
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: Mom...?
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: '*You are in shock when you suddenly hear a voice coming from behind you.
+      You turn araound but against the bright light of the city streets all you can
+      see is a dark silhouette.*'
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   - speaker: ???
-    line: "There\u2019s a caveat however. Our numbers are dwindling, making a counteroffensive
-      difficult. "
+    line: You must be quite confused I imagine. What you just saw is something you
+      will never forget.
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: 'What in the world was that? Where did my mom go? Did you see her? '
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   - speaker: ???
-    line: We need more power to hold out and you seem to have a natural resistance
-      to the hazardous atmosphere of the other side.
+    line: "Your mother has been taken, I\u2019m afraid. \nI believe you noticed a
+      change in her demeanor, so she must've resisted the demon's influences for
+      quite some time already.\r"
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   - speaker: ???
-    line: "If you help us we\u2019ll do our best to support you in your search as
-      well. "
+    line: "Child, your mother is very strong, and surely you are too. \nThe demons
+      have overpowered and taken her soul, but she is not lost yet."
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   - speaker: ???
-    line: 'Please treat this as a matter of utmost secrecy. '
+    line: What you stumbled into is the place where the demons collect the souls
+      of their victims. We call it the Otherworld. I believe we are both lucky to
+      have met. Here is my business card.
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   - speaker: ???
-    line: You know where to find us.
+    line: 'Not everyone who enters lives long enough to tell the tale. You possess
+      the necessary qualities to collect the souls that were gathered by the Masks
+      and we can give you the equipment needed for the job. '
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: ???
+    line: With our help you can save them from the eternal unrest that is the other
+      side. You can still save your mother.
+    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
+  - speaker: Miyo
+    line: Okay, I'm in. Just hold on a little longer, mom.
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   dialogueTextComponent: {fileID: 1331094383}
   speakerTextComponent: {fileID: 823624030}
@@ -10806,6 +10845,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 74af00a5-5b17-46bf-bd09-7ccaa8e35373
     m_ActionName: Player/PauseGame[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 01f520b9-3f6b-4007-bee4-bd69caa3e78a
+    m_ActionName: Player/StartMoving[/Keyboard/anyKey,/Mouse/rightButton,/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -10824,46 +10867,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData:
-  - speaker: ???
-    line: "Something strange has been happening in the city, I\u2019m sure you\u2019ve
-      realized as well. The people are changing. It might be a slow process but once
-      you figure out the pattern it\u2019s hard to unsee. "
+  - speaker: Miyo
+    line: '*I agreed to the man''s proposal... I don''t know how I''m pretty sure
+      he knew that I would.'
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   - speaker: ???
-    line: "They first lose their emotions and cease all social interaction before
-      experiencing violent breakdowns that ultimately culminate in\u2026 well, you\u2019ve
-      probably seen the news."
-    portrait: {fileID: 21300000, guid: 0c565b4ffe8dbc94bb71d398b4bfa422, type: 3}
-  - speaker: ???
-    line: "The space you got dragged into is the reason for all this, not some kind
-      of mass depression like the one\u2019s up top want you to believe. "
+    line: Welcome to our training facility. This is a virtual space that allows you
+      to get used to your newly acquired transformation and the abilities that come
+      with it.
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   - speaker: ???
-    line: "Something dangerous is lurking beyond the threshold of our world and we
-      are the reason it hasn\u2019t gotten out of hand yet."
-    portrait: {fileID: 21300000, guid: 0c565b4ffe8dbc94bb71d398b4bfa422, type: 3}
-  - speaker: ???
-    line: " Now, you told us that your mother left behind a note that led you to
-      said space and if you still wish to find her after everything that\u2019s already
-      happened we are your best bet. "
-    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: ???
-    line: "There\u2019s a caveat however. Our numbers are dwindling, making a counteroffensive
-      difficult. "
-    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: ???
-    line: We need more power to hold out and you seem to have a natural resistance
-      to the hazardous atmosphere of the other side.
-    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: ???
-    line: "If you help us we\u2019ll do our best to support you in your search as
-      well. "
-    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: ???
-    line: 'Please treat this as a matter of utmost secrecy. '
-    portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
-  - speaker: ???
-    line: You know where to find us.
+    line: Move about as much as you like, we'll move on after you finish your training.
     portrait: {fileID: 21300000, guid: d5d888b752a15fa4e9d7209b55da136c, type: 3}
   dialogueTextComponent: {fileID: 1914942085}
   speakerTextComponent: {fileID: 357749630}

@@ -47,25 +47,24 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private float dashCooldown = 0;
     private int currentDashAmount = 0;
     private float currentDashCooldown = 0;
-    private bool canDash = true;
+    [SerializeField] private bool canDash = true;
     [Space]
     
     [Header("Jump Variables")]
     [SerializeField] private float jumpPower = 10f;
     [SerializeField] private int jumpAmount = 0;
     [SerializeField] private float coyoteTime = 0.2f;
-    [SerializeField] private float jumpBufferTime = 0.2f;
     [SerializeField] private Vector3 boxCastSize;
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private float numWaitFrames;
     private float waitFrames;
     private float coyoteTimeCounter = 0;
-    private float jumpBufferCounter = 0;
     private int currentJumpAmount = 0;
     [Space]
     
     public bool disableMovement = true;
-    
+    private bool movementKeyPressed = false;
+
     private Rigidbody rb;
     
     [Header("Gravity Variables")]
@@ -83,6 +82,7 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
     [SerializeField] private Material jumpIndicator;
     [SerializeField] private Material dashIndicator;
+    [SerializeField] private Material swordIndicator;
     [SerializeField] private SkinnedMeshRenderer handRenderer;
     private AudioSource audioSource;
 
@@ -133,6 +133,10 @@ public class PlayerMovement : CharacterBase
         currentDashCooldown = dashCooldown;
         currentDashAmount = dashAmount;
         
+        /*jumpIndicator = new Material(jumpIndicator);
+        dashIndicator = new Material(dashIndicator);
+        swordIndicator = new Material(swordIndicator);*/
+
         // if (UIManager.Instance.tutorialDialogue.GetComponentInChildren<Dialogue>().isPlaying)
         // {
         //     disableMovement = true;
@@ -292,27 +296,47 @@ public class PlayerMovement : CharacterBase
         if (IsGrounded())
         {
             currentDashAmount = dashAmount;
-            currentJumpAmount = jumpAmount;
+            currentJumpAmount = 1;
         }
-
-        if (currentJumpAmount < 1)
+        else if (!IsGrounded() && currentDashAmount > 0)
         {
-            jumpIndicator.SetColor("_EmissionColor", Color.white * 10);
+            currentJumpAmount = 0;
+        }
+        else if (!IsGrounded() && currentDashAmount == 0)
+        {
+            jumpAmount = 1;
+        }
+            
+
+
+        if (currentJumpAmount > 0)
+        {
+            jumpIndicator.SetColor("_EmissionColor", Color.yellow * 10);          
         }
         else
         {
-            jumpIndicator.SetColor("_EmissionColor", Color.blue * 10);
-
+            jumpIndicator.SetColor("_EmissionColor", Color.black * 10);
         }
 
         if (currentDashAmount < 1)
         {
-            dashIndicator.SetColor("_EmissionColor", Color.white * 10);
+            dashIndicator.SetColor("_EmissionColor", Color.black * 10);
         }
         else
         {
             dashIndicator.SetColor("_EmissionColor", Color.yellow * 10);
         }
+
+        if (moveSpeed >= 15)
+        {
+            swordIndicator.SetColor("_EmissionColor", Color.yellow * 10);
+        }
+        else
+        {
+            swordIndicator.SetColor("_EmissionColor", Color.black * 10);
+        }
+
+
         
         //Calculates when to speed up the Player.
         if (rb.velocity.magnitude > maxDefaultMoveSpeed - 0.5f && states != PlayerStates.Dash)
@@ -347,7 +371,7 @@ public class PlayerMovement : CharacterBase
         Vector3 jumpVelocity = new Vector3(0f, rb.velocity.y, 0f);
         
         //Changes the animation.
-        if (moveVelocity.magnitude > 0.05f && jumpVelocity.magnitude < 0.05 && jumpVelocity.magnitude > -0.05f)
+        if (IsGrounded() && states == PlayerStates.Default && movementKeyPressed)
         {
             anim.SetBool( "IsRunning", true);
         }
@@ -363,10 +387,22 @@ public class PlayerMovement : CharacterBase
     public void Move(InputAction.CallbackContext context)
     {
         if (disableMovement) { return; }
-        
+
         //Get the move values
         inputX = context.ReadValue<Vector3>().x;
         inputZ = context.ReadValue<Vector3>().z;
+
+
+        if (inputX != 0 || inputZ != 0)
+        {
+            movementKeyPressed = true;
+        }
+        else
+        {
+            movementKeyPressed = false;
+        }
+        
+        
     }
     
     // --- JUMP METHOD --- //
@@ -388,35 +424,27 @@ public class PlayerMovement : CharacterBase
         gravity = defaultGravity;
         rb.useGravity = true;
 
-        if (context.performed)
-        {
-            jumpBufferCounter = jumpBufferTime;
-        }
-        else
-        {
-            jumpBufferCounter -= Time.time;
-        }
 
         //jump on ground
-        if (jumpBufferCounter > 0 && coyoteTimeCounter > 0)
+        if (context.performed && IsGrounded() && coyoteTimeCounter > 0)
         {
             rb.velocity = new Vector3(0f, jumpPower, 0f);
 
             //set gravity to default once grounded
             gravity = defaultGravity;
             currentDashAmount = dashAmount;
-            jumpBufferCounter = 0;
             waitFrames = numWaitFrames;
             audioSource.PlayOneShot(MusicManager.instance.jumpingSound);
+            currentJumpAmount = 0;
             // jumpIndicator.SetColor("_EmissionColor", Color.red);
         }
         //jump in air if Jump amount is larger than 0
-        else if (jumpBufferCounter > 0 &&  currentJumpAmount > 0) 
+        else if (context.performed && !IsGrounded() &&  currentJumpAmount > 0) 
         {
             rb.velocity = new Vector3(0f, jumpPower, 0f);
 
             //reduce jump amount
-            currentJumpAmount--;
+            currentJumpAmount = 0;
             // jumpIndicator.SetColor("_EmissionColor", Color.white);
 
         }
@@ -436,11 +464,17 @@ public class PlayerMovement : CharacterBase
         
         if (states == PlayerStates.Dash) { return; }
         
-        audioSource.PlayOneShot(MusicManager.instance.playerAttack);
 
+        if (currentDashAmount > 0 && canDash)
+        {
+            audioSource.PlayOneShot(MusicManager.instance.playerAttack);
+            anim.SetBool("DashAttack", true);
+        }
+        
+        
         currentMoveSpeed = moveSpeed;
         
-        anim.SetBool( "DashAttack", true);
+        //anim.SetBool( "DashAttack", true);
         
         //if on ground and not moving, move in direction of camera
         //checks if player is not moving by checking if the movement inputs return a value
@@ -453,8 +487,11 @@ public class PlayerMovement : CharacterBase
             movementDirection.Normalize();
 
             rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
-            
+
+            canDash = false;
             StartCoroutine(WaitForDash());
+
+
         }
         //if on ground and moving, move in current movement direction 
         else if (IsGrounded() && rb.velocity != Vector3.zero && canDash)
@@ -464,7 +501,8 @@ public class PlayerMovement : CharacterBase
             movementDirection = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
             movementDirection.Normalize();
             rb.AddForce(movementDirection * dashPower, ForceMode.VelocityChange);
-            
+
+            canDash = false;
             StartCoroutine(WaitForDash());
         }
         //if in air and not moving, move in direction of camera
@@ -478,7 +516,8 @@ public class PlayerMovement : CharacterBase
             rb.AddForce(cameraTransform.forward * dashPower, ForceMode.VelocityChange);
             
             currentDashAmount--;
-            currentJumpAmount = jumpAmount;
+            currentJumpAmount = 1;
+            canDash = false;
             StartCoroutine(WaitForDash());
         }
         //if in air and moving, move in current movement direction 
@@ -492,6 +531,7 @@ public class PlayerMovement : CharacterBase
 
             currentDashAmount--;
             currentJumpAmount = jumpAmount;
+            canDash = false;
             StartCoroutine(WaitForDash());
         }
     }
@@ -564,9 +604,10 @@ public class PlayerMovement : CharacterBase
     private IEnumerator WaitForDash()
     {
         speedlines.Play();
-        
+
         // dashIndicator.SetColor("_EmissionColor", Color.white);
-        
+        states = PlayerStates.Dash;
+
         yield return new WaitForSeconds(dashTimer);
         
         // dashIndicator.SetColor("_EmissionColor", Color.yellow * 10);
@@ -584,7 +625,8 @@ public class PlayerMovement : CharacterBase
         rb.useGravity = true;
 
         canDash = false;
-        
+
+
         if (!IsGrounded())
         {
             currentJumpAmount = jumpAmount;
