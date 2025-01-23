@@ -13,6 +13,7 @@ public class MusicManager : MonoBehaviour
 	public AudioClip buttonClickSound;
 	public AudioClip landingSound;
 	public AudioClip jumpingSound;
+	public AudioClip coinCollected;
 	public AudioClip[] playerSteps;
 	
 	/// <summary>

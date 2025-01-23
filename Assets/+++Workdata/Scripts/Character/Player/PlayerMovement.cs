@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : CharacterBase
@@ -275,8 +277,11 @@ public class PlayerMovement : CharacterBase
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
         velocityChange.y = 0;
-        
-        rb.AddForce(velocityChange, ForceMode.VelocityChange);
+
+        if (SlopeMovement())
+        {
+            rb.AddForce(velocityChange, ForceMode.VelocityChange);
+        }
         
         //Calculates when to speed up the Player.
         if (rb.velocity.magnitude > maxDefaultMoveSpeed - 0.5f && states != PlayerStates.Dash)
@@ -335,12 +340,10 @@ public class PlayerMovement : CharacterBase
 
         Debug.Log(CheckAngle());
         
-        if (SlopeMovement())
-        {
+      
             //Get the move values
             inputX = context.ReadValue<Vector3>().x;
             inputZ = context.ReadValue<Vector3>().z;
-        }
     }
     
     // --- JUMP METHOD --- //
@@ -484,7 +487,7 @@ public class PlayerMovement : CharacterBase
     private bool SlopeMovement()
     {
         //Calculates the angle of the ground to remove moving up slopes that are to high.
-        if (Physics.BoxCast(transform.position, boxCastSize * 1.5f, Vector3.down, out var hit, Quaternion.identity, boxCastSize.y, groundMask))
+        if (Physics.Raycast(transform.position, new Vector3(rb.velocity.x, 0, rb.velocity.z),out var hit, 5f, groundMask))
         {
             float angle = Vector2.Angle(hit.normal, Vector3.up);
             if (angle > maxSlopeAngle)
@@ -494,17 +497,28 @@ public class PlayerMovement : CharacterBase
         }
         return true;
     }
-
+    
     private float CheckAngle()
     {
-        if (Physics.BoxCast(transform.position, boxCastSize * 1.5f, Vector3.down, out var hit, Quaternion.identity, boxCastSize.y, groundMask))
+        Debug.DrawLine(transform.position, transform.position + new Vector3(rb.velocity.x, 0, rb.velocity.z) * 10 , Color.red, 0.2f);
+        if (Physics.Raycast(transform.position, new Vector3(rb.velocity.x, 0, rb.velocity.z),out var hit, 3f, groundMask))
         {
             float angle = Vector2.Angle(hit.normal, Vector3.up);
             return angle;
         }
+    
+        if (hit.transform != null)
+        {
+            Debug.Log(hit.transform.gameObject.name);
+        }
         return 0;
     }
-    
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position + Vector3.down * (boxCastSize.y * 2),  boxCastSize * 2);
+    }
+
     public void DisablePlayerActions()
     {
         //Disables the player Actions

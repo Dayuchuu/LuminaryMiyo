@@ -6782,6 +6782,7 @@ MonoBehaviour:
   buttonClickSound: {fileID: 8300000, guid: 2812660e3733b3b41a3d00b141b567d2, type: 3}
   landingSound: {fileID: 8300000, guid: c0a7d43d43de0af49a172cf590a7fb1d, type: 3}
   jumpingSound: {fileID: 8300000, guid: eca0e5c9064c9494e963ea96eb24cfe8, type: 3}
+  coinCollected: {fileID: 8300000, guid: fb5bc253878d59c49ae785ffc43d1ec6, type: 3}
   playerSteps:
   - {fileID: 8300000, guid: f2e2b522eedf78d44b0ab26899d71d2e, type: 3}
   - {fileID: 8300000, guid: 9bb40990011d79d4bba9dc707366b517, type: 3}

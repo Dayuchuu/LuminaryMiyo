@@ -46,7 +46,7 @@ public class PlayerInputManager : MonoBehaviour
         inputMap.Player.PauseGame.performed += playerMovement.PauseGame;
     }
 
-    /// <summary>
+    /// <summary>   
     /// Disables and subscribes Player actions.
     /// </summary>
     private void OnDisable()

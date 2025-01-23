@@ -3,7 +3,6 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
 	private AudioSource collectedSound;
-
 	
 	private void Awake()
 	{
@@ -20,6 +19,8 @@ public class Collectable : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			GameController.Instance.ChangeScore(500);
+			
+			collectedSound.PlayOneShot(MusicManager.instance.coinCollected);
 			
 			UIManager.Instance.inGameScoreText.text = "Score: " + GameController.Instance.currentPoints;
 			
