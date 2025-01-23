@@ -60,6 +60,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6825431613964156113, guid: 96b2da8177c49004c8398375e7433703,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6825431613964156113, guid: 96b2da8177c49004c8398375e7433703,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -105,6 +110,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367451341251751153, guid: 96b2da8177c49004c8398375e7433703,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 367451341251751153, guid: 96b2da8177c49004c8398375e7433703,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -112,6 +122,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrafficLight_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96b2da8177c49004c8398375e7433703,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617395761616159028, guid: 96b2da8177c49004c8398375e7433703,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617395761616159028, guid: 96b2da8177c49004c8398375e7433703,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069550529959122597, guid: 96b2da8177c49004c8398375e7433703,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069550529959122597, guid: 96b2da8177c49004c8398375e7433703,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6807910709779692268, guid: 96b2da8177c49004c8398375e7433703,
         type: 3}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2398028771359388829}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StreetSignTriangle_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 660035597683200}
   - component: {fileID: 6265665902500868025}
   - component: {fileID: 7891863693329582413}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StreetSignTriangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

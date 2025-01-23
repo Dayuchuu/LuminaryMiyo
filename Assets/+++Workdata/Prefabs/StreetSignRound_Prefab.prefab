@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5730941433022635798}
   - component: {fileID: 376257540775364160}
   - component: {fileID: 7590941098665053159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StreetSignRound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2080197500575927416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StreetSignRound_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

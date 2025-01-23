@@ -65,6 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 38ac2e9b0cb6b404aa130ec685b064ef, type: 2}
     - target: {fileID: -2335027659440359835, guid: 166de7d30dc942049ac62e90248122e5,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2335027659440359835, guid: 166de7d30dc942049ac62e90248122e5,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -72,6 +77,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetFlag_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 166de7d30dc942049ac62e90248122e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

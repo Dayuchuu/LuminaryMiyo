@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3037670821088567342}
   - component: {fileID: 217277847571042097}
   - component: {fileID: 4016377494007233333}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: KeiTruck_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
