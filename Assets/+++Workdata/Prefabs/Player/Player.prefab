@@ -5285,6 +5285,8 @@ MonoBehaviour:
   defaultGravity: -9.81
   maxGravity: -30
   speedlines: {fileID: 3410830121121518051}
+  jumpIndicator: {fileID: 2100000, guid: 2654b7a5eca6f15449a3ad8e2fc7e03d, type: 2}
+  dashIndicator: {fileID: 2100000, guid: c23d568788c332248bb655206f2dc342, type: 2}
   anim: {fileID: 3736313585442027570}
   cameraTransform: {fileID: 5212311064682074393}
   rotationSensibility: 0.2

@@ -55,8 +55,6 @@ public class UIManager : MonoBehaviour
 	
 	[Header("InGame")]
 	public GameObject inGameUi;
-	public Image jumpIndicator;
-	public Image dashIndicator;
 	public Timer timer;
 	public List<Image> hearts;
 	public GameObject preTutorial;
@@ -150,8 +148,6 @@ public class UIManager : MonoBehaviour
 		
 		tutorialDialogue.SetActive(true);
 		
-		ResetInGameUi();
-		
 		ResetHearts();
 
 		ResetTimer();
@@ -174,8 +170,6 @@ public class UIManager : MonoBehaviour
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 		
 		timer.StartCountdown();
-		
-		ResetInGameUi();
 
 		inGameScoreText.text = "Score: 0";
 
@@ -404,15 +398,6 @@ public class UIManager : MonoBehaviour
 	public void PlayButtonSound()
 	{
 		audioSource.PlayOneShot(MusicManager.instance.buttonClickSound);
-	}
-
-	/// <summary>
-	/// Resets ingame ui indicators.
-	/// </summary>
-	private void ResetInGameUi()
-	{
-		dashIndicator.color = Color.yellow;
-		jumpIndicator.color = Color.blue;
 	}
 	
 	/// <summary>

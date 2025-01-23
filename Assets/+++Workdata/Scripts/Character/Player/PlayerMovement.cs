@@ -81,6 +81,8 @@ public class PlayerMovement : CharacterBase
     
     [Header("Effect Variables")]
     [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
+    [SerializeField] private Material jumpIndicator;
+    [SerializeField] private Material dashIndicator;
     private AudioSource audioSource;
 
     [Space] 
@@ -223,7 +225,7 @@ public class PlayerMovement : CharacterBase
         if (IsGrounded() && waitFrames <= 0f)
         {
             coyoteTimeCounter = coyoteTime;
-            UIManager.Instance.jumpIndicator.color = Color.blue;
+            jumpIndicator.SetColor("_EmissionColor", Color.blue);
         }
         else
         {
@@ -243,7 +245,7 @@ public class PlayerMovement : CharacterBase
             {
                 currentDashCooldown = dashCooldown;
 
-                UIManager.Instance.dashIndicator.color = Color.yellow;
+                dashIndicator.SetColor("_EmissionColor",Color.yellow);
                 
                 canDash = true;
             }
@@ -384,7 +386,7 @@ public class PlayerMovement : CharacterBase
             jumpBufferCounter = 0;
             waitFrames = numWaitFrames;
             audioSource.PlayOneShot(MusicManager.instance.jumpingSound);
-            UIManager.Instance.jumpIndicator.color = Color.red;
+            jumpIndicator.SetColor("_EmissionColor", Color.red);
         }
         //jump in air if Jump amount is larger than 0
         else if (jumpBufferCounter > 0 &&  currentJumpAmount > 0) 
@@ -393,7 +395,8 @@ public class PlayerMovement : CharacterBase
 
             //reduce jump amount
             currentJumpAmount--;
-            UIManager.Instance.jumpIndicator.color = Color.white;
+            jumpIndicator.SetColor("_EmissionColor", Color.white);
+
         }
 
         //jump button released
@@ -540,11 +543,12 @@ public class PlayerMovement : CharacterBase
     {
         speedlines.Play();
         
-        UIManager.Instance.dashIndicator.color = Color.white;
+        dashIndicator.SetColor("_EmissionColor", Color.white);
+
         
         yield return new WaitForSeconds(dashTimer);
         
-        UIManager.Instance.dashIndicator.color = Color.yellow;
+        dashIndicator.SetColor("_EmissionColor", Color.yellow * 10);
         
         anim.SetBool( "DashAttack", false);
 
