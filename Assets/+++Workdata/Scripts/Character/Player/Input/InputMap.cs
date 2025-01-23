@@ -80,6 +80,15 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""StartMoving"",
+                    ""type"": ""Button"",
+                    ""id"": ""01f520b9-3f6b-4007-bee4-bd69caa3e78a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -280,6 +289,39 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
                     ""action"": ""PauseGame"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ca1b19e-a058-48eb-a432-b5afce2996c4"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartMoving"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c80c029-9bf1-45bd-aa93-455f33d22bf4"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartMoving"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a8899a8-918b-4c08-be92-e2397ee722b8"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartMoving"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -294,6 +336,7 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_DialogueContinue = m_Player.FindAction("Dialogue Continue", throwIfNotFound: true);
         m_Player_PauseGame = m_Player.FindAction("PauseGame", throwIfNotFound: true);
+        m_Player_StartMoving = m_Player.FindAction("StartMoving", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -361,6 +404,7 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_DialogueContinue;
     private readonly InputAction m_Player_PauseGame;
+    private readonly InputAction m_Player_StartMoving;
     public struct PlayerActions
     {
         private @InputMap m_Wrapper;
@@ -371,6 +415,7 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @DialogueContinue => m_Wrapper.m_Player_DialogueContinue;
         public InputAction @PauseGame => m_Wrapper.m_Player_PauseGame;
+        public InputAction @StartMoving => m_Wrapper.m_Player_StartMoving;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -398,6 +443,9 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
             @PauseGame.started += instance.OnPauseGame;
             @PauseGame.performed += instance.OnPauseGame;
             @PauseGame.canceled += instance.OnPauseGame;
+            @StartMoving.started += instance.OnStartMoving;
+            @StartMoving.performed += instance.OnStartMoving;
+            @StartMoving.canceled += instance.OnStartMoving;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -420,6 +468,9 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
             @PauseGame.started -= instance.OnPauseGame;
             @PauseGame.performed -= instance.OnPauseGame;
             @PauseGame.canceled -= instance.OnPauseGame;
+            @StartMoving.started -= instance.OnStartMoving;
+            @StartMoving.performed -= instance.OnStartMoving;
+            @StartMoving.canceled -= instance.OnStartMoving;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -445,5 +496,6 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnDialogueContinue(InputAction.CallbackContext context);
         void OnPauseGame(InputAction.CallbackContext context);
+        void OnStartMoving(InputAction.CallbackContext context);
     }
 }

@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "StartMoving",
+                    "type": "Button",
+                    "id": "01f520b9-3f6b-4007-bee4-bd69caa3e78a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -256,6 +265,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ca1b19e-a058-48eb-a432-b5afce2996c4",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartMoving",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c80c029-9bf1-45bd-aa93-455f33d22bf4",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartMoving",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a8899a8-918b-4c08-be92-e2397ee722b8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartMoving",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

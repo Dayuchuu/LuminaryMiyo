@@ -364,13 +364,6 @@ public class PlayerMovement : CharacterBase
     {
         if (disableMovement) { return; }
         
-        if (!UIManager.Instance.timer.countDownIsRunning && rb.velocity.magnitude > 0)
-        {
-            UIManager.Instance.StartCountdown();
-        }
-
-        Debug.Log(CheckAngle());
-        
         //Get the move values
         inputX = context.ReadValue<Vector3>().x;
         inputZ = context.ReadValue<Vector3>().z;
@@ -614,6 +607,14 @@ public class PlayerMovement : CharacterBase
     private void PlayerSteps()
     {
         audioSource.PlayOneShot(MusicManager.instance.playerSteps[Random.Range(0,MusicManager.instance.playerSteps.Length)]);
+    }
+
+    public void StartCountdown(InputAction.CallbackContext context)
+    {
+        if (!UIManager.Instance.timer.countDownIsRunning)
+        {
+            UIManager.Instance.StartCountdown();
+        }
     }
 
     /// <summary>

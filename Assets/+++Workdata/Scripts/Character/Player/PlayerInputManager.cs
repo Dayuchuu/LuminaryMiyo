@@ -43,6 +43,8 @@ public class PlayerInputManager : MonoBehaviour
 
         // inputMap.Player.Attack.performed += playerAttack.Attack;
 
+        inputMap.Player.StartMoving.performed += playerMovement.StartCountdown;
+
         inputMap.Player.PauseGame.performed += playerMovement.PauseGame;
     }
 
