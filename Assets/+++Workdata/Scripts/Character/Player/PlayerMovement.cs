@@ -83,6 +83,7 @@ public class PlayerMovement : CharacterBase
     [SerializeField] private ParticleSystem speedlines = new ParticleSystem();
     [SerializeField] private Material jumpIndicator;
     [SerializeField] private Material dashIndicator;
+    [SerializeField] private SkinnedMeshRenderer handRenderer;
     private AudioSource audioSource;
 
     [Space] 
@@ -140,6 +141,9 @@ public class PlayerMovement : CharacterBase
         // {
         //     disableMovement = false;
         // }
+        
+        // dashIndicator.SetColor("_EmissionColor", Color.yellow * 10);
+        // jumpIndicator.SetColor("_EmissionColor", Color.blue * 10);
 
         ChangeSettings();
 
@@ -225,7 +229,7 @@ public class PlayerMovement : CharacterBase
         if (IsGrounded() && waitFrames <= 0f)
         {
             coyoteTimeCounter = coyoteTime;
-            jumpIndicator.SetColor("_EmissionColor", Color.blue);
+            // jumpIndicator.SetColor("_EmissionColor", Color.blue);
         }
         else
         {
@@ -245,7 +249,7 @@ public class PlayerMovement : CharacterBase
             {
                 currentDashCooldown = dashCooldown;
 
-                dashIndicator.SetColor("_EmissionColor",Color.yellow);
+                // dashIndicator.SetColor("_EmissionColor",Color.yellow);
                 
                 canDash = true;
             }
@@ -284,6 +288,31 @@ public class PlayerMovement : CharacterBase
         }
         
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
+
+        if (IsGrounded())
+        {
+            currentDashAmount = dashAmount;
+            currentJumpAmount = jumpAmount;
+        }
+
+        if (currentJumpAmount < 1)
+        {
+            jumpIndicator.SetColor("_EmissionColor", Color.white * 10);
+        }
+        else
+        {
+            jumpIndicator.SetColor("_EmissionColor", Color.blue * 10);
+
+        }
+
+        if (currentDashAmount < 1)
+        {
+            dashIndicator.SetColor("_EmissionColor", Color.white * 10);
+        }
+        else
+        {
+            dashIndicator.SetColor("_EmissionColor", Color.yellow * 10);
+        }
         
         //Calculates when to speed up the Player.
         if (rb.velocity.magnitude > maxDefaultMoveSpeed - 0.5f && states != PlayerStates.Dash)
@@ -386,7 +415,7 @@ public class PlayerMovement : CharacterBase
             jumpBufferCounter = 0;
             waitFrames = numWaitFrames;
             audioSource.PlayOneShot(MusicManager.instance.jumpingSound);
-            jumpIndicator.SetColor("_EmissionColor", Color.red);
+            // jumpIndicator.SetColor("_EmissionColor", Color.red);
         }
         //jump in air if Jump amount is larger than 0
         else if (jumpBufferCounter > 0 &&  currentJumpAmount > 0) 
@@ -395,7 +424,7 @@ public class PlayerMovement : CharacterBase
 
             //reduce jump amount
             currentJumpAmount--;
-            jumpIndicator.SetColor("_EmissionColor", Color.white);
+            // jumpIndicator.SetColor("_EmissionColor", Color.white);
 
         }
 
@@ -543,12 +572,11 @@ public class PlayerMovement : CharacterBase
     {
         speedlines.Play();
         
-        dashIndicator.SetColor("_EmissionColor", Color.white);
-
+        // dashIndicator.SetColor("_EmissionColor", Color.white);
         
         yield return new WaitForSeconds(dashTimer);
         
-        dashIndicator.SetColor("_EmissionColor", Color.yellow * 10);
+        // dashIndicator.SetColor("_EmissionColor", Color.yellow * 10);
         
         anim.SetBool( "DashAttack", false);
 

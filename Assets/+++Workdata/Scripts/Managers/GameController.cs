@@ -46,7 +46,8 @@ public class GameController : MonoBehaviour
 
             return;
         }
-        
+
+        Screen.fullScreen = true;
     }
 
     /// <summary>

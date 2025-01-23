@@ -25,7 +25,6 @@ public class UIManager : MonoBehaviour
 	public GameObject pauseScreen = null;
 	public GameObject mainMenuScreen = null;
 	public GameObject levelSelectionScreen = null;
-	public GameObject credits = null;
 	[SerializeField] private List<GameObject> uiScreens;
 	[Space]
 	
@@ -34,6 +33,7 @@ public class UIManager : MonoBehaviour
 	public TextMeshProUGUI timeText = null;
 	public TextMeshProUGUI inGameScoreText = null;
 	public TextMeshProUGUI highScoreText = null;
+	public TextMeshProUGUI fovTexts = null;
 
 	[Space] [Header("Audio")] 
 	[SerializeField] private AudioSource audioSource;
@@ -104,6 +104,8 @@ public class UIManager : MonoBehaviour
 		GetSliderValues(masterSlider, master);
 		GetSliderValues(musicSlider, music);
 		GetSliderValues(sfxSlider, sfx);
+
+		fovTexts.text = fovSlider.value.ToString();
 
 		// sfxSlider.onValueChanged.AddListener((sliderValue) =>
 		// {
@@ -379,6 +381,11 @@ public class UIManager : MonoBehaviour
 				mixer.SetFloat(keyName, Mathf.Log10(slider.value) * 20);
 				break;
 		}
+
+		if (keyName == fov)
+		{
+			fovTexts.text = PlayerPrefs.GetFloat(fov, slider.value).ToString();
+		}
 	}
 
 	/// <summary>
@@ -386,7 +393,7 @@ public class UIManager : MonoBehaviour
 	/// </summary>
 	private void GetSliderValues(Slider slider, string keyName)
 	{
-		if (PlayerPrefs.GetFloat(keyName) != 0)
+		if (PlayerPrefs.GetFloat(keyName) > 0.05f)
 		{
 			slider.value = PlayerPrefs.GetFloat(keyName);
 		}

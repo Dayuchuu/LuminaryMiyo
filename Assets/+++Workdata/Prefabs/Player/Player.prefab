@@ -5287,6 +5287,7 @@ MonoBehaviour:
   speedlines: {fileID: 3410830121121518051}
   jumpIndicator: {fileID: 2100000, guid: 2654b7a5eca6f15449a3ad8e2fc7e03d, type: 2}
   dashIndicator: {fileID: 2100000, guid: c23d568788c332248bb655206f2dc342, type: 2}
+  handRenderer: {fileID: 7357394688473942291}
   anim: {fileID: 3736313585442027570}
   cameraTransform: {fileID: 5212311064682074393}
   rotationSensibility: 0.2
@@ -6141,6 +6142,12 @@ PrefabInstance:
 --- !u!4 &2802538778675344244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e4c7db65dd010a74e9b4a7eb751ac756,
+    type: 3}
+  m_PrefabInstance: {fileID: 2408906104408773791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &7357394688473942291 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -4074473252190429812, guid: e4c7db65dd010a74e9b4a7eb751ac756,
     type: 3}
   m_PrefabInstance: {fileID: 2408906104408773791}
   m_PrefabAsset: {fileID: 0}
