@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTimePoints: 60
-  showCredits: 0
+  isSecondLevel: 0
 --- !u!65 &701380721809239217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTimePoints: 90
-  showCredits: 0
+  isSecondLevel: 1
 --- !u!65 &1047459844174731230
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
 	public const string master = "Master";
 	public const string music = "Music";
 	public const string sfx = "SFX";
+	public const string highScore = "Highscore";
 
 	[Header("Screens")]
 	public GameObject winScreen = null;
@@ -32,6 +33,7 @@ public class UIManager : MonoBehaviour
 	public TextMeshProUGUI scoreText = null;
 	public TextMeshProUGUI timeText = null;
 	public TextMeshProUGUI inGameScoreText = null;
+	public TextMeshProUGUI highScoreText = null;
 
 	[Space] [Header("Audio")] 
 	[SerializeField] private AudioSource audioSource;
@@ -121,6 +123,8 @@ public class UIManager : MonoBehaviour
 		mixer.SetFloat(master, Mathf.Log10(masterSlider.value) * 20);
 		mixer.SetFloat(music, Mathf.Log10(musicSlider.value) * 20);
 		mixer.SetFloat(sfx, Mathf.Log10(sfxSlider.value) * 20);
+
+		highScoreText.text = PlayerPrefs.GetFloat(highScore).ToString();
 	}
 
 	/// <summary>

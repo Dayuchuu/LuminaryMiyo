@@ -5263,7 +5263,7 @@ MonoBehaviour:
   maxVelocityChange: 10
   speedUpTimer: 0.5
   moveSpeedAcceleration: 5
-  maxSlopeAngle: 30
+  maxSlopeAngle: 10
   speedUpCounter: 0
   maxMoveSpeedDuringDash: 20
   dashPower: 25

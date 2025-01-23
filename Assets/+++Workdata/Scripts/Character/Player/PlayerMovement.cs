@@ -333,6 +333,8 @@ public class PlayerMovement : CharacterBase
             UIManager.Instance.StartCountdown();
         }
 
+        Debug.Log(CheckAngle());
+        
         if (SlopeMovement())
         {
             //Get the move values
@@ -492,7 +494,16 @@ public class PlayerMovement : CharacterBase
         }
         return true;
     }
-    
+
+    private float CheckAngle()
+    {
+        if (Physics.BoxCast(transform.position, boxCastSize * 1.5f, Vector3.down, out var hit, Quaternion.identity, boxCastSize.y, groundMask))
+        {
+            float angle = Vector2.Angle(hit.normal, Vector3.up);
+            return angle;
+        }
+        return 0;
+    }
     
     public void DisablePlayerActions()
     {

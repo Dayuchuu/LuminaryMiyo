@@ -9,7 +9,7 @@ public class Goal : MonoBehaviour
 	[SerializeField] 
 	private int maxTimePoints = 0;
 
-	[SerializeField] private bool showCredits;
+	[SerializeField] private bool isSecondLevel;
 
 	private int enemyAmount = 0;
 	
@@ -114,6 +114,12 @@ public class Goal : MonoBehaviour
 		else if (currentScore >= (int)(currentMaxScore * 0.75))
 		{
 			UIManager.Instance.ChangeScoreText(currentScore, "S ");
+		}
+
+		if (isSecondLevel)
+		{
+			UIManager.Instance.highScoreText.text = currentScore.ToString();
+			PlayerPrefs.SetFloat(UIManager.highScore, currentScore);
 		}
 	}
 	#endregion
