@@ -272,16 +272,16 @@ public class PlayerMovement : CharacterBase
         
         Vector3 velocity = rb.velocity;
         Vector3 velocityChange = (targetVelocity - velocity);
-        
-        //changes velocity of the rigidbody.
-        velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
-        velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
-        velocityChange.y = 0;
 
-        if (SlopeMovement())
+        if(SlopeMovement())
         {
-            rb.AddForce(velocityChange, ForceMode.VelocityChange);
+            //changes velocity of the rigidbody.
+            velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+            velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+            velocityChange.y = 0;
         }
+        
+        rb.AddForce(velocityChange, ForceMode.VelocityChange);
         
         //Calculates when to speed up the Player.
         if (rb.velocity.magnitude > maxDefaultMoveSpeed - 0.5f && states != PlayerStates.Dash)
@@ -340,10 +340,9 @@ public class PlayerMovement : CharacterBase
 
         Debug.Log(CheckAngle());
         
-      
-            //Get the move values
-            inputX = context.ReadValue<Vector3>().x;
-            inputZ = context.ReadValue<Vector3>().z;
+        //Get the move values
+        inputX = context.ReadValue<Vector3>().x;
+        inputZ = context.ReadValue<Vector3>().z;
     }
     
     // --- JUMP METHOD --- //
@@ -487,7 +486,7 @@ public class PlayerMovement : CharacterBase
     private bool SlopeMovement()
     {
         //Calculates the angle of the ground to remove moving up slopes that are to high.
-        if (Physics.Raycast(transform.position, new Vector3(rb.velocity.x, 0, rb.velocity.z),out var hit, 5f, groundMask))
+        if (Physics.Raycast(transform.position, new Vector3(rb.velocity.x, 0, rb.velocity.z),out var hit, 2f, groundMask))
         {
             float angle = Vector2.Angle(hit.normal, Vector3.up);
             if (angle > maxSlopeAngle)
