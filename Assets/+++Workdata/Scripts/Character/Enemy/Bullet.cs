@@ -40,8 +40,6 @@ public class Bullet : MonoBehaviour
 		if (other.gameObject.CompareTag("Player"))
 		{
 			other.gameObject.GetComponent<PlayerMovement>().healthPoints--;
-			
-			StartCoroutine(DisableVolume(other.gameObject.GetComponent<PlayerMovement>().localVolume));
 
 			audioSource.PlayOneShot(MusicManager.instance.playerHurt);
 			
@@ -54,6 +52,7 @@ public class Bullet : MonoBehaviour
 				UIManager.Instance.OpenMenu(UIManager.Instance.loseScreen, CursorLockMode.None, 0f);
 			}
 			
+			gameObject.SetActive(false);
 		}
 	}
 
@@ -98,13 +97,4 @@ public class Bullet : MonoBehaviour
 		gameObject.SetActive(false);
 	}
 	#endregion
-
-	private IEnumerator DisableVolume(GameObject volume)
-	{
-        volume.SetActive(true);
-		yield return new WaitForSeconds(0.2f);
-        volume.SetActive(false);
-        gameObject.SetActive(false);
-
-    }
 }

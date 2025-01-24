@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -69,6 +70,7 @@ public class SceneLoader : MonoBehaviour
 	/// <returns></returns>
 	public IEnumerator LoadScene(int oldScene, int firstNewScene, int timeScale)
 	{
+		UIManager.Instance.loadingScreen.SetActive(true);
 		var unloadedScene = SceneManager.GetSceneByBuildIndex(oldScene);
 		
 		if (unloadedScene.isLoaded)
@@ -82,10 +84,17 @@ public class SceneLoader : MonoBehaviour
 				ObjectPool.sharedInstance.gameObject.GetComponent<ObjectPool>().enabled = true;
 			}
 		}
-
-
-		SceneManager.LoadScene(firstNewScene, LoadSceneMode.Additive);
-        yield return 0;
+		
+		AsyncOperation loadLevel = SceneManager.LoadSceneAsync(firstNewScene, LoadSceneMode.Additive);
+		
+		while (!loadLevel.isDone)
+		{
+			UIManager.Instance.loadingSlider.fillAmount = Mathf.Clamp01(loadLevel.progress / .9f);
+			yield return null;
+		}
+		
+		UIManager.Instance.loadingScreen.SetActive(false);
+		
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(firstNewScene));
 
 		currentScene = firstNewScene;

@@ -26,8 +26,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 63382681076724413}
   - {fileID: 5975952763043516403}
@@ -14184,9 +14184,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.8791473
+  m_Height: 2.0171695
   m_Direction: 1
-  m_Center: {x: 0, y: 0.8732046, z: 0}
+  m_Center: {x: 0, y: 0.87421346, z: 0}
 --- !u!82 &9209981324937246455
 AudioSource:
   m_ObjectHideFlags: 0

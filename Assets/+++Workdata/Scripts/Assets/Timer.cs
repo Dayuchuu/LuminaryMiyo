@@ -70,7 +70,7 @@ public class Timer : MonoBehaviour
    /// </summary>
    public void ResetTimer()
    {
-      time = 90;
+      time = 60;
       startCountDown = false;
       timeText.text = string.Format("{0}.{1}", 60, 00);
       countDownIsRunning = false;

@@ -99,7 +99,7 @@ public class Goal : MonoBehaviour
 	/// <param name="currentMaxScore"></param>
 	private void GetRank(int currentScore, int currentMaxScore)
 	{
-		if (currentScore >= (int)(currentMaxScore * 0) && currentScore <= (int)(currentMaxScore * 0.15))
+		if (currentScore >= (int)(currentMaxScore * 0) && currentScore <= (int)(currentMaxScore * 0.20))
 		{
 			UIManager.Instance.ChangeScoreText(currentScore, "C ");
 		}

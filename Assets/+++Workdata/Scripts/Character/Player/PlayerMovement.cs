@@ -311,9 +311,7 @@ public class PlayerMovement : CharacterBase
         {
             jumpAmount = 1;
         }
-            
-
-
+        
         if (currentJumpAmount > 0)
         {
             jumpIndicator.SetColor("_EmissionColor", Color.yellow * 10);          
@@ -340,8 +338,6 @@ public class PlayerMovement : CharacterBase
         {
             swordIndicator.SetColor("_EmissionColor", Color.black * 10);
         }
-
-
         
         //Calculates when to speed up the Player.
         if (rb.velocity.magnitude > maxDefaultMoveSpeed - 0.5f && states != PlayerStates.Dash)
@@ -406,8 +402,6 @@ public class PlayerMovement : CharacterBase
         {
             movementKeyPressed = false;
         }
-        
-        
     }
     
     // --- JUMP METHOD --- //
@@ -428,8 +422,7 @@ public class PlayerMovement : CharacterBase
         StopAllCoroutines();
         gravity = defaultGravity;
         rb.useGravity = true;
-
-
+        
         //jump on ground
         if (context.performed && IsGrounded() && coyoteTimeCounter > 0)
         {
@@ -475,7 +468,6 @@ public class PlayerMovement : CharacterBase
             audioSource.PlayOneShot(MusicManager.instance.playerAttack);
             anim.SetBool("DashAttack", true);
         }
-        
         
         currentMoveSpeed = moveSpeed;
         
@@ -659,7 +651,8 @@ public class PlayerMovement : CharacterBase
 
     public void StartCountdown(InputAction.CallbackContext context)
     {
-        if (!UIManager.Instance.timer.countDownIsRunning)
+        
+        if (context.performed &&!UIManager.Instance.timer.countDownIsRunning && !disableMovement)
         {
             UIManager.Instance.StartCountdown();
         }

@@ -61,6 +61,10 @@ public class UIManager : MonoBehaviour
 	public GameObject tutorialDialogue;
 	public GameObject levelDialogue;
 	
+	[Space] [Header("Loading")] 
+	public GameObject loadingScreen;
+	public Image loadingSlider;
+	
 	private bool uiOpen = true;
 	private GameObject currentScreen = null;
 	private int currentHealth = 5;
@@ -142,7 +146,6 @@ public class UIManager : MonoBehaviour
 	/// </summary>
 	public void LoadLevel01()
 	{
-		
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.Level01;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
 		
@@ -160,9 +163,12 @@ public class UIManager : MonoBehaviour
 		
 		CloseMenu(levelSelectionScreen,winScreen, CursorLockMode.Locked, 1f);
 		
-		OpenMenu(tutorialDialogue, CursorLockMode.None, 1f);
+		if (tutorialDialogue.GetComponentInChildren<Dialogue>().dialogueWasActive)
+		{
+			tutorialDialogue.GetComponentInChildren<Dialogue>().EmptyValues();
+		}
 		
-		tutorialDialogue.GetComponentInChildren<Dialogue>().EmptyValues();
+		OpenMenu(tutorialDialogue, CursorLockMode.None, 1f);
 	}
 	
 	/// <summary>
@@ -184,10 +190,13 @@ public class UIManager : MonoBehaviour
 		GameController.Instance.ResetGameStats();
 		
 		CloseMenu(levelSelectionScreen, winScreen, CursorLockMode.Locked, 1f);
-
-		OpenMenu(levelDialogue, CursorLockMode.None, 1f);
 		
-		levelDialogue.GetComponentInChildren<Dialogue>().EmptyValues();
+		if (levelDialogue.GetComponentInChildren<Dialogue>().dialogueWasActive)
+		{
+			levelDialogue.GetComponentInChildren<Dialogue>().EmptyValues();
+		}
+		
+		OpenMenu(levelDialogue, CursorLockMode.None, 1f);
 	}
 
 	/// <summary>

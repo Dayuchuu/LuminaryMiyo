@@ -13,6 +13,7 @@ public class Dialogue : MonoBehaviour
         [TextArea(3, 10)]
         public string line;
         public Sprite portrait;
+        public Sprite backGround;
     }
 
     [SerializeField] private DialogueData[] dialogueData;
@@ -20,7 +21,9 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueTextComponent;
     [SerializeField] private TextMeshProUGUI speakerTextComponent;
     [SerializeField] private Image speakerPortrait;
+    [SerializeField] private Image backGroundPortrait;
     [SerializeField] private bool isPreTutorial;
+    public bool dialogueWasActive;
     
     [SerializeField] private float textSpeed;
 
@@ -36,18 +39,23 @@ public class Dialogue : MonoBehaviour
         dialogueTextComponent.text = string.Empty;
         speakerTextComponent.text = string.Empty;
         speakerPortrait.sprite = null;
+        backGroundPortrait.sprite = null;
+        dialogueWasActive = true;
         StartDialogue();
     }
 
     public void EmptyValues()
     {
-        dialogueTextComponent.text = string.Empty;
-        speakerTextComponent.text = string.Empty;
-        speakerPortrait.sprite = null;
-        StartDialogue();
+        if (dialogueWasActive)
+        {
+            dialogueTextComponent.text = string.Empty;
+            speakerTextComponent.text = string.Empty;
+            speakerPortrait.sprite = null;
+            backGroundPortrait.sprite = null;
+            StartDialogue();
+        }
     }
-
-
+    
     //new input system
     public void Talking(InputAction.CallbackContext context)
     {
@@ -90,6 +98,7 @@ public class Dialogue : MonoBehaviour
             dialogueTextComponent.text += c;
             speakerTextComponent.text = dialogueData[dialogueDataIndex].speaker;
             speakerPortrait.sprite = dialogueData[dialogueDataIndex].portrait;
+            backGroundPortrait.sprite = dialogueData[dialogueDataIndex].backGround;
             yield return new WaitForSeconds(textSpeed);
         }
     }
@@ -105,6 +114,7 @@ public class Dialogue : MonoBehaviour
             dialogueTextComponent.text = string.Empty;
             speakerTextComponent.text= string.Empty;
             speakerPortrait.sprite = null;
+            backGroundPortrait.sprite = null;
             StartCoroutine (TypeLine());
         }
 
