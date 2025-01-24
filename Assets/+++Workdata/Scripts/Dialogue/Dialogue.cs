@@ -39,6 +39,14 @@ public class Dialogue : MonoBehaviour
         StartDialogue();
     }
 
+    public void EmptyValues()
+    {
+        dialogueTextComponent.text = string.Empty;
+        speakerTextComponent.text = string.Empty;
+        speakerPortrait.sprite = null;
+        StartDialogue();
+    }
+
 
     //new input system
     public void Talking(InputAction.CallbackContext context)

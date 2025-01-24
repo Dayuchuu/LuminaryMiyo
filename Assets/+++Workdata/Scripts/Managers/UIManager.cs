@@ -161,6 +161,8 @@ public class UIManager : MonoBehaviour
 		CloseMenu(levelSelectionScreen,winScreen, CursorLockMode.Locked, 1f);
 		
 		OpenMenu(tutorialDialogue, CursorLockMode.None, 1f);
+		
+		tutorialDialogue.GetComponentInChildren<Dialogue>().EmptyValues();
 	}
 	
 	/// <summary>
@@ -182,8 +184,10 @@ public class UIManager : MonoBehaviour
 		GameController.Instance.ResetGameStats();
 		
 		CloseMenu(levelSelectionScreen, winScreen, CursorLockMode.Locked, 1f);
-		
+
 		OpenMenu(levelDialogue, CursorLockMode.None, 1f);
+		
+		levelDialogue.GetComponentInChildren<Dialogue>().EmptyValues();
 	}
 
 	/// <summary>
