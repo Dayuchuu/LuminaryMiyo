@@ -189,6 +189,8 @@ public class UIManager : MonoBehaviour
 		
 		GameController.Instance.ResetGameStats();
 		
+		timer.transform.gameObject.SetActive(true);
+		
 		CloseMenu(levelSelectionScreen, winScreen, CursorLockMode.Locked, 1f);
 		
 		if (levelDialogue.GetComponentInChildren<Dialogue>().dialogueWasActive)
@@ -335,6 +337,8 @@ public class UIManager : MonoBehaviour
 	{
 		SceneLoader.Instance.sceneStates = SceneLoader.SceneStates.MainMenu;
 		SceneLoader.Instance.StartCoroutine(SceneLoader.Instance.LoadScene(SceneLoader.Instance.currentScene, (int)SceneLoader.Instance.sceneStates, 1));
+		
+		timer.gameObject.SetActive(false);
 		
 		GetCurrentScreen();
 		CloseMenu(currentScreen, CursorLockMode.None, 1f);
