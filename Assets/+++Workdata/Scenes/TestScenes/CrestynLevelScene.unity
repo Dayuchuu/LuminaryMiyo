@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: b3b0fb3aec2cbd443b0ee0495bbc0b07
+  m_OcclusionCullingData: {fileID: 36300000, guid: 8060626e38a05044e843eaeb3d5bab3c,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -306,6 +307,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -325,6 +331,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -591,6 +602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -739,6 +755,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -772,6 +793,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5035038955139617007, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -902,6 +928,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1001,6 +1032,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -1173,6 +1209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1285,6 +1326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -1484,6 +1530,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1503,6 +1554,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -1670,6 +1726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -2121,6 +2182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2189,6 +2255,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -2283,6 +2354,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1812123927755404654, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2421141155032740437, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2347,6 +2423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2451,10 +2532,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -2646,6 +2737,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2669,6 +2765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetBelow_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
@@ -2895,6 +2996,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3042,6 +3148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -3433,6 +3544,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torii_Gate_3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0768fb8d7e5a042b842060449d0e08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3520,6 +3636,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -3598,6 +3719,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -3843,6 +3969,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torii_Gate_5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0768fb8d7e5a042b842060449d0e08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4028,6 +4159,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4101,6 +4237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_3 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4348,6 +4489,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -4544,6 +4690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4858,6 +5009,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -5336,6 +5492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5601,6 +5762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetBelow_Prefab (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
@@ -5895,6 +6061,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5980,6 +6151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6157,7 +6333,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &312568665
 Transform:
@@ -6308,6 +6484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6555,6 +6736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6694,6 +6880,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6717,6 +6908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetBelow_Prefab (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
@@ -6806,6 +7002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -7236,6 +7437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7464,6 +7670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7745,6 +7956,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -7908,10 +8124,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -8369,6 +8595,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8831,6 +9062,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9383,6 +9619,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9529,6 +9770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetBelow_Prefab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
@@ -9694,6 +9940,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -9916,6 +10167,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -10168,6 +10424,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5455796674358158250, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10386,6 +10647,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10509,6 +10775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10683,6 +10954,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10757,6 +11033,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10830,6 +11111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10925,6 +11211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11032,6 +11323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -11157,6 +11453,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11264,6 +11565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -11389,6 +11695,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11488,6 +11799,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -11581,6 +11897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetBelow_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
@@ -12030,6 +12351,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -12124,6 +12450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetBelow_Prefab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12212,6 +12543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -12905,6 +13241,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 1862505217748925143, guid: d5e00af5c04dca541ad28567617dcc2b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2241802896430128276, guid: d5e00af5c04dca541ad28567617dcc2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12984,6 +13325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418595173200735561, guid: d5e00af5c04dca541ad28567617dcc2b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13150,6 +13496,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -13294,6 +13645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13319,10 +13675,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -13785,6 +14151,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetBelow_Prefab (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13964,6 +14335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torii_Gate_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0768fb8d7e5a042b842060449d0e08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14193,6 +14569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14266,6 +14647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_3 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14341,6 +14727,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14364,6 +14755,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -14434,10 +14830,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -14623,6 +15029,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14720,6 +15131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetBelow_Prefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
@@ -15019,6 +15435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15092,6 +15513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15201,6 +15627,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetBelow_Prefab (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -15285,6 +15716,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -15469,7 +15905,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &830535790
 Transform:
@@ -15956,6 +16392,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16031,10 +16472,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -16120,6 +16571,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -16412,6 +16868,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16491,6 +16952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_3 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16659,10 +17125,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -16917,6 +17393,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5035038955139617007, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_Layer
@@ -17140,6 +17621,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17219,6 +17705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_3 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17328,6 +17819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torii_Gate_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0768fb8d7e5a042b842060449d0e08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17492,6 +17988,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17565,6 +18066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_3 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17704,6 +18210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetBelow_Prefab (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -17792,6 +18303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -18089,6 +18605,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18227,6 +18748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18381,6 +18907,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18470,6 +19001,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18503,6 +19039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5035038955139617007, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -18889,6 +19430,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19051,6 +19597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19224,6 +19775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19363,6 +19919,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19456,6 +20017,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3805653152665043975, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -19883,6 +20449,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20129,6 +20700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetBelow_Prefab (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -20336,6 +20912,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20359,6 +20940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetBelow_Prefab (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
@@ -20582,6 +21168,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20601,10 +21192,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -20774,10 +21375,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -21155,6 +21766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21405,6 +22021,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -21494,10 +22115,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -21637,6 +22268,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21806,6 +22442,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22010,10 +22651,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -22347,6 +22998,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -22470,6 +23126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22561,6 +23222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -23128,6 +23794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23372,6 +24043,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -23624,6 +24300,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23880,6 +24561,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -24176,6 +24862,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24199,6 +24890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -24905,6 +25601,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25029,6 +25730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25048,6 +25754,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -25414,6 +26125,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25581,6 +26297,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -25655,6 +26376,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -25807,6 +26533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -26159,6 +26890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26548,6 +27284,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -26691,6 +27432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26884,6 +27630,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26917,6 +27668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5035038955139617007, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -26996,6 +27752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -27145,6 +27906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27214,6 +27980,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -27572,10 +28343,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -27756,6 +28537,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5035038955139617007, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_Layer
@@ -27906,6 +28692,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28014,6 +28805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Torii_Gate_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0768fb8d7e5a042b842060449d0e08,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28133,6 +28929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28305,6 +29106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -28556,6 +29362,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5035038955139617007, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_Layer
@@ -28708,6 +29519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -29021,6 +29837,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -29374,6 +30195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_Clean (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29542,6 +30368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29863,6 +30694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30078,6 +30914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_3 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30462,6 +31303,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetBelow_Prefab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -30550,6 +31396,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -30674,6 +31525,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30999,6 +31855,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -31094,6 +31955,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3805653152665043975, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -31202,6 +32068,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -31435,6 +32306,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31460,6 +32336,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -31538,6 +32419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StreetBelow_Prefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016776218167071865, guid: 592b42efb7ee1a144bead5c920d54afb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5680441898306211523, guid: 592b42efb7ee1a144bead5c920d54afb,
         type: 3}
@@ -31921,6 +32807,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31995,6 +32886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32018,6 +32914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -32211,6 +33112,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32230,6 +33136,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -32432,6 +33343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32674,6 +33590,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -32763,6 +33684,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
@@ -32891,6 +33817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_3 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33396,6 +34327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33958,10 +34894,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -34493,6 +35439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_2 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34516,6 +35467,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -34685,6 +35641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34916,6 +35877,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35160,6 +36126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35335,6 +36306,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5035038955139617007, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -35767,6 +36743,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35836,10 +36817,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699530388}
     m_Modifications:
+    - target: {fileID: 5325517593775890689, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
       propertyPath: m_Name
       value: CherryBlossom_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173563360373712306, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8801586451785023240, guid: c5ea0a7b5045b714b9828bf7afdc1b1f,
         type: 3}
@@ -35910,6 +36901,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -36038,6 +37034,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756468769686542167, guid: 6ee2fd7036d73ac49b99bd90b531d39e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36849,6 +37850,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 733577207}
     m_Modifications:
+    - target: {fileID: 858654219081154648, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6061183901052290142, guid: 29f2ea92315d4244bbcdb383cd9c8d26,
         type: 3}
       propertyPath: m_Name
@@ -36999,6 +38005,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37111,6 +38122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_1 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
@@ -37519,6 +38535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_1 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 137831917794933362, guid: 38b61eeb77ee3344ebffb3f19014936e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7492221739187945047, guid: 38b61eeb77ee3344ebffb3f19014936e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37797,6 +38818,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37920,6 +38946,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HOUSE_Clean (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600838274377729093, guid: ef8766a606bd5324981126bd24e96bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38143,6 +39174,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HOUSE_3 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8875475455219243736, guid: 3d27706e6d38f414c8ddd470a327dab8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38169,7 +39205,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!1001 &1311822514876972226
 PrefabInstance:

@@ -9,7 +9,7 @@ OcclusionCullingSettings:
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: d3c1aebe1ad78f14fbfdbaf29f10b347
-  m_OcclusionCullingData: {fileID: 36300000, guid: 603c2a6667f7e7841a9332b99e74adcf,
+  m_OcclusionCullingData: {fileID: 36300000, guid: 8060626e38a05044e843eaeb3d5bab3c,
     type: 2}
 --- !u!104 &2
 RenderSettings:
@@ -2967,6 +2967,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454075163}
   m_CullTransparentMesh: 1
+--- !u!1 &459213176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 459213178}
+  - component: {fileID: 459213177}
+  m_Layer: 0
+  m_Name: Doom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &459213177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459213176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a635acbc0ce114659817a0da018133e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LockKeyboard: 0
+  TickTime: 0.028571
+  WadPath: 
+  SfPath: 
+  Wad: {fileID: 102900000, guid: fd998310531ec45de8ca9a738b4adb26, type: 3}
+  SoundFont: {fileID: 102900000, guid: 47bc78f7fce68412a952511b95224145, type: 3}
+--- !u!4 &459213178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459213176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -163.27124, y: -8.26326, z: 223.82642}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &463826645
 GameObject:
   m_ObjectHideFlags: 0
@@ -14670,3 +14720,4 @@ SceneRoots:
   - {fileID: 304767946}
   - {fileID: 1146918878}
   - {fileID: 1637339783}
+  - {fileID: 459213178}
